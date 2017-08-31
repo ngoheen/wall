@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>A pure CSS parallax demo by Keith Clark</title>
+
+<link href="css/grid.css" rel="stylesheet">
+<link href="css/wall-story.css" rel="stylesheet">
+<style>
+.mobile-logo {
+ 	display: none;
+}
+@media (max-width:767px) {
+	.top-menu > .mobile-logo {
+		display: block;
+		left: 40px;
+		right: auto;
+	}
+	.mobile-logo img {
+	
+	}
+	.top-menu {
+		width: 100%;
+	}
+}
+header.substory .top-logo img.wall-logo.show-tablet.hide-mobile {
+	margin-left:40px;
+}
+@media (min-width:768px) {
+	.photo1 {
+		background-image:none;
+	}
+}
+@media (max-width:1023px) {
+	.hide-tablet {
+		display: none;
+	}
+	 h3.sub {
+    margin-left:15px;
+    margin-bottom:24px;
+    }
+}
+
+@media (max-width:768px) {
+   
+    .intro {
+    margin-top:50px;
+    }
+}
+@media (min-width:768px) and (max-width:1024px) {
+   
+    .intro {
+    	margin-top:0;
+    }
+    .block-desk,
+    .show-tablet {
+    	display: block !important;
+    }
+    .para-img {
+    	height:65px;
+    	width: auto;
+    	margin-left: 0;
+    	margin-top:14px;
+    }
+
+   
+}
+</style>
+    </head>
+<body class="light">
+
+<header class="substory">
+    
+        <div class="top-logo">
+            <img src="images/logo_black.png" class="wall-logo hide-mobile show-tablet">
+            
+        </div>
+        <div class="top-menu">
+            <div class="mobile-logo"><img src="images/logo-mob-bl.png"></div>
+            <div><span class="hide-mobile">Share<img src="images/swoosh.png" class="share"></span>Stories</div>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+  
+</header>
+
+<main>
+<div class="fixed-white"></div>
+    <section class="photo1">
+        <div class="col-md-offset-2 col-md-14 col-sm-14 col-sm-offset-2 col-xs-16 col-xs-offset-0 no-side-padding">
+        
+            <div class="screen"></div>
+            <img src="images/USATSI_10033146.jpg" class="hide-mobile show-tablet">
+            <div class="title show-mobile hide-tablet">
+                <h1>Land of <b>Shadows</b></h1>
+            </div>
+        </div>
+        <div class="row hide-mobile block-desk">
+            <div class="col-sm-4 col-sm-offset-2 col-xs-offset-0">
+                <figcaption class="hanging"><b>Photo 1:</b> This photo is right aligned and full width from left margin of 2 columns</figcaption>
+            </div>
+        </div>
+    </section>       
+    
+    <figcaption class="show-mobile hide-tablet side-padding"><b>Cutline title goes here:</b> Cutline for the photo goes here on mobile. And might be quite long.</figcaption>
+  
+    
+        <!-- intro text -->
+        <div class="section sub intro-txt"> 
+        
+            <div class="intro col-md-7 col-md-offset-8 col-sm-9 col-sm-offset-6 col-xs-offset-0 col-xs-16">
+            
+                <img class="para-img hide-mobile show-tablet" src="images/para-b.png">   
+                <h3 class="sub hide-mobile show-tablet" class="intro-h3">land of | <span>shadows</span></h3>
+                <p>Sometimes, the border ranchers hear the horses whinny in the corral at midnight, and see shadows moving silently past the barn. They've ridden over a ridge and stumbled into cartel "drug mules" &mdash; post stuffed in backpacks, assault rifles in hand.</p>
+                <p>After more than a decade of outrage about border security, cattlemen and women in the thorny southern Arizona outback grudgingly share the memories. Fences and irrigation lines cut. Homes and sheds broken into. Border Patrol sirens screaming through darkness in pursuit of drug-running vehicles. On of their own murdered in cold blood.</p>
+                <p>But in this land of dust and shadows, what most weighs on ranchers is not just what's seen, but what's unseen.</p>
+           
+            </div>
+        </div>
+        
+        <div class="clearer"></div>
+        
+        <section class="sub main">
+        <!-- image rifle --> 
+            <div class="col-xs-16 col-sm-16 col-sm-offset-0 col-xs-offset-0 photo2">
+                <figure class="full">
+                    <img src="images/rifle.jpg">
+                     <figcaption class="center"><b>Photo 2:</b> This photo is full-bleed content width. Cutline for the photo goes here and is centered on desktop.</figcaption>
+                </figure>              
+            </div>
+        </section>
+        
+        <div class="clearer"></div> 
+         
+        <!-- text -->
+        <section class="sub main">
+            <div class="row">
+                <div class="col-md-7 col-md-offset-8 col-sm-9 col-sm-offset-6 col-xs-offset-0 col-xs-16">    
+                    <h4 class="location"><i class="fa fa-map-marker" aria-hidden="true"></i> Cochise County, Ariz.</h4>
+                    <h1 class="sub">Main header for ranch Ipsum sub lorem</h1>
+                    <div class="byline">
+                        <b>Gustavo Solis</b> | The Desert Sun <span class="show-mobile"<br></span> <span class="hide-mobile">|</span> USA TODAY NETWORK
+                    </div>
+                    <p>Across hundreds of miles, cattle ranchers tell remarkably similar stories, from flowing grasslands of the San Rafael Valley to gnarly peaks of the Atascosa Mountains to saguaro-studded desert.</p>
+                </div>
+            </div>        
+        </section>
+     
+        <!-- image -->
+        <section class="sub main">
+            <div class="col-md-8 col-sm-8 col-sm-offset-2 col-md-offset-2 photo3">
+                <figure class="full">
+                    <img src="images/USATSI_10032938.jpg">
+                </figure>
+            </div>
+            <div class="col-md-4 col-sm-5 photo3-caption">
+                <figcaption><b>Photo 3:</b> Photo is 8-columns wide and caption is 3-columns wide and aligned left.</figcaption> 
+            </div>
+        </section>
+        
+        <!-- text -->
+        <section class="sub main">
+            <div class="row">
+                <div class="col-md-7 col-md-offset-8 col-sm-9 col-sm-offset-6 col-xs-offset-0 col-xs-16">   
+                    <p>Ranching is a heritage of land, a family legacy, a lifestyle. It’s a cycle of fence mending, cactus dodging and calf branding, measured by sweat and blisters.</p>
+                    <p>Most families have been at it more than a century, isolated in wild, lonely, peaceful country with only the buzzing of flies and the bawling of calves.</p>
+                    <p>These operations today run about 150,000 head of cattle in southern Arizona, an $18 million economic driver in Cochise County alone. Ranches and grazing leases account for much of the land area, and lifestyle.</p>
+                    <p>The Ladd-San Jose Ranch started up when Pancho Villa’s revolutionaries marauded along the border.</p>
+                    <p>More than 120 years later, John Ladd runs cattle there, along 10 miles of border in Cochise County. he recalls a time when nearly all of the locals employed Mexican cowboys. “We had Loreto,” he says. “My dad sponsored him for citizenship, and always kidded that he was my brother.”</p>
+                    <p>At a ranch near Nogales, Robert Noon offers a similar memory: “You had your wetvacks coming across,” he says, seemingly unaware that, for some, the word cuts like barbed wire. “They were actually looking for a job — not a handout. We’d give ‘em a peanut butter and jelly sandwich and they were on their way.”</p>
+                    <p>During the 1980s, perhaps 300 border crossers would pass through a ranch each month. They were meek and respectful, begging for water before heading north.</p>   
+                </div>
+            </div>
+        </section>
+    
+        <div class="clearer"></div>
+        
+        <!-- video -->
+        <section class="sub full">
+            
+            <div class="col-md-16">
+                <img src="images/video.png" style="width:100%;">
+            </div>
+           
+        </section>
+    
+        <div class="clearer"></div>
+    
+        <section class="sub main">
+            <div class="row">
+                <div class="col-md-5 col-md-offset-2 col-sm-offset-1 col-sm-4 ">
+                    <figure >
+                        <img src="images/USATSI_10058793.jpg">
+                        <figcaption class="left"><b>Cutline title car here:</b> Cutline for the photo goes here on mobile. And might be quite long.</figcaption>
+                    </figure>
+                </div>
+           
+                <div class="col-md-7 col-md-offset-1 col-sm-9 col-sm-offset-1 col-xs-offset-0 col-xs-16">
+                    <p>And then the borderland slowly turned to hell.</p>
+                    <p>In the ’90s, Ladd says, 300 migrants were crossing his land daily.</p>
+                    <p>By the early 2000s, a boom was underway. More migrants, more border patrol, more fences.</p>
+                    <p>Under the George W. Bush and Obama administrations, the U.S. Border Patrol nearly doubled the number of agents working on the Southwest border to over 17,000.</p>  
+                    <p>The Border Patrol budget has more than tripled, from $1 billion in 2000 to $3.6 billion last year. Beginning in 2006 under the Secure Fence Act of 2006, the government also built about 700 miles of pedestrian and vehicle barriers. Obama’s administration also added millions of dollars worth of motion sensors, trail cameras, flood lights and other technology collectively described as a “virtual fence.”</p>
+                </div>
+               
+            </div>
+         </section>
+         <section class="sub main top-adjust">
+           
+            <div class="row">
+            
+                <div class="col-md-7 col-md-offset-8 col-sm-9 col-sm-offset-6 col-xs-offset-0 col-xs-16">
+                 
+                    <!-- explainer promo -->
+                    <div class="explainer-promo show-mobile show-smaller">
+                        <h4>explainer card</h4>
+                        <h1>What types of fences are there on the border today?</h1>
+                        <div class="explainer-promo-next" onclick="openNav()"><span>READ</span><img src="images/icon/arrow-right_24-w.png"></div>
+                    </div>
+
+                    
+                    <p>But, because agents mostly patrolled many miles north of the Mexican boundary, ranches remained a no-man’s land where rival cartels and banditos waged war.</p>
+
+                    <p>On his ranch near Rio Rico, David Lowell drew a “Map of Atrocities” to keep track of where shootouts occurred and bodies were found.</p>
+
+                    <p>Then came the atrocities of 2010.</p>
+
+                    <p>To the east, past Ladd’s spread, a rancher named Robert Krentz was killed. Authorities followed tracks from the murder site to the border, where they lost the trail. Officially, the killer has never been identified.</p>
+
+                    <p>And to the west, in the backcountry of Lowell’s ranch, Border Patrol Agent Brian Terry was cut down in a gunfight with bandits.</p>
+                    <p>Today, there’s a monument to Terry in the remote, tangled canyon where he died.</p> 
+                    <p>It is, in essence, a private memorial – almost impossible to find or access. Like so many pieces of the border story, it remains unseen.</p>
+                </div>
+            </div>
+           
+         </section>
+    
+    <!-- image -->     
+        <section class="sub main">
+            <div class="row">
+                <div class="col-sm-12 col-sm-offset-2 col-xs-16 col-xs-offset-0">
+                    <figure class="full">
+                        <img src="images/USATSI_10058787.jpg">
+                        <figcaption class="hanging col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-offset-0"><b>Photo 4:</b> Photo is centered with 2-column margins on each side.</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+    
+        <section class="sub main top-adjust">
+            <div class="row">
+                <div class="col-md-offset-2 col-md-5 col-sm-offset-1 col-sm-14 quote">
+                    <br><br>“I’m 100 percent certain we’re being watched right now by someone affiliated with the cartel.”
+                    <div class="attrib">
+                        <h4>Quote Name Long</h4>
+                        <h5>Quote Attribution</h5>
+                        
+                    </div>
+                </div>
+                <div class="col-md-7 col-md-offset-1 col-sm-9 col-sm-offset-6 col-xs-offset-0 col-xs-16">
+                    <p>Deputy Mike Magoffin heads east out of Douglas, Arizona, his head on a swivel.</p>
+                    <p>Magoffin stops to inspect footprints across the border road. The tracks are a day old, so he moves on.</p>
+                    <p>Magoffin’s a deer hunter, and tracking smugglers or immigrants involves the same skill set and adrenaline. “It’s OK,” he adds, “as long as it doesn’t extrapolate into pulling the trigger.”</p>
+                    <p>The radio picks up occasional chatter among Border Patrol agents. Not one no word of immigrants or drug runners.</p>
+                    <p>Magoffin pulls out binoculars and points to a boulder-strewn bluff on the Mexican side – a smuggler’s lookout post.</p>
+                    <p>“I’m 100 percent certain we’re being watched right now by someone affiliated with the cartel,” he says.</p>
+                    <p>He just can’t see them.</p>
+                </div>
+            </div>
+        </section>
+    
+        <!-- horizontal quote over photo -->
+        <section class="sub main">
+        <div class="row">
+            <figure class="full photo-back col-md-14 col-md-offset-2">
+                <div class="horiz-quote-1 margin-top">
+                
+                    <div class="col-md-offset-2 col-md-12 col-sm-offset-1 col-sm-14 quote white-clr">
+                        “I’m 100 percent certain we’re being watched right now by someone affiliated with the cartel.”
+                        <div class="attrib">
+                            <h4>Quote Name</h4>
+                            <h5>Quote Attribution</h5>
+                        </div>
+                        <br><br>
+                    </div>
+                </div>
+                <img src="images/USATSI_10058784.jpg">
+                <figcaption class="hanging col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-offset-0 cutline-padding">
+                    <b>Cutline title goes here:</b> Cutline for the photo goes here on mobile. And might be quite long.
+                </figcaption>
+            </figure>
+            </div>
+        </section>
+    
+        <section class="sub main">
+            <div class="row">
+                <div class="col-md-7 col-md-offset-8 col-sm-9 col-sm-offset-6 col-xs-offset-0 col-xs-16">
+                    <p>Magoffin is on ranch patrol. When things got bad on the border, the Cochise County Sheriff’s Office created a team of deputies to help cattle growers deal with the immigrants, smugglers and Border Patrol.</p>
+                    <p>For 25 miles, fencing is variable. Some areas are guarded by an 18-foot bollard-style barricade; others have only Normandy vehicle barriers. Magoffin steps up to the more imposing fence, scales it in a matter of seconds, then jumps back to earth.</p>
+                    <p>The road ends atop a hill near the Mafioso Trail. From that point for 20 miles, the United States and Mexico are separated only by barbed wire.</p>
+                    <p>Magoffin says this is probably the hottest smuggling zone. He dramatically peers in all directions, seeing no one. “It’s because of all the Border Patrol presence,” he says, sarcastically. “We haven’t seen one since the Slaughter Ranch, about 40 minutes ago.”</p>
+                </div>
+            </section>
+            
+  <!-- in their words module-->
+             
+            <section class="sub main">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-2 col-sm-offset-6 col-sm-10">
+                        <div class="in-their-words">
+                            <div class="title-bar">
+                                <h4>In their words</h4>
+                            </div>
+                            
+                            <ul class="skippy">
+                                <li class="first dragend-page">
+                                    <div class="speaker">
+                                        <img src="images/cowboy-words.jpg">
+                                    </div>
+                                    <div class="footer">
+                                        <p>“Enforce our immigration laws first. Put Border Patrol agents in sight of one another (along the international line). If you have line of sight, you don’t need a wall.”</p>
+                                        <p class="person"><h4>John Ladd, </h4> <h5>Rancher</h5></p>
+                                       
+                                        <p class="next-screen"><span>Next</span> <img src="images/icon/arrow-right_24.png"></p><br>
+                                    </div>
+                                </li>
+                                <li class="dragend-page">
+                                    <div class="speaker">
+                                        <img src="images/hat-words.jpg">
+                                    </div>
+                                    <div class="footer">
+                                        <p>“Enforce our immigration laws first. Put Border Patrol agents in sight of one another (along the international line). If you have line of sight, you don’t need a wall.”</p>
+                                        <p class="person"><h4>John Ladd,</h4> <h5>Rancher</h5></p>
+                                       <p class="prev-screen"><img src="images/icon/arrow-left_24.png"> <span>back</span></p>
+                                    </div>
+                                </li>
+                               <!-- <li class="middle dragend-page"></li>
+                                <li class="dragend-page"></li>
+                                <li class="last dragend-page"></li>-->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="sub main">
+                <div class="row">
+                    <div class="col-md-7 col-md-offset-8 col-sm-10 col-sm-offset-6 col-xs-offset-0 col-xs-16"> 
+                        <p>Reminded that the number of agents roughly doubled during the past decade, Magoffin nods. “There may be more back at the station,” he allows, “but out here? It doesn’t look like it.”</p>
+                        <p>Ranchers down here will tell you they despised the Obama administration, and helped vote Donald Trump into the White House.</p>
+                        <p>Yet a funny thing happens when you ask them about the president’s famous promise of a “tall, powerful, beautiful” border wall.</p>
+                        <p>Almost unanimously, they think it’s bad idea.</p>
+                        <p>John Ladd, a cowboy who looks like the Marlboro man and runs cattle along 10 miles of border in Cochise County: “Enforce our immigration laws first. Put Border Patrol agents in sight of one another (along the international line). If you have line of sight, you don’t need a wall.”</p>
+                        <p>Manuel Solomon, a 71-year-old caballero, who has just finished castrating and branding calves near Rio Rico: “It won’t really matter. They (immigrants) will still come here. They’ll still climb it or go around it to find jobs.”</p>
+                        <p>Robert Noon, who works a couple cow-calf operations outside Nogales: “A wall is a wall. It’s going to stop some traffic, but they’ll find a way around it. … In the long term? It’s a major waste of money. And it’s kind of ludicrous to think Mexicans will pay for it.”</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+       
+
+        <div class="clearer"></div>
+        
+        <figure>
+            <img src="images/USATSI_10033154.jpg">
+        </figure>
+         
+        <div class="col-sm-16 col-sm-offset-0 col-xs-offset-0">
+            <figcaption class="center"><b>Photo 2:</b> This photo is full-bleed content width. Cutline for the photo goes here and is centered on desktop.</figcaption>
+        </div>
+    
+        <div class="clearer"></div>
+        
+        <section class="sub main">
+            <div class="row">
+                 <!-- explainer -->
+                <div class="col-md-5 col-md-offset-2 col-sm-offset-0 col-sm-16">
+                    <div class="explainer-wrapper hide-mobile hide-smaller">
+                        <img src="images/wt-paragraph.png" class="para">
+                        <div class="explainer">
+                            <h4>explainer card</h4>
+                            <ul class="lorax">
+                                <li class="first dragend-page">
+                                    <h1>What types of fences are there on the border today?</h1>
+                                    <div class="bot-arrow-next next-screen"><span>next</span> <img src="images/icon/arrow-right_24-w.png"></div>
+                                </li>
+                                <li class="dragend-page">
+                                    <div class="card-content">
+                                        <p>And then the borderland slowly turned to hell.</p>
+                                        <p>In the ’90s, Ladd says, 300 migrants were crossing his land daily.</p>
+                                        <p>By the early 2000s, a boom was underway. More migrants, more border patrol, more fences.</p>
+                                        <div class="bot-arrow-next prev-screen"><img src="images/icon/arrow-left_24.png"> <span>back</span></div>
+                                        <div class="bot-arrow-next next-screen"><span>next</span> <img src="images/icon/arrow-right_24.png"></div>
+                                    </div>
+                                </li>
+                                <li class="last dragend-page">
+                                    <div class="card-content">
+                                        <p>And then there is this page</p>
+                                        <p>In the ’90s, Ladd says, 300 migrants were crossing his land daily.</p>
+                                        <p>By the early 2000s, a boom was underway. More migrants, more border patrol, more fences.</p>
+                                       
+                                        <div class="bot-arrow-next prev-screen"><img src="images/icon/arrow-left_24.png"> <span>back</span></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer">
+                            <div class="pagination"><span class="cur-exp">1</span> of <span class="exp-tot">4</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7 col-md-offset-1 col-sm-10 col-sm-offset-6 col-xs-offset-0 col-xs-16">   
+                    <p>David Lowell, a rancher who also has a degree in mine engineering, estimates that a three-story concrete wall might eliminate 80 percent of the illegal traffic, adding, “That would be all to the good as far as we’re concerned.”</p>
+                    <p>On the other hand, Lowell says, a barrier like the communist regime erected in East Berlin might work much better: “It would be two, sturdy, razor-wire fences with electrical currents and a road between them.”</p>
+                    <p>“The wall without the agents won’t do anything,” Magoffin says. “If you tell me, ‘Everything you want is on the other side of the wall and I won’t look,’ I’m going over that wall.”</p>
+                    <p>Ladd concedes that today’s rancher outrage is aimed mostly at how things used to be, not how they are.</p>
+                    <p>Ladd has not seen migrants on the property since Christmas. No smugglers’ vehicles have come through in 18 months.</p>
+                    <p>In fact, illegal immigration has been plummeting for years. Border Patrol data show 54,891 people were apprehended in southern Arizona’s Tucson Sector in 2016 – about one-tenth the number captured in 2000.</p>
+                    <p>An even sharper decline this year has been attributed, at least in part, to prospective immigrant fears after President Donald Trump took office and signed executive orders to start planning for the wall. Overall apprehensions dropped by two-thirds in April.</p>
+                    <p>Drive the border anywhere in this region and the story is the same. Rancher frustration is real, palpable.</p>
+                </div>
+            </div>
+        </section>
+    
+        <section class="sub main">
+            <div class="row">
+                <div class="col-sm-12 col-sm-offset-2 col-xs-16 col-xs-offset-0">
+                    <figure class="full">
+                        <img src="images/USATSI_10058788.jpg">
+                        <figcaption class="hanging col-sm-4 col-sm-offset-0 col-xs-offset-0"><b>Photo 4:</b> Photo is centered with 2-column margins on each side.</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+            
+       
+        <div class="clearer"></div>
+        
+        <section class="sub main top-adjust">
+            <div class="row">
+               <div class="col-md-7 col-md-offset-8 col-sm-10 col-sm-offset-6 col-xs-offset-0 col-xs-16">     
+                    <p>But the crossers, well, they aren’t around to be seen.</p>
+                    <p>Ladd hops in an old, red pickup truck and churns a 3-mile trail of dust to newly installed border fence. Thick metal slats, 18 feet high, are emblazoned with the words “Korean Steel.”</p>
+                    <p>“This is probably 90 percent effective,” Ladd says. “It’s the best I’ve seen as far as design.”</p>
+                    <p>A brisk wind blows from Sonora, making a “shwoooo” sound as it crosses through fencing and into the United States.</p> 
+                    <p>“That’s a wonderful sound,” Ladd says, smiling.</p>
+                    <p>But in the wind is the whisper of the past, invisible but inescapable.</p>
+                    <p>On Lowell’s ranch, cowhand Reed Thwaits maneuvers a Jeep over steep, rutted roads until he finally reaches a cattle tank and a giant mesquite.</p> 
+                    <p>This, he explains softly, is a so-called “rape tree.” It was once adorned with women’s bras and underwear. Coyotes would sexually assault some of the female migrants who hired them, leaving undergarments in the branches as trophies.</p>
+                    <p>The idea of rape trees is laced through ranchland lore, as universal as it is unverifiable.</p>
+                    <p>Thwaits shakes his head. “Not a safe place to be … I’ve seen (immigrant) women crying like they had been raped, abused.”</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="sub main">
+            <div class="row">
+                <div class="col-sm-12 col-sm-offset-2 col-xs-16 col-xs-offset-0">
+                    <div class="horiz-quote-1 over-img margin-top">
+                        <div class="col-md-offset-1 col-md-6 col-xs-offset-0 quote white-clr">
+                            “I’m 100 percent certain we’re being watched right now by someone affiliated with the cartel.”
+                            <div class="attrib">
+                                <h4>Quote Name</h4>
+                                <h5>Quote Attribution</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <figure class="full back-photo">
+                        <img src="images/cow.jpg">
+                        <figcaption class="hanging col-sm-4 col-sm-offset-0 col-xs-offset-0"><b>Photo 4:</b> Photo is centered with 2-column margins on each side.</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+    
+        <section class="sub main">
+            <div class="row">
+                <div class="col-sm-12 col-sm-offset-2 col-xs-16 col-xs-offset-0">
+                    <div class="horiz-quote-1 over-img margin-top">
+                        <div class="col-md-offset-8 col-md-6 col-xs-offset-0 quote white-clr">
+                            “I’m 90 percent certain we’re being watched right now by someone affiliated with the cartel.”
+                            <div class="attrib">
+                                <h4>Quote Name</h4>
+                                <h5>Quote Attribution</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <figure class="full back-photo">
+                        <img src="images/cow.jpg">
+                        <figcaption class="hanging col-sm-4 col-sm-offset-0 col-xs-offset-0"><b>Photo 4:</b> Photo is centered with 2-column margins on each side.</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="modal" id="sesame">
+      
+        <div class="explainer modal-content">
+            <div href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</div>
+            <img src="images/wt-paragraph.png" class="para">
+            <h4>explainer card</h4>
+            <ul class="lorax">
+                <li class="first dragend-page">
+                    <h1>What types of fences are there on the border today?</h1>
+                     <p class="bot-arrow-next next-screen"><b>next</b> <img src="images/icon/arrow-right_24-w.png"></p>
+                </li>
+                <li class="dragend-page">
+                    <div class="card-content">
+                        <p>And then the borderland slowly turned to hell.</p>
+                        <p>In the ’90s, Ladd says, 300 migrants were crossing his land daily.</p>
+                        <p>By the early 2000s, a boom was underway. More migrants, more border patrol, more fences.</p>
+                         <p class="bot-arrow-next prev-screen"><img src="images/icon/arrow-left_24.png"> <span><b>back</b></span></p>
+                        <p class="bot-arrow-next next-screen"><span><b>next</b></span> <img src="images/icon/arrow-right_24.png"></p>
+                    </div>
+                </li>
+                <li class="dragend-page">
+                    <div class="card-content">
+                        <p>And then there is this page/p>
+                        <p>In the ’90s, Ladd says, 300 migrants were crossing his land daily.</p>
+                        <p>By the early 2000s, a boom was underway. More migrants, more border patrol, more fences.</p>
+                                       
+                        <p class="bot-arrow-next prev-screen"><img src="images/icon/arrow-left_24.png"> <span><b>back</b></span></p>
+                    </div>
+                </li>
+            </ul>
+            <div class="footer">
+                <div class="pagination">1 of 4</div>
+            </div>
+        </div>
+    </div>
+</main>
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/dragend.js"></script>
+<script>
+$(".speaker img").each(function(i, elem) {
+  var img = $(elem);
+  var div = $("<div />").css({
+    background: "url(" + img.attr("src") + ") no-repeat center center",
+    backgroundSize: "cover",
+    width: "100%",
+    height: "300px"
+  });
+  img.replaceWith(div);
+});
+var high = $( document ).height();
+console.log(high);
+$('.fixed-white').css('height', high);
+</script>
+<script>
+    $(function() {
+        $(".skippy,.lorax").dragend({
+        afterInitialize: function() {
+          this.container.style.visibility = "visible";
+        },
+        onSwipeEnd: function() {
+          var first = this.pages[0],
+              last = this.pages[this.pages.length - 1];
+
+            $(".prev, .next").removeClass("deactivated");
+            $(".nav li").removeClass("active");
+
+            if (first === this.activeElement) {
+                $(".prev").addClass("deactivated")
+            };
+
+            if (last === this.activeElement) {
+                $(".next").addClass("deactivated")
+            }
+
+            $(".nav li").eq(this.page).addClass("active");
+
+        }
+    });
+     
+        $(".prev-screen").click(function() {
+            $(".skippy,.lorax").dragend("right");
+        });
+    
+    $(".next-screen").click(function() {
+        $(".skippy,.lorax").dragend("left");
+    });
+   
+   
+    $(".nav").click(function() {
+        var page = $(event.target).data("page");
+
+        $("#demo").dragend({
+          scrollToPage: page
+        });
+
+        $(event.target).addClass("active");
+
+      })
+
+    });
+    
+    function openNav() {
+    var heightViewport = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+        document.getElementById("sesame").style.height = "100%";
+    }
+
+    function closeNav() {
+        document.getElementById("sesame").style.height = "0%";
+    }
+  </script>
+</body>
+</html>
+<!--
+background: -moz-linear-gradient(top, rgba(0,0,0,0.68) 0%, rgba(209,209,209,0.12) 82%, rgba(254,254,254,0) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,0.68)), color-stop(82%, rgba(209,209,209,0.12)), color-stop(100%, rgba(254,254,254,0)));
+background: -webkit-linear-gradient(top, rgba(0,0,0,0.68) 0%, rgba(209,209,209,0.12) 82%, rgba(254,254,254,0) 100%);
+background: -o-linear-gradient(top, rgba(0,0,0,0.68) 0%, rgba(209,209,209,0.12) 82%, rgba(254,254,254,0) 100%);
+background: -ms-linear-gradient(top, rgba(0,0,0,0.68) 0%, rgba(209,209,209,0.12) 82%, rgba(254,254,254,0) 100%);
+-->
