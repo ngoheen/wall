@@ -29,6 +29,9 @@
 	
 
 }
+.beta-para{
+    background:rgba(255,255,255,0.85);
+}
 .mobile-caption {
 	margin-left:32px;
 	margin-right: 32px;
@@ -107,7 +110,7 @@
 
 <main>
 <div class="fixed-white"></div>
-    <section class="photo1">
+    <section class="photo1 lax" data-rellax-speed="-4" data-rellax-percentage="0.35">
         <div class="col-md-offset-2 col-md-14 col-sm-14 col-sm-offset-2 col-xs-16 col-xs-offset-0 no-side-padding">
         
             <div class="screen"></div>
@@ -157,7 +160,7 @@
         <!-- text -->
         <section class="sub main">
             <div class="row">
-                <div class="col-md-7 col-md-offset-8 col-sm-9 col-sm-offset-6 col-xs-offset-0 col-xs-16">    
+                <div class="col-md-7 col-md-offset-8 col-sm-9 col-sm-offset-6 col-xs-offset-0 col-xs-16 beta-para">    
                     <h4 class="location"><i class="fa fa-map-marker" aria-hidden="true"></i> Cochise County, Ariz.</h4>
                     <h1 class="sub">Main header for ranch Ipsum sub lorem</h1>
                     <div class="byline">
@@ -169,7 +172,7 @@
         </section>
      
         <!-- image -->
-        <section class="sub main">
+        <section class="sub main" style="transform: translateY(calc( -460px / 3));z-index: -100; transform: translateY(calc( -460px / 3));z-index: -100;margin-bottom: calc( -460px / 2.5);">
             <div class="col-md-8 col-sm-8 col-sm-offset-2 col-md-offset-2 photo3">
                 <figure class="full">
                     <img src="images/USATSI_10032938.jpg">
@@ -554,6 +557,15 @@
 </main>
 <script src="js/jquery-2.1.1.min.js"></script>
 <script src="js/dragend.js"></script>
+
+
+
+<script src='http://cdnjs.cloudflare.com/ajax/libs/rellax/1.1.0/rellax.min.js'></script>
+<script>
+    if (window.matchMedia("(min-width: 1024px)").matches) {
+      var rellax = new Rellax('.lax');
+    }
+</script>
 <script>
 $(".speaker img").each(function(i, elem) {
   var img = $(elem);
@@ -565,9 +577,9 @@ $(".speaker img").each(function(i, elem) {
   });
   img.replaceWith(div);
 });
-var high = $( document ).height();
+/* var high = $( document ).height();
 console.log(high);
-$('.fixed-white').css('height', high);
+$('.fixed-white').css('height', high); */
 </script>
 <script>
     $(function() {
