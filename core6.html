@@ -4,10 +4,25 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <title>A pure CSS parallax demo by Keith Clark</title>
+<link href="bootstrap.css" rel="stylesheet">
 
 <link href="css/grid.css" rel="stylesheet">
 <link href="css/wall-story-header2.css" rel="stylesheet">
 <style>
+.glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.photo-move {
+    margin-top: 300px;
+}
 .top-menu > .mobile-logo  {
  	display: none;
 }
@@ -57,13 +72,23 @@
 }
 
 @media (max-width:768px) {
-   
+   .photo-move {
+        margin-top:0;
+   }
     .intro {
     margin-top:50px;
     }
 }
+.para-img {
+    	height:65px;
+    	width: auto;
+    	margin-left: 0;
+    	margin-top:14px;
+    }
 @media (min-width:768px) and (max-width:1023px) {
-  
+  .photo-move {
+        margin-top:0;
+   }
     .intro {
     	margin-top:0;
     }
@@ -71,13 +96,11 @@
     .show-tablet {
     	display: block !important;
     }
-    .para-img {
-    	height:65px;
-    	width: auto;
-    	margin-left: 0;
-    	margin-top:14px;
-    }
+    
    
+}
+.show-tablet {
+    display: block;
 }
 @media (min-width:1024px) {
 	header.substory .top-logo img.wall-logo.show-tablet.hide-mobile {
@@ -289,16 +312,16 @@ display:inline-block;width:19px;height:24px;background-color:#2990D5;padding:5px
     .margin-top-100 {
         margin-top: 0;
     }
-    .photo2,
-   .photo1 {
+	.photo2,
+	.photo1 {
 	position: relative;
 	width: 100%;
 	margin-left: 0%;
 	z-index:0;
-}
-.bbb {
-    margin-left:47px;margin-right:47px;width:calc(100% - 94px);
-}
+	}
+	.bbb {
+    	margin-left:47px;margin-right:47px;width:calc(100% - 94px);
+	}
 
 }
 .content + div + div {
@@ -321,13 +344,56 @@ padding-left:32px !important;
 .icon-star:after, .icon-star-2:before {
     content: "\e00c";
 }
+header .wall-logo {
+    float: left;
+}
+@media (min-width: 768px) {
+/*bootstrap.css:4408*/
+.navbar-toggle {
+display: block;
+}
+.margin-top-300 {
+    margin-top: 0;
+}
+}
+
+@media (max-width: 1023px) and (min-width: 768px){
+.para-img {
+    height: 65px;
+    width: auto;
+    margin-left: 0;
+    margin-top: 14px;
+}
+}
+
+@media (max-width: 1023px) and (min-width: 768px){
+
+.block-desk, .show-tablet {
+    display: block !important;
+}
+}
+.btn-wrap {
+    position: relative;
+}
+.action-button {
+    position: absolute;
+    bottom: 0;
+}
+#core-intro {
+    position: relative;
+}
+#core-intro header {
+    position: absolute;
+    top:0;
+    z-index: 40;
+}
 </style>
 </head>
 <body class="light" id="core">
 
 
     <div class="fixed-white"></div>
-    <br><br><br>
+
     
     
     		
@@ -355,7 +421,7 @@ padding-left:32px !important;
 		
 		<div class="content">
 			<div class="row">
-				<div class="col-md-8 col-md-offset-6 col-sm-16 col-sm-offset-0 col-xs-16 col-xs-offset-0 col-xs-16 bbb" style="">    
+				<div class="col-md-9 col-md-offset-6 col-sm-16 col-sm-offset-0 col-xs-16 col-xs-offset-0 col-xs-16 bbb" style="">    
 					<h4 style="color:#009bff;font-family:'Unify Sans Bold', sans-serif;font-size:16px;text-transform:none;margin-top:30px;margin-bottom:20px">A USA Today Network Special report</h4>
 					<h1 class="core" style="font-size:42px;margin-top:0">Should we build a border wall?</h1>
 					<div class="opener">
@@ -377,7 +443,7 @@ padding-left:32px !important;
 						<div class="col-md-5 col-md-offset-0 col-sm-8 col-sm-offset-6 col-xs-offset-0 col-xs-16">
 						<h5>Documentaries</h5>
 						(4-9 mins.each)
-						<p style="margin-top:10px;margin-bottom:10px;">A groundbreaking series of documenta- ries from the shadows of the wall.</p>
+						<p style="margin-top:10px;margin-bottom:10px;">A groundbreaking series of documentaries from the shadows of the wall.</p>
 						<div class="btn-wrap">
 							<div class="action-button">
 								
@@ -385,7 +451,7 @@ padding-left:32px !important;
 							</div>
 						</div>
 					</div>
-					<div class="col-md-5 col-md-offset-0 col-sm-8 col-sm-offset-6 col-xs-offset-0 col-xs-16">
+					<div class="col-md-5 col-md-offset-0 col-sm-8 col-sm-offset-6 col-xs-offset-0 col-xs-16" style="position: relative;">
 						<h5>Stories</h5>
 						(6-12 mins.each)
 						<p style="margin-top:10px;margin-bottom:10px;">The untold stories of the border, where some face death and some find life.</p>
@@ -415,7 +481,7 @@ padding-left:32px !important;
 		<div class="clearer"></div>
 	</div>
     
-</div>
+
     
     
     
@@ -425,12 +491,28 @@ padding-left:32px !important;
 
 
 
+<div id="core-intro">
+    <header>
+    	
+        	<div style="float:left;width:50%">
+            	<img src="images/logo_black.png" class="wall-logo">
+        	</div>
+        	<div style="float:right;text-align:right;display: table-cell;vertical-align:middle">
+        	    <h4 style="font-family:'Unify Sans SemiBold';display:inline-block;line-height:48px;margin-right: 12px;font-size: 14px"><span class="hide-mobile">Share<img src="images/swoosh.png" style="margin-right:12px;margin-left:6px"></span>Stories</h4>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
 
+		</header>
 	<section class="core-main lax" data-rellax-speed="-4" data-rellax-percentage="0.5">
 		<div class="row">
 			<figure class="full">
         	<img src="images/BigBendAerial.jpg">
-        	<div class="col-md-3 col-md-offset-2 col-sm-5 col-sm-offset-2 col-xs-offset-0 col-xs-16"> 
+        	<div class="col-md-3 col-md-offset-2 col-sm-5 col-sm-offset-1 col-xs-offset-0 col-xs-16"> 
             	<figcaption class="hanging"><b>Photo 1:</b> This photo is right aligned and full width from left margin of 2 columns</figcaption>
         	</div>
     	</figure>
@@ -449,34 +531,53 @@ padding-left:32px !important;
            
         </div>
      </div>
-	
+</div>	
     	
         
     	
     <div class="clear"></div>
     
-    
+    <section>
+        <header>
+            <div style="float:left;width:50%">
+            	<img src="images/logo_black.png" class="wall-logo">
+        	</div>
+        	<div style="float:right;text-align:right;display: table-cell;vertical-align:middle">
+        	    <h4 style="font-family:'Unify Sans SemiBold';display:inline-block;line-height:48px;margin-right: 12px;font-size: 14px"><span class="hide-mobile">Share<img src="images/swoosh.png" style="margin-right:12px;margin-left:6px"></span>Stories</h4>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+		</header>
+		<div class="clearer"></div>  
     <div class="row">
-        <div class="col-md-14 col-md-offset-2 col-sm-14 col-sm-offset-2">
+        <div class="col-md-14 col-md-offset-2 col-sm-16 col-sm-offset-0">
 			<figure class="full">
 				<img src="images/maninwater.jpg">
-				<figcaption class="center"><b>Photo 2:</b> This photo is full-bleed content width placeholder. Cutline for the photo goes here and is centered on desktop.</figcaption>
-			</figure>
+            </figure>
 	    </div>
+	    <div class="col-md-5 col-md-offset-2 col-sm-5 col-sm-offset-1 col-xs-offset-0 col-xs-16"> 
+	    <figcaption class="hanging"><b>Photo 2:</b> This photo is full-bleed content width placeholder. Cutline for the photo goes here and is centered on desktop.</figcaption>
+			</figure>
+			</div>
 	</div>
 
+</section>
 
 
 
 
 
-
-
+<div class="clearer"></div>
      
     <section class="sub main lax story-move" data-rellax-speed="4" data-rellax-percentage="0.75">
         <div class="row">
-            <div class="col-md-7 col-md-offset-8 col-sm-9 col-sm-offset-6 col-xs-offset-0 col-xs-16 margin-top-60 core-start">    
-                <h4 class="location">Segment I &mdash; Gulf to Laredo</h4>
+            <div class="col-md-7 col-md-offset-8 col-sm-9 col-sm-offset-6 col-xs-offset-0 col-xs-16 core-start">    
+                <h4 class="location"><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>Segment I &mdash; Gulf to Laredo</h4>
                 <h1 class="sub">Main header header for article</h1>
                 <div class="byline">
 					<b>Dennis Wagner</b> | Arizona Republic <span class="show-mobile"<br></span> <span class="hide-mobile">|</span> USA TODAY NETWORK
@@ -522,13 +623,13 @@ padding-left:32px !important;
                 <p>Those captured were being led to vans when a radio call announced more migrants in the next ravine. The agents took off. Alone with a dozen migrants, I identified myself as a journalist and began inter- viewing a father holding a baby. Others gathered around as the man asked, "Are you Border Patrol?"</p>
                 <p>"No, a journalist." He hesitated. "Well, then, can we just go?"</p>
                 <p>I told him it was not up to me. The entire group stayed until agents returned.</p>
-                <p>At the port of entry in Nogales in the late 1990s, vehicle inspections seemed endless and tedious. Then, suddenly, 30 young Mexicans made a mad dash through the checkpoint -- a suicide run. They dodged around cars and twisting away from overwhelmed inspectors. A few were caught; most got away.</p>
+                <p>At the port of entry in Nogales in the late 1990s, vehicle inspections seemed endless and tedious. Then, suddenly, 30 young Mexicans made a mad dash through the checkpoint – a suicide run. They dodged around cars and twisting away from overwhelmed inspectors. A few were caught; most got away.</p>
             </div>
         </div>        
     </section>       
                 
  	
-			<!-- image placeholder --> 
+			<!– image placeholder –> 
             <div class="col-xs-16 col-sm-16 col-sm-offset-0 col-xs-offset-0 photo2 margin-top-60 photo2">
                 <figure class="full">
                     <img src="images/Wagner1.jpg">
@@ -537,7 +638,7 @@ padding-left:32px !important;
             </div>
                      
           
-                
+  <div class="clearer"></div>              
               
 	<section class="sub main">
         <div class="row">
@@ -572,9 +673,9 @@ padding-left:32px !important;
             </div>
         </section>
         
-<!-- =============== -->   
-<!-- TOO BIG A SPACE -->        
-<!-- =============== -->  
+<!– =============== –>   
+<!– TOO BIG A SPACE –>        
+<!– =============== –>  
         
     <section class="sub main">
         <div class="row">
@@ -582,12 +683,12 @@ padding-left:32px !important;
 
                 <p>We're more than 13 miles inland from the water's edge before the first fence looms, rust-colored posts jutting up alongside a cornfield. It's a bollard-style barricade, 18 feet tall. Two Border Patrol vehicles sit at a vacant road checkpoint nearby.</p>
                 <p>Moving upriver, a gap appears, then another – the first of many. We climb to 1,000 feet and higher for perspective.</p>
-                <p>Most of the border here is a quilt of crop lands and other private property within the floodplain, contained in a system of levees. From above, the security scheme seems random and nonsensical -- until you learn the rest of the story.</p>
+                <p>Most of the border here is a quilt of crop lands and other private property within the floodplain, contained in a system of levees. From above, the security scheme seems random and nonsensical – until you learn the rest of the story.</p>
                 <p>After passage of the Secure Fence Act in 2006, Customs and Border Protection used eminent domain to seize (and pay for) hundreds of private parcels along the Rio Grande. The cost was enormous, the political backlash furious. More than 300 cases went to court. Some were settled for as little as a $100 easement. In one, the country paid $5 million for six acres.</p>
                 <p>As of summer 2017, nine years after the first cases were filed, 85 were still in litigation.</p>
                 <p>At the same time, the river's bending hydrology created design nightmares. The border adheres to a pretzel-like channel. Fencing to match would have meant financial chaos and potential catastrophe. A barrier alongside any curving river acts as a dam at high water, backing up the flow and then collapsing into a massive a flood.</p>
                 <p>Moreover, such construction likely would violate a treaty with Mexico that is overseen by the International Boundary and Water Com- mission.</p>
-                <p>As a result, Customs and Border Protection was forced to erect straight-line fences, often on levees that are far from the river, the border. Some sit more than a mile away. Some are so distant we won't even see them from our helicopter. These distances leave some Tex- ans, and their land, in a nebulous zone between border and fence.</p>
+                <p>As a result, Customs and Border Protection was forced to erect straight-line fences, often on levees that are far from the river, the border. Some sit more than a mile away. Some are so distant we won't even see them from our helicopter. These distances leave some Texans, and their land, in a nebulous zone between border and fence.</p>
                 <p>We fly north past Harlingen, Progreso and Hidalgo. The fence stops, starts, stops again. Gates along the way allow farmers through.</p>
             </div>
         </div>
@@ -595,7 +696,7 @@ padding-left:32px !important;
 
                 
     <section class="sub main">
-        <!-- image --> 
+        <!– image –> 
         <div class="col-xs-16 col-sm-16 col-sm-offset-0 col-xs-offset-0 photo2">
             <figure class="full">
                 <img src="images/EminentDomain.jpg">
@@ -635,9 +736,9 @@ padding-left:32px !important;
         	</div>
     	</section>
     	
-<!--  ========================= -->
-    	<!-- section 2 -->
-<!--  ========================= -->
+<!–  ========================= –>
+    	<!– section 2 –>
+<!–  ========================= –>
 
  	<section class="sub main" style="margin-top:100px">
             <div class="col-xs-16 col-sm-16 col-sm-offset-0 col-xs-offset-0 photo2">
@@ -652,16 +753,16 @@ padding-left:32px !important;
 		<section class="sub main" style="margin-top:100px;">
             <div class="row">
                 <div class="col-md-7 col-md-offset-8 col-sm-9 col-sm-offset-6 col-xs-offset-0 col-xs-16">    
-                    <h4 class="location">Segment II &mdash; Laredo (Trump)</h4>
+                    <h4 class="location"><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>Segment II &mdash; Laredo (Trump)</h4>
                     <h1 class="sub">Main header header for article</h1>
                 </div>
             </div>
 		</section>
 		
 		
-    	<section class="sub main" style="position:relative;z-index:40;">
+    	<section class="sub main">
         	<div class="row">
-            	<div class="col-md-7 col-md-offset-8 col-sm-8 col-sm-offset-6 col-xs-offset-0 col-xs-16">  
+            	<div class="col-md-7 col-md-offset-8 col-sm-8 col-sm-offset-6 col-xs-offset-0 col-xs-16 core-start">  
                 	<p>In July 2015, Donald Trump crossed the bridge between Texas and the Mexican state of Coahuila.</p>
                 	<p>He was in Laredo for another in a string of campaign rallies, mixtures of festivity and fury with crowds that would cheer his promises, jeer protesters and eventually propel the candidate to presidential victory.</p>
                 	<p>On that day, Trump wore a pair of white golf shoes and, for the first time, a baseball cap emblazoned with his motto: "Make America Great Again."<p>
@@ -709,14 +810,14 @@ padding-left:32px !important;
                 
                 
                 
-<!-- =============== -->   
-<!-- TOO BIG A SPACE -->        
-<!-- =============== -->             
+<!– =============== –>   
+<!– TOO BIG A SPACE –>        
+<!– =============== –>             
 
-<!-- DATA -->                
+<!– DATA –>                
 		<section class="sub main">
             <div class="row">
-<!-- DATA -->    <div class="col-md-4 col-md-offset-2 col-sm-9 col-sm-offset-6 col-xs-offset-0 col-xs-16">
+<!– DATA –>    <div class="col-md-4 col-md-offset-2 col-sm-9 col-sm-offset-6 col-xs-offset-0 col-xs-16">
 					<h2 class="graphic-title margin-top-60" style="letter-spacing: -0.025em;font-size:50px;fot-family:'Unify Sans';font-weight: normal;margin-bottom:0;">Data here</h2>
 				<figcaption class="hanging" style="margin-top:0">This is some sort of data that goes here; cost of border wall for example</figcaption>
 				</div>
@@ -739,7 +840,7 @@ padding-left:32px !important;
         <div class="row">
             <figure class="full photo-back col-md-14 col-md-offset-2">
                 <img src="images/Trump3.jpg">
-                <figcaption class="hanging col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-offset-0 cutline-padding">
+                <figcaption class="hanging col-md-5 col-md-offset-0 col-sm-5 col-sm-offset-1 col-xs-offset-0 cutline-padding">
                     <b>Cutline title goes here:</b> Cutline for the photo goes here on mobile. And might be quite long.
                 </figcaption>
             </figure>
@@ -748,9 +849,9 @@ padding-left:32px !important;
                   
                 
                 
-<!-- =============== -->   
-<!-- TOO BIG A SPACE -->        
-<!-- =============== -->                
+<!– =============== –>   
+<!– TOO BIG A SPACE –>        
+<!– =============== –>                
                 
                 
                 
@@ -789,7 +890,7 @@ padding-left:32px !important;
 		<section class="sub main" style="margin-top:100px">
             <div class="row">
                 <div class="col-md-7 col-md-offset-8 col-sm-9 col-sm-offset-6 col-xs-offset-0 col-xs-16">    
-                    <h4 class="location"><i></i>Segment III &mdash; Laredo through Big Bend to Fort Hancock/El Paso</h4>
+                    <h4 class="location"><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>Segment III &mdash; Laredo through Big Bend to Fort Hancock/El Paso</h4>
                     <h1 class="sub">Main header header for article</h1>
                    
                 </div>
@@ -802,7 +903,7 @@ padding-left:32px !important;
             	<div class="col-md-7 col-md-offset-8 col-sm-8 col-sm-offset-6 col-xs-offset-0 col-xs-16">  
 
 					<p>Just outside Laredo, the Rio Grande swivels through rolling hills of desert scrub, wider, with fewer bends and occasional island. The red line on the video screen shows some islands on U.S. side, some in Mexico.</p>
-					<p>The banks take on a new tint of green -- clumps of willow and cat- tails. Near the Mexican town of Hidalgo (not Texas), on a bluff, a Border Patrol truck is parked with a perfect view upstream – the first in a long time.</p>
+					<p>The banks take on a new tint of green – clumps of willow and cat- tails. Near the Mexican town of Hidalgo (not Texas), on a bluff, a Border Patrol truck is parked with a perfect view upstream – the first in a long time.</p>
 					<p>Overall, the notion of a wall alone stopping illegal immigration is detached from reality. Experts and most people who live along the border, whatever their politics, would agree that a wall would be effective only where sufficiently backed by agents and technology. Any wall can be surmounted. Eventually someone must be watching the other side.</p>
 
 					<p>But the Trump campaign recognized, accurately, that much of the border has no physical barrier.</p>
@@ -825,9 +926,9 @@ padding-left:32px !important;
             </div>
         </section>
 
-<!-- =============== -->   
-<!-- TOO BIG A SPACE -->        
-<!-- =============== --> 
+<!– =============== –>   
+<!– TOO BIG A SPACE –>        
+<!– =============== –> 
 
 		<section class="sub main">
         	<div class="row">
@@ -855,7 +956,7 @@ padding-left:32px !important;
         </section>
 
 
-<!-- fix spacing -->
+<!– fix spacing –>
 
 
 		<section class="sub main">
@@ -869,7 +970,7 @@ padding-left:32px !important;
 			</div>
 		</section>
 
-<!-- fix spacing -->
+<!– fix spacing –>
 
 
  		<section class="sub main">
@@ -887,12 +988,12 @@ padding-left:32px !important;
 					<p>This would require a determination of price per mile, the expected reduction of illegal crossings, and an acceptable expense per deterred person.</p>
 					<p>For illustration, let's say a wall along this remote stretch of the Rio Grande might cost $10 million per mile. And it would reduce the number of illegal border crossings by 50 percent. Is that worth it?</p>
 					<p>The price tag above is made up, of course. There is no official projec- tion on the wall's cost per mile.</p>
-					<p>The GAO calculated in 2009 that the existing pedestrian fences – those tall steel bollards we first saw 13 miles inland, and which we now haven't seen for hundreds of miles -- cost about $6.5 million per mile. The most expensive mile was $15.1 million, the least, $400,000.</p>
+					<p>The GAO calculated in 2009 that the existing pedestrian fences – those tall steel bollards we first saw 13 miles inland, and which we now haven't seen for hundreds of miles – cost about $6.5 million per mile. The most expensive mile was $15.1 million, the least, $400,000.</p>
 					<p>The Texas border is about 1,200 miles. Twelve hundred miles times $6.5 million equals $7.8 billion. A pittance, compared to $700 billion in defense spending.</p>
 					<p>But we cannot extrapolate anything about the per-mile cost of a wall.</p>
 					<p>&bull; A wall almost certainly will be more expensive than fence due to its height, volume and engineering. There are no details to calculate. No prototype designs have been publicly selected or tested. But, to date, the president has said his wall should be at least 40 feet, or at least 30 feet, or no less than 20 feet.</p>
 					<p>&bull; GAO fence calculations did NOT include land acquisition, litigation, and utility relocation costs. Those expenses figure to be huge, especially in Texas.</p>
-					<p>&bull; The existing fencing was built in relatively easy and inex- pensive locations (less eminent domain and easier access, topogra- phy, etc.) If those barriers are ripped out for replacement by a wall, it will add cost. As more difficult locations are chosen, costs will esca- late.</p>
+					<p>&bull; The existing fencing was built in relatively easy and inexpensive locations (less eminent domain and easier access, topogra- phy, etc.) If those barriers are ripped out for replacement by a wall, it will add cost. As more difficult locations are chosen, costs will esca- late.</p>
 					<p>We have seen a hapless array of price estimates for a wall project – from Trump projections as low as $4 billion to Democrats saying $60 billion. Yet no one even knows how many miles of wall will be built, in what locations, using what design.</p>
 					<p>Still, for the sake of discussion, $10 million per mile might be a ball- park estimate in difficult terrain.</p>
 					<p>The area in question is part of the Border Patrol's Big Bend Sector, formerly known as the Marfa Sector with 510 miles of border.</p>
@@ -941,7 +1042,7 @@ padding-left:32px !important;
         
 
 
-<!-- fix caption -->
+<!– fix caption –>
 
 
 		<section class="sub main">
@@ -978,7 +1079,7 @@ padding-left:32px !important;
    
    
    
-   <!-- fix caption -->     
+   <!– fix caption –>     
         
 		<section class="sub main">
         	<div class="row">
@@ -1027,16 +1128,16 @@ padding-left:32px !important;
 					<p>At the El Paso international crossing, people swarm into Juarez, the Chihuahua city once known as the murder capital of the world.</p>
 					<p>Vendors dodge through traffic on the bridge, hawking souvenirs and junk food. Through mesh fencing, fresh graffiti is visible on a concrete canal below: "Resist Berlin Wall."</p>
 					<p>Border communities are bonded by blood ties, business, history, cul- ture and language. But they also are distinct. Entering the Mexican side on foot, a transition is visible, palpable: Life seems more chaotic, colorful and harsh.</p>
-					<p>A few amputees in wheelchairs nod for donations. Smells, from taco stands to trash fires, seem emphatic. The plaza, an open market, buzz- es with stands selling roasted crickets, fruit ices and balloons. A band in the park plays ranchero ballads.</p>
+					<p>A few amputees in wheelchairs nod for donations. Smells, from taco stands to trash fires, seem emphatic. The plaza, an open market, buzzes with stands selling roasted crickets, fruit ices and balloons. A band in the park plays ranchero ballads.</p>
 					<p>From the outside, Ciudad Juarez is all about cartel terror. The violence at one point claimed more than 3,000 a year – roughly 30 times the slayings in Phoenix. Parents did not dare let children play outside. But the crime wave abated some after soldiers replaced corrupt police.</p>
-					<p>About eight blocks into the city, Esteban Valdez is selling necklaces on the sidewalk, in the foreground of a nine-story mural honoring the late Mexican pop singer, Juan Gabriel. At a mention of "el muro" – the wall -- Valdez shakes his head. "We need a bridge. We need to make friends," he says. "You build a wall, you make enemies. It's disrespectful."</p>
+					<p>About eight blocks into the city, Esteban Valdez is selling necklaces on the sidewalk, in the foreground of a nine-story mural honoring the late Mexican pop singer, Juan Gabriel. At a mention of "el muro" – the wall – Valdez shakes his head. "We need a bridge. We need to make friends," he says. "You build a wall, you make enemies. It's disrespectful."</p>
 					<p>Valdez grew up in the United States without papers, went to high school, got a job in concrete work. One day in 2012, Border Patrol agents nabbed him.</p>
-					<p>Asked whether he would help build the wall, given his construction ex- perience, he laughs. "No way. Not even if they pay me a million bucks."</p>
-					<p>As Valdez speaks with reporters, passersby on the sidewalk stop to lis- ten, then ask if they, too, can be interviewed about the wall.</p>
+					<p>Asked whether he would help build the wall, given his construction experience, he laughs. "No way. Not even if they pay me a million bucks."</p>
+					<p>As Valdez speaks with reporters, passersby on the sidewalk stop to listen, then ask if they, too, can be interviewed about the wall.</p>
 					<p>Outside the cathedral, toddlers play kick the can. Young girls in fluffy dresses pose for quinceanera pictures with their dads. Teenagers in an outdoor choir march down the street singing a hymn for the Feast of the Sacred Heart.</p>
-					<p>Juarez has two million residents. A minority are cartel operatives, rap- ists and criminals. The others arguably are victims of a black market built on criminal greed, Mexican corruption and America's craving for drugs.</p>
+					<p>Juarez has two million residents. A minority are cartel operatives, rapists and criminals. The others arguably are victims of a black market built on criminal greed, Mexican corruption and America's craving for drugs.</p>
 					<p>Weeks earlier, Attorney General Jeff Sessions visited El Paso and talked about border security with metaphors of warfare: "It is here, on this sliver of land where we establish a beachhead against the cartels, the transnational street gangs like Mara Salvatrucha 13, and the hu- man traffickers. This is ground zero – this is the front lines, and this is where we take our stand."</p>
-					<p>Back in El Paso, there is another street celebration underway. The main show is an Alice Cooper concert sponsored by Budweiser. Tickets start at $35, double the average wage of a Juarez resident. Based on FBI crime data, El Paso is consistently ranked among America's safest cit- ies of over 500,000 population.</p>
+					<p>Back in El Paso, there is another street celebration underway. The main show is an Alice Cooper concert sponsored by Budweiser. Tickets start at $35, double the average wage of a Juarez resident. Based on FBI crime data, El Paso is consistently ranked among America's safest cities of over 500,000 population.</p>
 				</div>
 			</div>
 		</section>
@@ -1055,8 +1156,8 @@ padding-left:32px !important;
         
  		<section class="sub main" style="margin-top:100px;">
             <div class="row">
-                <div class="col-md-7 col-md-offset-8 col-sm-9 col-sm-offset-6 col-xs-offset-0 col-xs-16" style="background:rgba(255,255,255,0.85);position:relative;z-index:40;">    
-                    <h4 class="location">Segment IV &mdash; El Paso to Nogales</h4>
+                <div class="col-md-7 col-md-offset-8 col-sm-9 col-sm-offset-6 col-xs-offset-0 col-xs-16 core-start">    
+                    <h4 class="location"><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>Segment IV &mdash; El Paso to Nogales</h4>
                     <h1 class="sub">Main header header for article</h1>
 					<p>At the edge of New Mexico, the Rio Grande continues north while the international boundary abruptly beelines west. Following no land feature, it is now just an arbitrary line on maps.</p>
 					<p>The first drawing, after Mexico lost much of the Southwest in a war with the United States, required 10 years of tortured expeditions, fierce disputes and fending off Apaches during the 1850s.</p>
@@ -1064,7 +1165,7 @@ padding-left:32px !important;
 			</div>
 		</section>
 
-<div class="lax" data-rellax-speed="1" data-rellax-percentage="0.75">
+<div class="lax" data-rellax-speed="1" data-rellax-percentage="0.15">
 
 		<div class="col-md-8 col-sm-8 col-sm-offset-2 col-md-offset-2 photo3">
 			<figure class="full">
@@ -1092,7 +1193,7 @@ padding-left:32px !important;
 					<p>On both sides, mile upon mile of bleak, flat, red-brown earth, lightly peppered with desert shrubs, devoid of humans.</p>
 					<p>A reasonable person might wonder: Why did Customs and Border Protection build fences through this empty desert?</p>
 					<p>The answer involves a bit more history.</p>
-					<p>In 1907, to combat marauding along the border zone, President The- odore Roosevelt established a 60-foot federal easement along the entire boundary -- except along the Rio Grande in Texas. The idea of this so-called Roosevelt Reservation was to maintain a strip "free from obstruction as a protection against the smuggling of goods be- tween the United States and Mexico."</p>
+					<p>In 1907, to combat marauding along the border zone, President The- odore Roosevelt established a 60-foot federal easement along the entire boundary – except along the Rio Grande in Texas. The idea of this so-called Roosevelt Reservation was to maintain a strip "free from obstruction as a protection against the smuggling of goods be- tween the United States and Mexico."</p>
 					<p>A century later, Congress adopted the Secure Fence Act of 2006, re- quiring construction of 700 miles of border barrier. Private property costs ruled out much of Texas, but the Roosevelt Reservation made New Mexico's border an ideal location to satisfy the congressional mandate.</p>
 					<p>Columbus, N.M., population 1,623, is the largest metropolis near the state's border. In 1916, the village came under attack by Mexican rev- olutionary Pancho Villa, causing the United States to launch a puni- tive military siege south of the border.</p>
 					<p>Thanks to the Roosevelt Strip, Columbus got fencing a decade ago – about three miles long and 15 feet high. But the barrier wasn't fool- proof: In 2011, the local mayor and some other folks pleaded guilty to charges of smuggling guns into Mexico.</p>
@@ -1109,7 +1210,7 @@ padding-left:32px !important;
 		
 		
 		<section class="sub main">
-			<!-- image placeholder --> 
+			<!– image placeholder –> 
             <div class="col-xs-16 col-sm-16 col-sm-offset-0 col-xs-offset-0 photo2">
                 <figure class="full">
                    <img src="images/Naco-1.jpg">  
@@ -1148,14 +1249,14 @@ padding-left:32px !important;
         
            
    
-    <!-- fix caption here -->
+    <!– fix caption here –>
     
          
  
         <section class="sub main">
             <div class="row">
                 <div class="col-md-7 col-md-offset-8 col-sm-9 col-sm-offset-6 col-xs-offset-0 col-xs-16"> 
-                    <p>Approaching the Huachuca Mountains, a giant sign is visible at a strange compound: "Save the United States -- Secure the Border First."</p>
+                    <p>Approaching the Huachuca Mountains, a giant sign is visible at a strange compound: "Save the United States – Secure the Border First."</p>
                     <p>Made from 120,000 U.S. flags, this message is brought to you by Glenn Spencer and his nonprofit American Border Patrol, which touts itself as "the only non-governmental organization that monitors the border on a regular basis."</p>
                     <p>In an interview, Spencer says he started flying the border around 2006 to see how much fence would actually get built.</p>
                     <p>Spencer says he's devised seismic sensors that detect and distin- guish human traffic, plus an automated drone response system that could secure the entire U.S.-Mexico line at a cost of $150,000 per mile.</p>
@@ -1175,7 +1276,7 @@ padding-left:32px !important;
         
         
         
- <!-- fix caption here -->
+ <!– fix caption here –>
  
  
  
@@ -1200,7 +1301,7 @@ padding-left:32px !important;
             	<div class="row">
                 	<div class="col-md-7 col-md-offset-8 col-sm-9 col-sm-offset-6 col-xs-offset-0 col-xs-16">  
 					<p>Today, jaguars occasionally follow a similar path north.</p>
-					<p>The spotted cats once ranged from South America deep into the American Southwest. Today, wandering males sometimes visit Arizona – one was photographed in the Huachucas last winter -- from northern Mexico. But, for decades, there have been no breeding jag- uars in the United States. They were rooted out by all sorts of human activity, especially hunting and habitat loss. It's an old story.</p>
+					<p>The spotted cats once ranged from South America deep into the American Southwest. Today, wandering males sometimes visit Arizona – one was photographed in the Huachucas last winter – from northern Mexico. But, for decades, there have been no breeding jag- uars in the United States. They were rooted out by all sorts of human activity, especially hunting and habitat loss. It's an old story.</p>
 					<p>The battle to save or revive an endangered species is more than symbolism. For naturalists, the giant feline is like a canary in a coal mine: If a predator at the top of the food chain cannot survive, that sug- gests the entire ecosystem is in trouble.</p>
 					<p>Which explains why conservationists continue pushing jaguar recovery efforts, and why President Trump's proposed wall looms as an ecologist's nightmare.</p>
 					<p>Put simply, a 30-foot barrier would blockade virtually all non-flying wildlife. It would close off migration routes. It would block access to water. And there would be no legal recourse.</p>
@@ -1227,7 +1328,7 @@ padding-left:32px !important;
 
 
 
-<!-- fix caption here -->
+<!– fix caption here –>
 
 
 		<section class="sub main">
@@ -1246,7 +1347,7 @@ padding-left:32px !important;
                 <div class="col-md-7 col-md-offset-8 col-sm-9 col-sm-offset-6 col-xs-offset-0 col-xs-16">  
 
 					<p>Jaguars also have visited the next range west, the Patagonia Moun- tains. We fly over them and descend into Nogales, the most heavily fortified town so far. Bollard fence doubles with vehicle barriers, slicing through heavily patrolled neighborhoods.</p>
-					<p>Nogales, Sonora, is a sprawl of factories and beehive apartments, home to about 200,000 people. That's 10 times the population of its sibling town in Arizona. The size difference is typical: Mexican border communities swell with migrants who didn't make it across -- or got deported. Many wind up stranded, employed in maquilas, mak- ing as little as $7 a day.</p>
+					<p>Nogales, Sonora, is a sprawl of factories and beehive apartments, home to about 200,000 people. That's 10 times the population of its sibling town in Arizona. The size difference is typical: Mexican border communities swell with migrants who didn't make it across – or got deported. Many wind up stranded, employed in maquilas, mak- ing as little as $7 a day.</p>
 					<p>Manufactured goods, crops and other legal products pass north through checkpoints all along the line. So does much of the narcotics smuggled into the United States, slipping by inspectors.</p>
 					<p>Trucks at the Mariposa Port of Entry in Nogales sometimes get backed up for three hours. The number of lanes was doubled in an expansion project, but Congress did not set aside money for staffing. So the new lanes remain closed.</p>
 
@@ -1267,21 +1368,21 @@ padding-left:32px !important;
 		<div class="clearer"></div>
 
 
-<!-- ===================== -->
-<!-- ===== SECTION V ===== -->
-<!-- ===================== -->
+<!– ===================== –>
+<!– ===== SECTION V ===== –>
+<!– ===================== –>
 
 		<section class="sub main" style="margin-top:100px">
             <div class="row">
                 <div class="col-md-7 col-md-offset-8 col-sm-9 col-sm-offset-6 col-xs-offset-0 col-xs-16" style="background:rgba(255,255,255,0.85);position:relative;z-index:40;">    
-                    <h4 class="location">Segment V: Nogales to Yuma</h4>
+                    <h4 class="location"><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>Segment V: Nogales to Yuma</h4>
                     <h1 class="sub">Main header header for article</h1>
 					<p>Outside of Nogales, the helicopter lifts high into the Parjarito Wilderness, some of the wildest and steepest border terrain. Smuggling trails zig-zag through canyons, over ridges.</p>
 					<p>A road sign just outside of Arivaca advises motorists they are entering Coronado National Forest, "Land of Many Uses." A bit further, another sign amplifies: "Travel Caution: Smuggling and Illegal Immigration May Be Encountered in this Area."</p>
 				</div>
 			</div>
 			<div class="clearer"></div>
-			<section class="sub main margin-top-60 lax"  data-rellax-speed="2" data-rellax-percentage="0.15">
+			<section class="sub main margin-top-60 lax"  data-rellax-speed="3" data-rellax-percentage="0.5">
                 <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 photo3" style="margin-top:300px">
                     <figure class="full">
                         <img src="images/RapeTree.jpg">
@@ -1300,11 +1401,11 @@ padding-left:32px !important;
 				<div class="row">	
 				 <div class="col-md-7 col-md-offset-8 col-sm-9 col-sm-offset-6 col-xs-offset-0 col-xs-16"> 	
 					<p>In the 1990s and 2000s, Arizona became Ground Zero for desperados.</p>
-					<p>Violence grew so intense in 2010 that local rancher David Lowell created a "Map of Atrocities," marking locations of shootouts and other horrible events: One dot shows where Border Patrol Agent Brian Terry was killed by Mexican bandits; another where a cowpoke found a decapitated head; a third locates a so-called "rape tree" where coyotes – human smugglers -- purportedly hung undergarments of fe- male clients after sexually assaulting them.</p>
+					<p>Violence grew so intense in 2010 that local rancher David Lowell created a "Map of Atrocities," marking locations of shootouts and other horrible events: One dot shows where Border Patrol Agent Brian Terry was killed by Mexican bandits; another where a cowpoke found a decapitated head; a third locates a so-called "rape tree" where coyotes – human smugglers – purportedly hung undergarments of fe- male clients after sexually assaulting them.</p>
 					<p>For much of this border, natural barriers are fortified only by barbed wire. To build a wall would require other construction first. There is no road.</p>
 					<p>Now, 600 companies are vying for wall contracts of two types: Some contractors will submit plans for a structure of steel-reinforced con- crete. Others are invited to propose creative designs.</p>
 					<p>A few experts have toyed with satirical ideas. Mexican architect Leonardo Diaz-Borioli came up with a 2,000-mile, flamingo-pink barrier that would also serve as a prison-factory where captured im- migrants must work. Ron Rael, a California design engineer, came up with a concept he calls, "Border Wall as Infrastructure," containing taco shops, a transnational volleyball court and other amenities.</p>
-					<p>Whatever the design, federal bid requirements call for a nearly im- penetrable and unclimbable barrier, 20 to 30 feet tall -- the height of five men. The wall must be anchored in concrete at least six additional feet underground to prevent tunneling. Its foundation must support pillars every 10 to 30 feet. The structure must be at least eight inches thick, and able to withstand at least 30 minutes of assault by sledgehammer, acetylene torch or power impact tools.</p>
+					<p>Whatever the design, federal bid requirements call for a nearly im- penetrable and unclimbable barrier, 20 to 30 feet tall – the height of five men. The wall must be anchored in concrete at least six additional feet underground to prevent tunneling. Its foundation must support pillars every 10 to 30 feet. The structure must be at least eight inches thick, and able to withstand at least 30 minutes of assault by sledgehammer, acetylene torch or power impact tools.</p>
 				</div>
 			</div>
 		</section>
@@ -1330,7 +1431,7 @@ padding-left:32px !important;
                     <p>Before the cranes and cement mixers can roll in, the existing 4-wheel- drive tracks will have to be bulldozed. Before flatbed trucks arrive carrying 30,000-pound precast slabs of wall, new roads will have to be cut along the boundary line.</p>
                     <p>All of this will require a substantial labor force, security, places for workers to stay, food services. Some contractors may need to create mobile villages.</p>
                     <p>But the real challenges is topography, geology and hydrology.</p>
-                    <p>Most of the 2,000 mile border landscape is magnificent, severe, res- olute, imposing, serene -- virtually unchanged for eons. Wall builders will have to deal with rivers, sand dunes, cliffs, fierce winds, flash floods and more.</p>
+                    <p>Most of the 2,000 mile border landscape is magnificent, severe, res- olute, imposing, serene – virtually unchanged for eons. Wall builders will have to deal with rivers, sand dunes, cliffs, fierce winds, flash floods and more.</p>
 
                     <p>The job is not impossible. Think of the Great Pyramids, Stonehenge and Taj Mahal. With enough machinery, manpower, materials and money, a wall can go up almost anywhere. For civil engineers, the question is not whether a project can be done, but at what cost?</p>
 
@@ -1349,7 +1450,7 @@ padding-left:32px !important;
                     <p>Either way, those responsible for enforcement methods cannot win. When migrants cross, border hawks call for barricades. Those barricades inevitably push border crossers deeper into the perilous outback. Deaths are as predictable as the outcry from human rights organizations.</p>
                     
 
-                    <p>The helicopter passes over fences guarding small towns -- Sasabe and Sonoyta – then continues into Organ Pipe National Monument.</p>
+                    <p>The helicopter passes over fences guarding small towns – Sasabe and Sonoyta – then continues into Organ Pipe National Monument.</p>
                     <p>Once overrun with drug runners and labeled America's most danger- ous national park, Organ Pipe shut down after a ranger was killed by cartel gunmen in 2002. Vehicle barriers got built. More agents were assigned. The place reopened in 2014.</p>
                     <p>Further west is perhaps the most bleak, isolated and empty border place of all: The Barry M. Goldwater Air Force Range. The military reservation, closed to the public, is training ground for F-16 and A-10 fighter pilots. A fake town near the border provides target practice for bombing and strafing practice.</p>
                     <p>A mini-volcano looms dark brown against the dull Sonoran wasteland, with a near perfect crater top.</p>
@@ -1367,22 +1468,25 @@ padding-left:32px !important;
 
 
 <div class="clearer"><div>
-<!-- ====================== -->
-<!-- ===== SECTION VI ===== -->
-<!-- ====================== -->
+<!– ====================== –>
+<!– ===== SECTION VI ===== –>
+<!– ====================== –>
 
         <section class="sub main">
             <div class="row">
-                <div class="col-md-7 col-md-offset-8 col-sm-9 col-sm-offset-6 col-xs-offset-0 col-xs-16">    
-                    <h4 class="location">Segment VI: Yuma to San Ysidro</h4>
+                <div class="col-md-7 col-md-offset-8 col-sm-9 col-sm-offset-6 col-xs-offset-0 col-xs-16 core-start">    
+                    <h4 class="location"><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>Segment VI: Yuma to San Ysidro</h4>
                     <h1 class="sub">Main header header for article</h1>
                      <p>The border takes an odd turn in Yuma, curling north along a dry, obsolete channel of the Colorado River, its water already diverted into canals upstream.</p>
                 </div>
             </div>
         </section>
-        
-        <section class="sub main margin-top-60">
-            <div class="col-md-8 col-md-offset-2 photo3">
+
+                
+                
+                
+        <section class="sub main margin-top-60 lax" data-rellax-speed="3" data-rellax-percentage="0.5">
+            <div class="col-md-8 col-md-offset-2 photo3 photo-move">
                 <figure class="full">
                     <img src="images/Yuma1.jpg">
                 </figure>
@@ -1392,9 +1496,9 @@ padding-left:32px !important;
             </div>
         </section>
                    
-         <section class="sub main">          
+         <section class="sub main margin-top-300">          
             <div class="row">
-                <div class="col-md-7 col-md-offset-8 col-sm-9 col-sm-offset-6 col-xs-offset-0 col-xs-16" style="background:rgba(255,255,255,0.85);"> 
+                <div class="col-md-7 col-md-offset-8 col-sm-9 col-sm-offset-6 col-xs-offset-0 col-xs-16"> 
                    
                     <p>Heavy fencing runs 300 feet off the international boundary, under watch by numerous Border Patrol agents. Barriers cut along residential tracts and vegetable fields.</p>
                     <p>In California, we cross Imperial County's sand dunes, a 45-mile-long recreation area. The smooth, gritty, surreal landscape represents a challenge for Customs and Border Protection. </p><p>Seven miles of so-called "floating fence" have been designed to adjust with shifting dunes.</p>
@@ -1461,7 +1565,7 @@ padding-left:32px !important;
                     <p>Arizona ranchers, spitting mad about border security, conceded they have not actually seen any smugglers on their range for months.</p>
                     <p>At a New Mexico Forward Operating Base – the tip of the Border Pa- trol enforcement spear – agents had not captured an illegal crosser in eight days. Such experiences would have been unheard of a decade ago, when migrants carrying tote bags could be spotted traipsing through border-town backstreets and slipping through farm fields all over the Southwest.</p>
                     <p>But the diminishing flow also shows up in Border Patrol data. Appre- hensions peaked in fiscal 2000, with 1.7 million apprehensions. This year, even with more than double the agents, arrests likely will total fewer than 300,000.</p>
-                    <p>While that's still a lot of migrants -- and drugs continue to flow -- Trump can take credit: Over the past six months, fears generated by his rhetoric spurred a dramatic drop in border traffic.</p>
+                    <p>While that's still a lot of migrants – and drugs continue to flow – Trump can take credit: Over the past six months, fears generated by his rhetoric spurred a dramatic drop in border traffic.</p>
                     <p>There are legitimate policy and value disputes about building walls.</p>
                     <p>But, whether viewed from a helicopter, an Arizona ranch, a back- street in Juarez or the White House, decisions require a grounding in facts. Chanting "Build that wall" is not a simple answer, but a formula for failure. What kind of wall? Where? And how much?</p>
                     <p>After 2,000 miles, takeaways are simple and nonpartisan: The border is not just a line, but a kaleidoscope of unique places, problems and people.</p>

@@ -1190,10 +1190,13 @@ ul.lorax {
         padding: 0 16px;
     }
    .sub.main {
-        background: none;
         margin: 40px 0;
         padding-left: 32px;
         padding-right: 32px;
+   }
+   #core .sub.main {
+        padding-left: 17px;
+        padding-right: 17px;
    }
    .sub.main + .sub.main,
    .sub.main +  .sub.main.top-adjust,
