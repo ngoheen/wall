@@ -85,11 +85,37 @@
 		margin-left:0;
 	}
 }
+p.first {
+	margin-top: 0 !important;
+}
+
+
+.intro {
+    background-color: rgba(255,255,255,0.85);
+    background-image: url(../images/paragraph.png);
+    background-repeat: no-repeat;
+    background-position: 52px top;
+    padding: 0 75px 100px;
+    width: 60%;
+}
+.intro p {
+	margin: 12px 75px 12px 0;
+}
+
+.margin-top-60 {
+	margin-top: 60px;
+}
+.photo1 {
+	position: relative;
+	width: 87.5%;
+	margin-left: 12.5%;
+	z-index:0;
+}
 </style>
     </head>
 <body class="light">
 
-<header class="substory">
+	<header class="substory">
         <div class="top-logo">
             <img src="images/logo_black.png" class="wall-logo hide-mobile show-tablet">
         </div>
@@ -103,12 +129,12 @@
                 <span class="icon-bar"></span>
             </button>
         </div>
-</header>
+	</header>
 
 <main>
-<div class="fixed-white"></div>
-    <section class="photo1">
-        <div class="col-md-offset-2 col-md-14 col-sm-14 col-sm-offset-2 col-xs-16 col-xs-offset-0 no-side-padding">
+<div class="fixed-white" style="z-index:-2"></div>
+   <section class="photo1 lax" data-rellax-speed="-4" data-rellax-percentage="0.5">
+       
         
             <div class="screen"></div>
             <img src="images/USATSI_10033146.jpg" class="hide-mobile show-tablet">
@@ -120,7 +146,7 @@
             <div class="col-sm-4 col-sm-offset-2 col-xs-offset-0">
                 <figcaption class="hanging"><b>Photo 1:</b> This photo is right aligned and full width from left margin of 2 columns</figcaption>
             </div>
-        </div>
+       
     </section>       
     
     <figcaption class="mobile-caption"><b>Cutline title goes here:</b> Cutline for the photo goes here on mobile. And might be quite long.</figcaption>
@@ -129,7 +155,7 @@
         <!-- intro text -->
         <div class="section sub intro-txt"> 
         
-            <div class="intro col-md-7 col-md-offset-8 col-sm-9 col-sm-offset-6 col-xs-offset-0 col-xs-16">
+            	<div class="intro" style="margin-left:calc(50% - 60px);margin-right:calc(50% - 60px);position:relative;padding-bottom: 100px;">
             
                 <img class="para-img hide-mobile show-tablet" src="images/para-b.png">   
                 <h3 class="sub hide-mobile show-tablet" class="intro-h3">land of | <span>shadows</span></h3>
@@ -554,6 +580,14 @@
 </main>
 <script src="js/jquery-2.1.1.min.js"></script>
 <script src="js/dragend.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/rellax/1.1.0/rellax.min.js'></script>
+<script>
+    if (window.matchMedia("(min-width: 1025px)").matches) {
+      var rellax = new Rellax('.lax');
+    }
+</script>
+
+
 <script>
 $(".speaker img").each(function(i, elem) {
   var img = $(elem);

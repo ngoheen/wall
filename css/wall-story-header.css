@@ -33,16 +33,26 @@
 }
 @font-face {
     font-family: "Unify Serif";
-    src:url("../fonts/UnifySerif_A_Rg.eot");
-    src:url("../fonts/UnifySerif_A_Rg.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/UnifySerif_A_Rg.woff") format("woff"),
+    src:url("../fonts/UnifySerif_W_Rg.eot");
+    src:url("../fonts/UnifySerif_W_Rg.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/UnifySerif_W_Rg.woff") format("woff"),
     url("../fonts/UnifySerif_Rg.ttf") format("truetype"),
-    url("../fonts/UnifySerif_A_Rg.svg#UnifySerif_A_Rg") format("svg");
+    url("../fonts/UnifySerif_W_Rg.svg#UnifySerif_A_Rg") format("svg");
 
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: "Unify Serif Bold";
+    src:url("../fonts/UnifySerif_W_Bd.eot");
+    src:url("../fonts/UnifySerif_W_Bd.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/UnifySerif_W_Bd.woff") format("woff"),
+    url("../fonts/UnifySerif_Bd.ttf") format("truetype"),
+    url("../fonts/UnifySerif_W_Bd.svg#UnifySerif_A_Rg") format("svg");
 
+    font-weight: normal;
+    font-style: normal;
+}
 
 html {
     font-size:100%;
@@ -223,10 +233,10 @@ header.substory {
     overflow: hidden;
 }
 .intro {
-    background-color: rgba(255,255,255,0.85);
+   /* background-color: rgba(255,255,255,0.85);
     background-image: url('../images/paragraph.png');
     background-repeat: no-repeat;
-    background-position: 52px top;
+    background-position: 52px top;*/
     padding: 40px 60px;
 }
 .para-img {
@@ -236,11 +246,6 @@ header.substory {
 .intro-h3 {
     margin-bottom: 20px;
     margin-left:-8px;
-}
-.intro {
-    /*margin-top:-87px;*/
-    padding: 0 15px !important;
-    background-image: none;
 }
 
 .intro p {
@@ -921,6 +926,9 @@ ul.lorax {
         .intro-txt .intro {
             padding-left: 60px;
             padding-right: 60px;
+            }
+          .intro-txt {
+             margin-top: -100px;
         }
         [class*=col-] {
             padding-left: 0;
@@ -1231,22 +1239,29 @@ ul.lorax {
     .ranch figcaption.hanging {
         text-align: left;
     }
-    figure.full {
+   /* figure.full {
         margin-left: -32px;
         margin-right: -32px;
         padding-left: 0;
         padding-right: 0;
         width: calc( 100% + 64px );
-    }
+    }*/
     
     figure.full figcaption {
         padding-left: 15px;
         padding-right: 15px;
     }
-    .photo3 figure.full {
+     figure.full figcaption.hanging {
+        padding-left: 47px;
+        padding-right: 47px;
+    }
+    .photo1 figure.full figcaption.hanging {
+    	width:50%;
+    }
+    /*.photo3 figure.full {
         margin-left: -57px;
         width: calc( 100% + 94px );
-    }
+    }*/
      .floating-caption figcaption {
         margin: 16px -17px;
         padding-left: 0;
@@ -1323,7 +1338,6 @@ ul.lorax {
     .intro {
         padding: 20px 0;
         background-color: rgba(255,255,255,1);
-        background-image:none;
     }
     header {
         padding: 10px 0; !important;
@@ -1336,15 +1350,6 @@ ul.lorax {
         font-size: 16px;
         line-height: 26px;
         margin: 12px 17px;
-    }
-    .photo1 {  
-        background-image:url('../images/USATSI_10033146.jpg');
-        background-size: 250%;
-        background-position: center center;
-        width: 100%;
-        height: 350px;
-        position: relative;
-        z-index: 0;
     }
     .photo1 .screen {
         position: absolute;
