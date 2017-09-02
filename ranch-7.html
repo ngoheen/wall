@@ -66,7 +66,7 @@ b {
 
 <main>
 <div class="fixed-white"></div>
-    <section class="photo1" style="z-index:10">
+    <section class="photo1 lax" data-rellax-speed="-4" data-rellax-percentage="0.5">
         <div class="col-sm-14 col-sm-offset-2 col-xs-16 col-xs-offset-0 no-side-padding">
         
             <div class="screen"></div>
@@ -87,7 +87,7 @@ b {
     
         <!-- intro text -->
         <div class="section sub intro-txt"> 
-            <div class="intro col-md-7 col-md-offset-8 col-sm-9 col-sm-offset-7 col-xs-offset-0 col-xs-16" style="margin-top:-120px">
+            <div class="intro col-md-7 col-md-offset-8 col-sm-9 col-sm-offset-7 col-xs-offset-0 col-xs-16" style="margin-top:-200px">
             <img src="images/para-b.png" style="margin-top:0;margin-left:-20px">   
                 <h3 class="sub hide-mobile" style="margin-bottom: 20px">ranchers | <span>intro</span></h3>
                 <p>Sometimes, the border ranchers hear the horses whinny in the corral at midnight, and see shadows moving silently past the barn. They've ridden over a ridge and stumbled into cartel "drug mules" &mdash; post stuffed in backpacks, assault rifles in hand.</p>
@@ -516,7 +516,13 @@ b {
     </div>
 </main>
 <script src="js/jquery-2.1.1.min.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/rellax/1.1.0/rellax.min.js'></script>
 <script src="js/dragend.js"></script>
+<script>
+    if (window.matchMedia("(min-width: 1024px)").matches) {
+      var rellax = new Rellax('.lax');
+    }
+</script>
 <script>
 $(".speaker img").each(function(i, elem) {
   var img = $(elem);
