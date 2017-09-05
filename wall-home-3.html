@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>The Wall</title>
+    <link href="css/bootstrap.css" rel="stylesheet">  
+    <link href="css/grid.css" rel="stylesheet">
+    <link href="css/style-wall.css" rel="stylesheet">
+<style>
+#themap {
+width:100%;background:#fff url('images/mapgrab.png') no-repeat;position: relative;clear: both;z-index:10;background-size:cover;
+}
+video.fullscreen {
+    display: none;
+}
+.still-bg {
+    display: block;
+}
+@media (min-width: 1025px) {
+video.fullscreen { 
+    display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  max-height:980px;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translate(-50%, -50%);
+}
+.still-bg {
+    display: none;
+}
+.unmute-video,
+.mute-video {
+    background-image: url('sound-btn.png');
+    background-repeat: no-repeat;
+    display: block;
+    height: 24px;
+    position: relative;
+    text-indent:-999px;
+    width: 24px;
+    z-index: 11;
+}
+.unmute-video:hover,
+.mute-video:hover {
+    cursor: pointer;
+}
+.mute-video {
+    background-position: 0 0;
+}
+.mute-video:hover {
+    background-position: 0 -25px;
+}
+.unmute-video {
+    background-position: -48px 0;
+}
+.unmute-video:hover {
+    background-position: -48px -25px;
+}
+}
+header {
+    padding:40px 40px 60px;
+    width:100%;
+}
+header .wall-logo {
+    height: 50px;
+    width: auto;
+}
+.navbar-toggle {
+    position: relative;
+    float: right;
+    padding: 9px 0;
+    margin-top: 8px;
+    margin-right: 0;
+    margin-bottom: 8px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    line-height: 60px;
+    vertical-align: middle;
+}
+.navbar-toggle .icon-bar {
+    background-color: #808080;
+}
+.navbar-toggle .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+}
+.navbar-toggle .icon-bar+.icon-bar {
+    margin-top: 4px;
+}
+h1.core{
+    font: 36px/42px 'Unify Sans Bold', sans-serif;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    color: #000;
+    text-align: left;
+    font-weight: normal;
+    text-transform: none;
+    color: #000;
+    text-align: left;
+    font-weight: normal;
+}
+h4 + h1.core {
+    margin: 40px 0 0;
+}
+.opener {
+	font-family: 'Unify Serif', serif;
+	font-size: 19px;
+	line-height:33px;
+	margin-top:40px;
+}
+</style>
+</head>
+<body>
+	<div class="wrapper-core">
+		<video class="fullscreen" loop autoplay>
+			<source src="TheWallLoopV5.mp4" type="video/mp4">
+			<source src="TheWallLoopV5.ogg" type="video/ogg">
+			Your browser does not support the video tag.
+		</video>
+			
+        <div class="message">
+        	<!-- placeholder for story progress -->
+            <img src="leftnav.png" class="left-nav hide-mobile">
+            
+            <div class="surtitle">
+            	<h3>Unknown stories.</h3>
+            	<h3>Unintended consequences.</h3>
+            </div>
+         	<img src="thewalllogo_reverse-02.png" id="logo" style="margin-bottom: 100px;">
+          
+            <div class="scroll">
+				<a class="page-header__scroll-to-content" href="#themap" aria-label="Jump to content">
+					<div class="scroll_down"></div>
+				</a>
+				<br>
+			</div>
+        </div>
+        	<section class="hide-mobile">
+        		<div class="pull-left">
+        			<div class="wt-circle"></div><div class="usat">USA TODAY NETWORK</div>
+        		</div>
+        		
+				<div class="pull-right">
+            		<div id="sound-toggle" class="mute-video"></div>
+        		</div>
+        	</section>
+		</div>
+	</div>
+    <div class="mobile-bg">
+            <div class="message" style="position:relative;z-index:20;width: 100%;display:table;">
+        	<!-- placeholder for story progress -->
+            <img src="leftnav.png" class="left-nav hide-mobile">
+            <div style="display: table-cell;vertical-align:bottom;height: 100vh">
+                <div class="surtitle" style="margin-left:calc( (100% - 150px) / 2 );text-align:left;width:150px">
+            	<h3>Unknown stories.</h3>
+            	<h3>Unintended consequences.</h3>
+            </div>
+         	    <img src="images/thewalllogo_reverse-02.png" id="logo" style="margin-bottom: 40px;height: 180px;margin-left: 100px;">
+                <div style="margin: 20px auto;"><img src="images/USATODAY.logo.png"></div>
+                <div class="scroll">
+                    <a class="page-header__scroll-to-content" href="#themap" aria-label="Jump to content">
+					<div class="scroll_down" style="background-image:url('images/down-w.png');"></div>
+				</a>
+				<br>
+			</div>
+            </div>
+		</div>
+        <div class="message" style="display:none;">
+        	<!-- placeholder for story progress -->
+            <img src="leftnav.png" class="left-nav hide-mobile">
+            
+            <div class="surtitle">
+            	<h3>Unknown stories.</h3>
+            	<h3>Unintended consequences.</h3>
+            </div>
+         	<img src="thewalllogo_reverse-02.png" id="logo" style="margin-bottom: 100px;">
+          
+            <div class="scroll">
+				<a class="page-header__scroll-to-content" href="#themap" aria-label="Jump to content">
+					<div class="scroll_down"></div>
+				</a>
+				<br>
+			</div>
+        </div>
+        	<section class="hide-mobile" style="display:none;">
+        		<div class="pull-left">
+        			<img src="images/USATODAY.logo.png">
+        		</div>
+        		
+				<div class="pull-right">
+            		<div id="sound-toggle" class="mute-video"></div>
+        		</div>
+        	</section>
+		</div>		
+ 
+    
+<div style="width:100%;margin-top:100vh;">   
+	<div id="themap">
+		<header>
+    	
+        	<div style="float:left;width:50%">
+            	<img src="images/logo_black.png" class="wall-logo">
+        	</div>
+        	<div style="float:right;text-align:right;display: table-cell;vertical-align:middle">
+        	<h4 style="font-family:'Unify Sans SemiBold';display:inline-block;line-height:48px;margin-right: 12px;font-size: 14px"><span>Share<img src="images/swoosh.png" style="margin-right:12px;margin-left:6px"></span>Stories</h4>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+		</header>
+
+			<article>
+				<div class="content">
+					<div class="row">
+                		<div class="col-md-8 col-md-offset-6 col-sm-8 col-sm-offset-6 col-xs-offset-0 col-xs-16">    
+							<h4 style="color:#009bff;font-family:'Unify Sans Bold', sans-serif;font-size:16px;text-transform:none;">A USA Today Network Special report</h4>
+							<h1 class="core">Should we build a border wall?</h1>
+							<div class="opener">
+								<p>The promise fueled an unprecedented election: We will build a wall. The questions launched an unprecedented journey: Could it be built? Would it work? The USA TODAY NETWORK looked at every foot of a 2,000-mile border. Now, you can too. You'll meet remarkable people and discover the border's untold stories. Is a border wall worth the consequences? The issue is vast and complex. But the stories that follow are designed to help you understand. No matter what you already think about a border wall, you'll learn something new here. The exploration is yours to begin.</p>
+							</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+						</article>
+					</div>
+				</div>
+			</div>	
+		</div>
+	</div>
+
+<!-- MORE STORIES OVERLAY - DESKTOP -->    
+    <div id="myNav" class="overlay">
+        <div class="overlay-head">
+            <div class="pull-left"><a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="sm-close.png"></a></div>
+            <div class="col-md-6 col-sm-6 iconmenu pull-right text-right padding-right-15 margin-top-15">
+                <img src="logo.svg" id="logo">
+                <span class="white-clr">|
+                    <span class="site-logo"><img src="thewalllogo_reverse-02.png"></span>
+                </span>       
+            </div>
+        </div>
+        
+        <div class="overlay-content">
+            <ul>
+                <li class="i-home"><a href="#">Home</a></li>
+                <li class="i-menu"><img src="menu.png" style="height:16px;width:auto;margin-right:10px;"><a href="#">View all Stories</a></li>
+                <li class="i-map"><a href="#">Interactive Map</a></li>
+            </ul>
+        </div>
+        <div class="overlay-footer">
+        	<div class="social">
+            <ul>
+                <li><a href=""><div class="bl-circle"><i class="fa fa-facebook white-clr" aria-hidden="true"></i></div></a></li>
+                <li><a href=""><div class="bl-circle"><i class="fa fa-twitter white-clr" aria-hidden="true"></i></div></a></li>
+            </ul>
+        </div>
+    </div>
+	</div>
+<!--
+<div class="collapse navbar-collapse" id="navbar-collapse">
+                    <nav class="menu-primary-container">
+                        <ul id="menu-primary" class="nav navbar-nav">
+                            <li><a href="">Home</a></li>
+                            <li><a href="">Explore the Story</a></li>
+                            <li><a href="">Interactive Map</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                -->
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+    $("video").prop('muted', false);
+
+	$("#sound-toggle").click(function () {
+    if ($("video").prop('muted')) {
+        $("video").prop('muted', false);
+        $(this).removeClass('unmute-video');
+    
+
+    } else {
+        $("video").prop('muted', true);
+        $(this).addClass('unmute-video');
+    }
+    console.log($("video").prop('muted'))
+});
+</script>
+   
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.height = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.height = "0%";
+        }
+    </script>
+
+<!-- <i class="fa fa-bookmark" aria-hidden="true"></i>
+ -->
+</body>
+</html>
