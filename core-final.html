@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 <title>A pure CSS parallax demo by Keith Clark</title>
 <link href="bootstrap.css" rel="stylesheet">
 
@@ -14,6 +14,9 @@
 }
 .text-left {
     text-align: left;
+}
+.fixed-white {
+    z-index: -1;
 }
 .glyphicon {
     position: relative;
@@ -169,12 +172,12 @@ p.first {
 }
 .intro {
     background-color: rgba(255,255,255,0.85);
-    margin-left:calc(50% - 60px);
-    margin-right:calc(50% - 60px);
+    margin-left:37.5%;
+    margin-right:37.5%;
     position:relative;
 
     padding: 0 75px 100px;
-    width: 60%;
+
 }
 .intro p {
 	margin: 12px 75px 12px 0;
@@ -207,7 +210,7 @@ video.fullscreen {
 }
 .unmute-video,
 .mute-video {
-    background-image: url('sound-btn.png');
+    background-image: url('images/sound-btn.png');
     background-repeat: no-repeat;
     display: block;
     height: 24px;
@@ -242,7 +245,7 @@ video.fullscreen {
     padding-bottom:200px;
     position: relative;
     width:100%;
-    z-index:10;
+
 }
 .content + div + div {
     padding-left: 32px !important;
@@ -263,6 +266,8 @@ h4.header-h4 {
 
 .row.index {
     margin-top: 40px;
+    margin-left:0;
+    margin-right:0;
 }
 .content .row.index p {
     font-family:'Unify Sans',sans-serif;
@@ -300,6 +305,7 @@ h2.core {
     font-size:30px;
     line-height:33px;
     margin-bottom: 20px;
+    letter-spacing: -.0125em;
     margin-top:0;
 }
 
@@ -373,11 +379,16 @@ a.pop-out {
 }
 
 
-
+.intro p {
+padding-right:0;
+}
 @media (max-width:768px) {
     h1.core {
     font-size: 36px;
     }
+    .row.index {
+    margin-top:0;
+}
     .intro {
 		 padding: 0 45px 100px;
     }
@@ -414,7 +425,11 @@ a.pop-out {
 	    margin-left: 32px;
 	    margin-right: 32px;
 	}
-	
+	figcaption.photo2.hanging,
+	figcaption {
+
+	    padding: 0 !important;
+	}
 	
 
 }
@@ -422,8 +437,8 @@ a.pop-out {
    .intro {
     width: 100%;
     background-image: none;
-    margin-left: 17px;
-    margin-right: 17px;
+    margin-left: 0;
+    margin-right: 0;
 }
    .intro-txt{ 
     margin-top: 0;
@@ -431,7 +446,16 @@ a.pop-out {
     .para-img {
         display: none;
     }
-    
+    h3.sub {
+        margin-left:17px;
+    }
+    .intro p {
+     margin: 12px 17px;
+    }
+    .no-side-padding figcaption.mobile.hanging {
+        margin-left: 32px;
+        margin-right: 32px;            
+    }
 }
 @media (max-width:992px){
 
@@ -440,7 +464,11 @@ a.pop-out {
 	}
 }
 
-
+@media (max-width: 1024px) {
+  .intro-txt {
+    	margin-top:0;
+    }
+}
 
 header .wall-logo {
     float: left;
@@ -519,6 +547,10 @@ img.share {
     padding:0;
     width:calc(100% - 80px);
 }
+.full img {
+    max-width: 100%;
+    height: auto;
+}
 
 /*
 -------------------------- Animated BUTTONS */
@@ -529,6 +561,7 @@ img.share {
     max-width:200px;
 }
 .btn {
+border-radius: 0;
    text-align: left;
 	position: relative;
 	-webkit-transition: all 0.3s;
@@ -544,13 +577,14 @@ img.share {
 	transition: all 0.3s;
 }
 .icon-blah {
-    background-color:#1a95d2;
+    background-color:#027ccc;
     display:inline-block;
     height:34px;
     position:relative;
     width:34px;
 }
 .blah {
+    box-sizing: border-box;
     display:inline-block;
     height:34px;
     background:#009bff;
@@ -562,7 +596,7 @@ img.share {
     color: #fff;
     position: absolute;
     top: 50%;
-    left: 31px;
+    left: 33px;
     padding-left:4px;
     right: 0;
     transform: translate(0, -50%) ;
@@ -646,6 +680,21 @@ span.text {
     position: relative;
     text-align: left;
 }
+ .intro-col {
+    padding-left:0;
+    padding-right:0;
+}
+.vr-btn {
+    display:block;
+}
+.vr-btn-mobile {
+    display: none;
+}
+.intro-col {
+    padding-left:0;
+    padding-right:15px;
+    }
+    
 /* end Animated buttons 
 ------------------------------------ */
 
@@ -653,31 +702,273 @@ span.text {
     .wall-logo-mobile {
         display: block;
     }
+   .vr-btn {
+        display:none
+    }
+    .vr-btn-mobile {
+        display:block;
+    }
+    .blah {
+        vertical-align: top;
+    }
     .wall-logo {
         display: none;
     }
     .header-menu {
         margin-bottom: 0;
+        margin-left:32px;
+        margin-right:32px;
     }
- 
+  .intro-col {
+   padding-left:0;
+    padding-right:0;
+}
    .content h5 {
         margin-top: 40px;
    }
    .header-menu {
-        margin-left:32px;
+        margin-left:32px !important;
         margin-right:32px;
         width: calc(100% - 64px);
     }
+    h4.header-h4  {
+        display: none;
+    }
+}
+.sr-only {
+    display: none;
 }
 .fake-vid {
 clear:both;position:relative;z-index:40;background:black;width:100%;color:white;display:table;vertical-align:middle;text-align:center;height:550px;
+}
+.mobile-splash {
+    background-image: url('images/ranch-splash.jpg');
+    background-repeat: no-repeat;
+    background-position: right -20%;
+    position:relative;
+    z-index: -1;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.next-screen {
+    width:100%;clear:both;position:relative;margin-top:100vh;
+}
+video.fullscreen {
+    display: none;
+}
+.mobile-splash {
+    display: block;
+    z-index:1
+}
+@media (min-width: 1025px) {
+video.fullscreen { 
+    display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  max-height:980px;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translate(-50%, -50%);
+}
+.mobile-splash {
+    display: none;
+}
+}
+h3 {
+    color: #fff;
+    font-family: 'Unify Sans SemiBold', sans-serif;
+    font-size: 22px;
+    letter-spacing: 0.0125em;
+    line-height: 1;
+    margin-top: 24px;
+    margin-bottom: 36px;
+}
+.header-menu.splash {
+    position:absolute;
+    top:0;
+    color:#fff;
+    font-family: 'Unify Sans SemiBold',sans-serif;
+	font-size:14px;
+	text-align:right;
+    z-index:40;
+}
+.header-menu.splash td {
+    vertical-align:middle;
+}
+.header-menu.splash .icon-bar {
+    background-color:#fff;
+}
+.header-menu.splash .menu-txt {
+    display:inline-block;color:#fff;
+    }
+.header-menu.splash .navbar-toggle {
+    display:inline-block;margin-top:8px;margin-left:6px;
+    }
+.share-stuff,
+.desk-splash {
+    display: none;
+}
+#logo {
+margin-bottom: 40px;height: auto;width:100%;margin-left:-30%;
+}
+@media (min-width:1025px) {
+.desk-splash {
+height:100%;position:relative;z-index:1;background-image:url(images/vid-cap.png);background-size:cover;
+display:table;top:0;left:0;bottom:0;right:0;width:100%;
+}
+.hide-mobile-footer {
+    position:absolute;
+    bottom:20px;
+    width: calc(100% - 80px);
+    left:40px;
+   right:40px;
+   z-index:100;
+}
+.share-stuff{
+display:inline-block;
+}
+#logo {
+    width:60%;
+
+margin-left: calc( (25% + 7%  ) /2);
+
+
+}
+}
+.splash-title {
+    position: relative;
+    z-index: 20;
+    width: 100%;
+    display: table-cell;
+    vertical-align: bottom;
+    height: 100%;
+}
+
+.desk-splash .splash-title > div {
+    text-align:center;
+}
+.mobile-splash .splash-title {
+    display: table;
+}
+.mobile-wrap {
+    display: table-cell;
+    height: 100vh;
+    vertical-align:bottom;
+}
+.usat-wrap {
+    margin: 20px auto;
+}
+.surtitle {
+    margin-left:calc( (100% - 150px) / 2 );
+}
+.surtitle > div.wrapper {
+    text-align:left;
+    width:150px
+}
+.logo-wrapper {
+    margin:auto;
+    width:30%
+}
+.logo-wrapper .splash-logo {
+    margin-left:14%;
+}
+.splash-scroll {
+    margin: 20px auto 10px auto;
+}
+.splash-scroll img {
+    height:44px;
+    margin: 20px auto;
+    width:44px;
+}
+.usat-logo {
+    height:18px;width:170px;
+}
+@media (max-width:414px) {
+#logo {
+    margin-left:-15%;
+}
+.core-start {
+    padding-left:47px;
+    padding-right:47px;
 }
 </style>
 </head>
 <body class="light" id="core">
 
 
-    <div class="fixed-white"></div>
+    <div class="fixed-white"></div>   
+    
+     <!-- home screen menu -->
+    <table class="header-menu splash">
+        <tr>
+            <td></td>
+            <td class="text-right">
+                <h4 class="header-h4">
+                    <span class="hide-mobile">Share<img src="images/swoosh-w.png" class="share"></span>Stories
+                </h4>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </td>
+	    </tr>
+	</table>	    
+	    
+    <!-- home screen desk -->
+    <div class="desk-splash">	
+        <div class="splash-title">
+            <div>
+                <div class="surtitle">
+                    <div class="wrapper">
+            	        <h3>Unknown stories.</h3>
+            	        <h3>Unintended consequences.</h3>
+                    </div>
+                </div>
+                <div class="logo-wrapper"><img src="images/thewalllogo_reverse-02.png" class="splash-logo"></div>
+                <div class="splash-scroll"><img src="images/down-w.png"></div>
+            </div>
+        </div>
+        <section class="hide-mobile-footer">
+            <div class="pull-left">
+                <img src="images/USATODAY.logo.png" class="usat-logo">
+            </div>
+        		
+            <div class="pull-right">
+                <div id="sound-toggle" class="mute-video"></div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- home screen mobile -->
+    <div class="mobile-splash">
+        <div class="splash-title">
+            <div class="mobile-wrap">
+                <div class="surtitle">
+            	    <div class="wrapper">
+            	        <h3>Unknown stories.</h3>
+            	        <h3>Unintended consequences.</h3>
+                    </div>
+                    <img src="images/thewalllogo_reverse-02.png" id="logo">
+                    <div class="usat-wrap">
+                        <img src="images/USATODAY.logo.png" class="usat-logo">
+                    </div>
+                    <div class="clearer"></div>
+                    <img src="images/down-w.png" style="width:44px;margin-left:60px;margin-bottom:20px;">
+                    <div class="clearer"></div>
+                </div>
+		    </div>
+        </div>
+    </div>	
+
+<!-- end home screen -->
 
     <div id="themap"> 
         <table class="header-menu">
@@ -703,7 +994,7 @@ clear:both;position:relative;z-index:40;background:black;width:100%;color:white;
 
         <div class="content">
 			
-				<div class="col-md-9 col-md-offset-6 col-sm-16 col-sm-offset-0 col-xs-16 col-xs-offset-0 col-xs-16 bbb">    
+				<div class="col-md-9 col-md-offset-6 col-sm-16 col-sm-offset-0 col-xs-16 col-xs-offset-0 col-xs-16 bbb no-side-padding">    
 					<h4 class="subhead first">A USA Today Network Special report</h4>
 					<h1 class="core">Should we build a border wall?</h1>
 					<div class="opener">
@@ -720,14 +1011,17 @@ clear:both;position:relative;z-index:40;background:black;width:100%;color:white;
 							    </div>
 					        </div>
 					   
-					    <div class="row index">
-						    <div class="col-md-5 col-md-offset-0 col-sm-5 col-sm-offset-0 col-xs-offset-0 col-xs-16 intro-col">
+					   
+				        </div>
+				        
+		         <div class="row index">
+						    <div class="col-md-5 col-md-offset-0 col-sm-5 col-sm-offset-0 col-xs-offset-0 col-xs-16 intro-col intro-col">
 						        <h5>Documentaries</h5>
 						        <p>(4-9 mins.each)</p>
 						        <p style="">A groundbreaking series of documentaries from the shadows of the wall.</p>
 						        <div class="btn-wrap">
 							        <div class="blah">
-							            <div class="icon-blah"><img src="images/location-pin.png"></div><span class="btn btn-1c"><span class="text">Watch</span></span>
+							            <div class="icon-blah"><img src="images/icon-play_24.svg"></div><span class="btn btn-1c"><span class="text">Watch</span></span>
 							        </div>
 					            </div>
 					        </div>
@@ -737,42 +1031,55 @@ clear:both;position:relative;z-index:40;background:black;width:100%;color:white;
 						        <p>The untold stories of the border, where some face death and some find life.</p>
 						        <div class="btn-wrap">
 							        <div class="blah">
-							            <div class="icon-blah"><img src="images/location-pin.png"></div><span class="btn btn-1c"><span class="text">Read</span></span>
+							            <div class="icon-blah"><img src="images/read.png"></div><span class="btn btn-1c"><span class="text">Read</span></span>
 							        </div>
 					            </div>
 					        </div>
-					        <div class="col-md-5 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-offset-0 col-xs-16 intro-col">
+					        <div class="col-md-5 col-md-offset-0 col-sm-5 col-sm-offset-0 col-xs-offset-0 col-xs-16 intro-col">
 					            <h5>Podcasts</h5>
 					            <p>(15-18 mins.each)</p>
-					            <p>Our podcast series, where the team explains the report’s hidden challenges.</p>
+					            <p>Our podcast series, where the team explains the hidden challenges.</p>
                                 <div class="btn-wrap">
 							        <div class="blah">
-							            <div class="icon-blah"><img src="images/location-pin.png"></div><span class="btn btn-1c"><span class="text">Listen</span></span>
+							            <div class="icon-blah"><img src="images/snd-icon.png"></div><span class="btn btn-1c"><span class="text">Listen</span></span>
 							        </div>
 					            </div>
 				            </div>
-					    </div>
-				    </div>
+				            <div class="clearer"></div>
+                            <div class="col-sm-16 intro-col margin-top-60" style="padding-right:0;width:100%;margin-top:40px">
+                                <div class="vr-btn">
+                                    <div class="icon-blah">
+                                        <img src="images/vr.png">
+                                    </div>
+					                <div style="display:inline-block;margin-left:5px;">
+					                    <h5>Virtual Reality</h5>
+                                        <p>Explore the series on the Vive VR system and stand at the border itself.</p>
+                                    </div>
+							       </div> 
+							        <div class="vr-btn-mobile">
+							        <h5>Virtual Reality</h5>
+							        <p>Explore the series on the Vive VR system and stand at the border itself.</p>
+							        <div class="btn-wrap">
+							        <div class="blah">
+							            <div class="icon-blah"><img src="images/vr.png"></div><span class="btn btn-1c"><span class="text">Listen</span></span>
+							        </div>
+					            </div>
+                            </div>   
+                        </div>
+                    </div>
+		        
 			    </div>	
 			    <div class="clearer"></div>
-		  
+		       
 		    <div class="clearer"></div>
 	    </div>
     
-
+    </div>
     
-    
-    
- 
-
-
-
-
-
-<div id="core-intro">
-    <table class="header-menu">
+    <div id="core-intro">
+        <table class="header-menu">
             <tr>
-                <td> <img src="images/logo_black.png" class="wall-logo">
+                <td><img src="images/logo_black.png" class="wall-logo">
                     <img src="images/logo-mob-bl.png" class="wall-logo-mobile">
             	</td>
 	            <td class="text-right">
@@ -787,30 +1094,28 @@ clear:both;position:relative;z-index:40;background:black;width:100%;color:white;
                 </td>
 	        </tr>
 	    </table>
-	<section class="core-main lax" data-rellax-speed="-4" data-rellax-percentage="0.5">
-		
+	    <section class="core-main lax" data-rellax-speed="-4" data-rellax-percentage="0.5">
 			<figure class="full">
-        	<img src="images/BigBendAerial.jpg">
-        	<div class="col-md-3 col-md-offset-2 col-sm-4 col-sm-offset-1 col-xs-offset-0 col-xs-16" style="padding-right:0;padding-left:0;"> 
-            	<figcaption class="hanging"><b>Photo 1:</b> This photo is right aligned and full width from left margin of 2 columns</figcaption>
-        	</div>
-    	</figure>
-    	
-    </section>
+        	    <img src="images/BigBendAerial.jpg">
+        	    <div class="col-md-3 col-md-offset-2 col-sm-5 col-sm-offset-1 col-xs-offset-0 col-xs-16 no-side-padding"> 
+            	    <figcaption class="hanging mobile"><b>Photo 1:</b> This photo is right aligned and full width from left margin of 2 columns</figcaption>
+        	    </div>
+    	    </figure>
+        </section>
 
-	<div class="section sub intro-txt"> 
+	    <div class="section intro-txt"> 
 	
-		<div class="intro core">
-			<img class="para-img hide-mobile show-tablet" src="images/para-b.png">   
-            <h3 class="sub hide-mobile show-tablet">land of | <span>shadows</span></h3>
-            <p>Silky mud squirts between toes as we wade into the Rio Grande. The river’s water is lukewarm here, slippery against the skin.</p>
-			<p>We dive beneath the surface, swimming against current, back and forth. Forth to Coahuila, back to Texas. Knee deep, mid-river, it is unclear at times whether we’re in the United States or in Mexico.</p>
-			<p>The border is an idea at midstream. But in the drifting current, it’s impossible to know.</p>
-			<p>We are nearly midway through a nearly 2,000-mile journey. By car, by occasional swim, and foremost by helicopter, we are here to examine every inch of the international boundary.</p>
+		    <div class="intro core">
+			    <img class="para-img hide-mobile show-tablet" src="images/para-b.png">   
+                <h3 class="sub hide-mobile show-tablet">land of | <span>shadows</span></h3>
+                <p>Silky mud squirts between toes as we wade into the Rio Grande. The river’s water is lukewarm here, slippery against the skin.</p>
+			    <p>We dive beneath the surface, swimming against current, back and forth. Forth to Coahuila, back to Texas. Knee deep, mid-river, it is unclear at times whether we’re in the United States or in Mexico.</p>
+			    <p>The border is an idea at midstream. But in the drifting current, it’s impossible to know.</p>
+			    <p>We are nearly midway through a nearly 2,000-mile journey. By car, by occasional swim, and foremost by helicopter, we are here to examine every inch of the international boundary.</p>
            
+            </div>
         </div>
-     </div>
-</div>	
+    </div>	
     	
         
     	
@@ -836,12 +1141,12 @@ clear:both;position:relative;z-index:40;background:black;width:100%;color:white;
 	    </table>
 		<div class="clearer"></div>  
    
-        <div class="col-md-14 col-md-offset-2 col-sm-16 col-sm-offset-0" style="padding-left:0;padding-right:0;">
+        <div class="col-md-14 col-md-offset-2 col-sm-16 col-sm-offset-0 no-side-padding">
 			<figure class="full">
 				<img src="images/maninwater.jpg">
             </figure>
 	    </div>
-	    <div class="col-md-5 col-md-offset-2 col-sm-4 col-sm-offset-1 col-xs-offset-0 col-xs-16"> 
+	    <div class="col-md-5 col-md-offset-2 col-sm-5 col-sm-offset-1 col-xs-offset-0 col-xs-16"> 
 	    <figcaption class="photo2 hanging"><b>Photo 2:</b> This photo is full-bleed content width placeholder. Cutline for the photo goes here and is centered on desktop.</figcaption>
 			</figure>
 			</div>
@@ -853,12 +1158,12 @@ clear:both;position:relative;z-index:40;background:black;width:100%;color:white;
 
 
 
-<div class="clearer"></div>
+    <div class="clearer"></div>
      
-    <section class="core-main lax story-move" data-rellax-speed="4" data-rellax-percentage="0.75">
+    <section class="core-main">
         <div class="row">
-            <div class="col-md-7 col-md-offset-8 col-sm-9 col-sm-offset-6 col-xs-offset-0 col-xs-16 core-start">    
-                <h4 class="location"><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>Segment I &mdash; Gulf to Laredo</h4>
+            <div class="col-md-7 col-md-offset-8 col-sm-8 col-sm-offset-7 col-xs-offset-0 col-xs-16 core-start">    
+                <h4 class="location"><i class="fa fa-map-marker" aria-hidden="true"></i>Segment I &mdash; Gulf to Laredo</h4>
                 <h1 class="sub">Main header header for article</h1>
                 <div class="byline">
 					<b>Dennis Wagner</b> | Arizona Republic <span class="show-mobile"<br></span> <span class="hide-mobile">|</span> USA TODAY NETWORK
@@ -871,7 +1176,7 @@ clear:both;position:relative;z-index:40;background:black;width:100%;color:white;
     </section>
    
     <section class="photo1">
-		<div class="col-md-8 col-md-offset-2 col-sm-16 col-sm-offset-0 photo3 margin-top-300">
+		<div class="col-md-8 col-md-offset-2 col-sm-16 col-sm-offset-0 photo3 margin-top-60">
 			<figure class="full">
 				<img src="images/MouthRio.jpg">
 			</figure>
@@ -881,57 +1186,31 @@ clear:both;position:relative;z-index:40;background:black;width:100%;color:white;
 		</div>
     </section>
 
-    <section class="core-main lax story-move" data-rellax-speed="4" data-rellax-percentage="0.75">
+    <section class="core-main">
         <div class="row">
-            <div class="col-md-7 col-md-offset-8 col-sm-9 col-sm-offset-6 col-xs-offset-0 col-xs-16" style="position:relative;z-index:40;background:rgba(255,255,255,0.85);">    
+            <div class="col-md-7 col-md-offset-8 col-sm-8 col-sm-offset-7 col-xs-offset-0 col-xs-16 core-start" style="position:relative;z-index:40;background:rgba(255,255,255,0.85);margin-bottom:60px">    
                 <p>Our goal is to fly and film every inch of the line. To survey the existing fence and security features. To capture images of illegal crossers. To figure out how a wall fits into the big picture.</p>
                 <p>In those first minutes, several deer spook at the thump of chopper rotors, bounding through bush lands along the river delta.</p>
                 <p>Brownsville is off in the distance. There is no fence below. No sign of law enforcement.</p>
                 <p>Just a mesmerizing delta, and a measure of anticipation: How many undocumented migrants would we see running like deer? How many smugglers? How many Border Patrol chases and apprehensions?</p>
+                   <div class="clear"></div>
             </div>
-        </div>        
+               <div class="clear"></div>
+        </div>   
+           <div class="clear"></div>     
     </section>
     <div class="clear"></div>
 	<div class="fake-vid">VIDEO PLAYER</div>  
 	<div class="clear"></div>		
-
-
-  
-        
-   
-
-                
-         
- 
-
-
-
-
-	
-
-
-
-   
-   
-	
-
- 
-
-
-        
-        
-        
-        
-        
 <br><br><br><br><br>
 
 <script src="js/jquery-2.1.1.min.js"></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/rellax/1.1.0/rellax.min.js'></script>
+<!--<script src='https://cdnjs.cloudflare.com/ajax/libs/rellax/1.1.0/rellax.min.js'></script>
 <script>
     if (window.matchMedia("(min-width: 1024px)").matches) {
       var rellax = new Rellax('.lax');
     }
-</script>
+</script>-->
 <script>
 var high = $( document ).height();
 console.log(high);
