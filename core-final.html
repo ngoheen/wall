@@ -9,6 +9,14 @@
 <link href="css/grid.css" rel="stylesheet">
 <link href="css/wall-story-header2.css" rel="stylesheet">
 <style>
+.notifications {
+    position: fixed;
+    right: 0;
+    top: 76px;
+    z-index: 2;
+    padding: 0;
+    margin: 0;
+}
 .text-right {
     text-align:right;
 }
@@ -1200,21 +1208,24 @@ margin-left: calc( (25% + 7%  ) /2);
            <div class="clear"></div>     
     </section>
     <div class="clear"></div>
-	<div class="fake-vid">VIDEO PLAYER</div>  
+	<div class="fake-vid" id="basic-waypoint">VIDEO PLAYER</div>  
 	<div class="clear"></div>		
 <br><br><br><br><br>
-
+<br><br><br><br><br>
+<br><br><br><br><br>
 <script src="js/jquery-2.1.1.min.js"></script>
-<!--<script src='https://cdnjs.cloudflare.com/ajax/libs/rellax/1.1.0/rellax.min.js'></script>
-<script>
-    if (window.matchMedia("(min-width: 1024px)").matches) {
-      var rellax = new Rellax('.lax');
-    }
-</script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.4/waypoints.min.js"></script>
+
 <script>
 var high = $( document ).height();
 console.log(high);
 $('.fixed-white').css('height', high);
+var waypoint = new Waypoint({
+  element: document.getElementById('basic-waypoint'),
+  handler: function() {
+    notify('Basic waypoint triggered')
+  }
+})
 </script>
 </body>
 </html>

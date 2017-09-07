@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<title>A pure CSS parallax demo by Keith Clark</title>
+<title>Findings</title>
 <link href="bootstrap.css" rel="stylesheet">
 
 <link href="css/grid.css" rel="stylesheet">
@@ -62,6 +62,7 @@
 	header.substory .top-logo img.wall-logo.show-tablet.hide-mobile {
 	margin-left:40px;
     }
+  
 }
 @media (min-width:768px) {
 	.mobile-caption {
@@ -81,7 +82,13 @@
 }
 
 @media (max-width:768px) {
-
+  .tablet-p,
+    h1.core,
+    h4.subhead.first,
+    .row.index {
+    padding-left:17px;
+    padding-right: 17px;
+    }
    .photo-move {
         margin-top:0;
    }
@@ -116,6 +123,11 @@
 	header.substory .top-logo img.wall-logo.show-tablet.hide-mobile {
 		margin-left:0;
 	}
+	.left-col-icon {
+height:auto;
+margin-top:100px !important;
+width: 50px;
+}
 }
 p.first {
 	margin-top: 0 !important;
@@ -134,9 +146,7 @@ p.first {
 	margin: 12px 75px 12px 0;
 }
 
-.margin-top-60 {
-	margin-top: 60px;
-}
+
 .photo1 {
 	position: relative;
 	width: 87.5%;
@@ -184,10 +194,10 @@ p.first {
 }
 
 .margin-top-60 {
-	margin-top: 60px;
+	margin-top: 60px !important;
 }
  .margin-top-100 {
-    margin-top: 100px;
+    margin-top: 100px !important;
     }
 .margin-top-300 {
     margin-top: -300px;
@@ -247,6 +257,13 @@ video.fullscreen {
     width:100%;
 
 }
+.findings .row.content,
+.desk-findings .content {
+    background-image: none !important;
+    z-index: 16;
+    padding-top: 100px;
+}
+.desk-findings .content + div + div,
 .content + div + div {
     padding-left: 32px !important;
 }
@@ -257,18 +274,25 @@ h4.header-h4 {
     line-height:48px;
     margin-right: 12px;
 }
+.black {
+    color: #000;
+}
+.desk-findings .content h5,
 .content h5 {
     font-weight: normal;
-    font-family: 'Unify Sans SemiBold',sans-serif;
+    font-family: 'Unify Sans Bold',sans-serif;
     font-size: 16px;
     line-height: 1;
 }
-
+.desk-findings .content h5 {
+    font-size: 17px;
+}
 .row.index {
-    margin-top: 40px;
+    margin-top: 30px;
     margin-left:0;
     margin-right:0;
 }
+.desk-findings .content .row.index p,
 .content .row.index p {
     font-family:'Unify Sans',sans-serif;
     font-size: 15px;
@@ -276,6 +300,17 @@ h4.header-h4 {
     line-height: 24px;
     margin: 10px 0;
     
+}
+.desk-findings .content .row.index p {
+    font-size: 17px;
+    line-height: 26px;
+}
+@media (max-width: 1024px) {
+    .desk-findings .content .intro-col.row.index p {
+        font-size: 15px;
+        line-height: 24px;
+        padding-right:15px;
+    }
 }
 .content .row.index h5 + p {
     margin-top: 0;
@@ -285,7 +320,7 @@ h4.header-h4 {
     font-size:16px;
     line-height: 23px;
 }
-
+.desk-findings .content h4.subhead,
 .content h4.subhead {
     color: #009bff;
     font-family:'Unify Sans Bold', sans-serif;
@@ -293,9 +328,10 @@ h4.header-h4 {
     margin-bottom: 15px;
     margin-top: 50px;
 }
+.desk-findings .content h4.subhead.first,
 .content h4.subhead.first {
     margin-bottom:20px;
-    margin-top:30px;
+    margin-top:40px;
 }
 p + .btn-wrap {
     margin-top:20px;
@@ -331,6 +367,7 @@ header .wall-logo {
     line-height: 60px;
     vertical-align: middle;
 }
+.findings .header-menu.splash .icon-bar,
 .navbar-toggle .icon-bar {
     background-color: #000;
 }
@@ -386,9 +423,12 @@ padding-right:0;
     h1.core {
     font-size: 36px;
     }
-    .row.index {
-    margin-top:0;
-}
+    h4 + h1.core {
+        margin-bottom: 20px;
+    }
+    h1.core + .row.index {
+        margin-top:25px;
+    }
     .intro {
 		 padding: 0 45px 100px;
     }
@@ -460,7 +500,9 @@ padding-right:0;
 @media (max-width:992px){
 
     .bbb {
-    	margin-left:32px;margin-right:32px;width:calc(100% - 64px);
+    	margin-left:32px;
+    	margin-right:0;
+    	width:calc(100% - 32px);
 	}
 }
 
@@ -680,10 +722,7 @@ span.text {
     position: relative;
     text-align: left;
 }
- .intro-col {
-    padding-left:0;
-    padding-right:0;
-}
+
 .vr-btn {
     display:block;
 }
@@ -719,12 +758,27 @@ span.text {
         margin-left:32px;
         margin-right:32px;
     }
-  .intro-col {
-   padding-left:0;
-    padding-right:0;
-}
-   .content h5 {
+    .intro-col {
+        padding-left:0;
+        padding-right:0;
+    }
+    .intro-col {
+        width: 34.375% !important;
+    }
+    .intro-col.margin-top-60 {
+        margin-top: 20px !important;
+    }
+    .desk-findings .content h5,
+    .content h5 {
         margin-top: 40px;
+   }
+   .content h5.podcast-h5 {
+    margin-top: 0;
+    width: 90%;
+   }
+   .cols-bottom p,
+   .content p.podcast-desc {
+   width: 90%;
    }
    .header-menu {
         margin-left:32px !important;
@@ -733,6 +787,28 @@ span.text {
     }
     h4.header-h4  {
         display: none;
+    }
+}
+.content h5.podcast-h5 {
+    margin-top: 0;
+    width: 90%;
+   }
+@media (max-width: 414px) {
+ .intro-col {
+        width: 100% !important;
+    }
+    .row.cols-bottom .no-left-padding {
+        margin-top:40px
+    }
+    .cols-bottom p.podcast-desc,
+     .content h5.podcast-h5 {
+        width: 100% !important;
+    }
+    .margin-top-100 {
+     margin-top:60px !important;
+    }
+    .left-col-icon {
+        margin-top: 0 !important;
     }
 }
 .sr-only {
@@ -762,6 +838,11 @@ video.fullscreen {
     display: block;
     z-index:1
 }
+.left-col-icon {
+height:auto;
+
+width: 50px;
+}
 @media (min-width: 1025px) {
 video.fullscreen { 
     display: block;
@@ -776,6 +857,7 @@ video.fullscreen {
   z-index: -100;
   transform: translate(-50%, -50%);
 }
+
 .mobile-splash {
     display: none;
 }
@@ -789,6 +871,7 @@ h3 {
     margin-top: 24px;
     margin-bottom: 36px;
 }
+.findings .header-menu,
 .header-menu.splash {
     position:absolute;
     top:0;
@@ -797,6 +880,9 @@ h3 {
 	font-size:14px;
 	text-align:right;
     z-index:40;
+}
+.findings .header-menu {
+    text-align: left;
 }
 .header-menu.splash td {
     vertical-align:middle;
@@ -810,18 +896,39 @@ h3 {
 .header-menu.splash .navbar-toggle {
     display:inline-block;margin-top:8px;margin-left:6px;
     }
-.share-stuff,
-.desk-splash {
+
+.share-stuff {
     display: none;
 }
 #logo {
 margin-bottom: 40px;height: auto;width:100%;margin-left:-30%;
 }
-@media (min-width:1025px) {
-.desk-splash {
-height:100%;position:relative;z-index:1;background-image:url(images/vid-cap.png);background-size:cover;
-display:table;top:0;left:0;bottom:0;right:0;width:100%;
+ .desk-findings {
+ height:100%;position:relative;z-index:1;background-image:url(images/aerial.jpg);background-size:cover;
+    display:table;top:0;left:0;bottom:0;right:0;width:100%;
 }
+.findings-overlay {
+        background: rgba(255,255,255,0.68);
+    /*background: linear-gradient(to bottom, rgba(255,255,255,0.88) 0%, rgba(209,209,209,0.12) 82%, rgba(254,254,254,0) 100%);*/
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 14;
+}
+@media (min-width:1025px) {
+
+    .desk-splash {
+        height:100%;position:relative;z-index:1;background-image:url(images/vid-cap.png);background-size:cover;
+    display:table;top:0;left:0;bottom:0;right:0;width:100%;
+    }
+
+    .desk-findings {
+        background-image: url(images/aerial.jpg);
+    }
+    
 .hide-mobile-footer {
     position:absolute;
     bottom:20px;
@@ -841,6 +948,12 @@ margin-left: calc( (25% + 7%  ) /2);
 
 }
 }
+.desk-findings {
+    z-index:10;
+}  
+.desk-findings .content {
+z-index:20;
+} 
 .splash-title {
     position: relative;
     z-index: 20;
@@ -897,20 +1010,45 @@ margin-left: calc( (25% + 7%  ) /2);
     padding-left:47px;
     padding-right:47px;
 }
+[class*='cols-'].row > *{
+  float: none;
+  position: relative;
+  display: inline-block; 
+  /* old ie fixes */
+  *zoom: 1; 
+  *display: inline;
+}
+
+.row.cols-bottom > *{
+  vertical-align: bottom;
+}
+.row.index {
+    margin-top:0 !important;
+}
+.row.cols-middle > *{
+  vertical-align: middle;
+}
+.margin-top-40 {
+    margin-top: 40px;
+}
+
 </style>
 </head>
-<body class="light" id="core">
+<body class="light findings" id="core">
 
 
     <div class="fixed-white"></div>   
     
-     <!-- home screen menu -->
-    <table class="header-menu splash">
+     <!-- menu -->
+    <table class="header-menu">
         <tr>
-            <td></td>
+            <td>
+                <img src="images/logo_black.png" class="wall-logo">
+                <img src="images/logo-mob-bl.png" class="wall-logo-mobile">
+            </td>
             <td class="text-right">
-                <h4 class="header-h4">
-                    <span class="hide-mobile">Share<img src="images/swoosh-w.png" class="share"></span>Stories
+                <h4 class="header-h4 black">
+                    <span class="hide-mobile">Share<img src="images/swoosh.png" class="share"></span>Stories
                 </h4>
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -923,122 +1061,48 @@ margin-left: calc( (25% + 7%  ) /2);
 	</table>	    
 	    
     <!-- home screen desk -->
-    <div class="desk-splash">	
-        <div class="splash-title">
-            <div>
-                <div class="surtitle">
-                    <div class="wrapper">
-            	        <h3>Unknown stories.</h3>
-            	        <h3>Unintended consequences.</h3>
-                    </div>
-                </div>
-                <div class="logo-wrapper"><img src="images/thewalllogo_reverse-02.png" class="splash-logo"></div>
-                <div class="splash-scroll"><img src="images/down-w.png"></div>
-            </div>
-        </div>
-        <section class="hide-mobile-footer">
-            <div class="pull-left">
-                <img src="images/USATODAY.logo.png" class="usat-logo">
-            </div>
-        		
-            <div class="pull-right">
-                <div id="sound-toggle" class="mute-video"></div>
-            </div>
-        </section>
-    </div>
     
-    <!-- home screen mobile -->
-    <div class="mobile-splash">
-        <div class="splash-title">
-            <div class="mobile-wrap">
-                <div class="surtitle">
-            	    <div class="wrapper">
-            	        <h3>Unknown stories.</h3>
-            	        <h3>Unintended consequences.</h3>
+    <div class="desk-findings">	
+        <div class="findings-overlay"></div>
+        <div class="content row">
+    
+            <div class="col-md-9 col-md-offset-6 col-sm-16 col-sm-offset-0 col-xs-16 col-xs-offset-0 col-xs-16 bbb no-side-padding">    
+                <h4 class="subhead first">A USA Today Network Special report</h4>
+                <h1 class="core">What we learned. How we did it.</h1>
+                <div class="index row">
+                <p><b>A search for answers:</b> Most of the border remains unfenced, ad more than half the existing fence blocks only cars, not people. But building a contiguous fence or wall is almost unimaginable. In Texas, it could require seizing as many as 5,000 parcels of private property. Border fences do inhibit crossings, but human smuggling and drug smuggling remain active once fences are built. There is no cost estimate for a border wall, and more crucially, there is no cost-benefit analysis: In some stretches, a wall might stop immigrants at a cost of more than $1 million per person.</p>
+		        <div class="btn-wrap">
+                    <div class="blah">
+                        <div class="icon-blah"><img src="images/read.png"></div><span class="btn btn-1c"><span class="text">Read</span></span>
                     </div>
-                    <img src="images/thewalllogo_reverse-02.png" id="logo">
-                    <div class="usat-wrap">
-                        <img src="images/USATODAY.logo.png" class="usat-logo">
-                    </div>
-                    <div class="clearer"></div>
-                    <img src="images/down-w.png" style="width:44px;margin-left:60px;margin-bottom:20px;">
-                    <div class="clearer"></div>
-                </div>
-		    </div>
-        </div>
-    </div>	
-
-<!-- end home screen -->
-
-    <div id="themap"> 
-        <table class="header-menu">
-            <tr>
-                <td>
-                    <img src="images/logo_black.png" class="wall-logo">
-                    <img src="images/logo-mob-bl.png" class="wall-logo-mobile">
-            	</td>
-	            <td class="text-right">
-                    <h4 class="header-h4">
-	                    <span class="hide-mobile">Share<img src="images/swoosh.png" class="share"></span>Stories
-	                </h4>
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </td>
-	        </tr>
-	    </table>
-    		
-
-        <div class="content">
-			
-				<div class="col-md-9 col-md-offset-6 col-sm-16 col-sm-offset-0 col-xs-16 col-xs-offset-0 col-xs-16 bbb no-side-padding">    
-					<h4 class="subhead first">A USA Today Network Special report</h4>
-					<h1 class="core">Should we build a border wall?</h1>
-					<div class="opener">
-						<p>The promise fueled an unprecedented election: We will build a wall. But could a wall be built? Would it work? Our questions launched an unprecedented journey: Look at every foot of the 2,000-mile border. Join our reporting team on the <a class="pop-out" href="">search for answers.</a> Along the way, you’ll meet remarkable people and discover the border’s untold stories. And you can explore the border yourself, every single mile, in our interactive map. Is a border wall worth the consequences? The USA TODAY NETWORK committed to this <a class="pop-out" href="">report</a> to help you decide. You can spend five minutes with our videos, or all day with the entire series. The conclusions are up to you.</p>
-							
-							
-						<h4 class="subhead">Choose your journey</h4>
-						<h2 class="core">The border as no one<br> has seen it before</h2>
-				
-						<p class="choose"><b>Interactive Map</b> (infinite exploration): Travel every foot of the border in our unprecedented end- to-end helicopter flight, with our reporting team as your guide. Examine every piece of border fence as it stands, and see how much border remains open. See the border in 360-degree video.</p>
-						<div class="btn-wrap">
-							    <div class="blah">
-							        <div class="icon-blah"><img src="images/location-pin.png"></div><span class="btn btn-1c"><span class="text">Explore</span></span>
-							    </div>
-					        </div>
-					   
-					   
-				        </div>
-				        
-		         <div class="row index">
-						    <div class="col-md-5 col-md-offset-0 col-sm-5 col-sm-offset-0 col-xs-offset-0 col-xs-16 intro-col intro-col">
-						        <h5>Documentaries</h5>
-						        <p>(4-9 mins.each)</p>
-						        <p style="">A groundbreaking series of documentaries from the shadows of the wall.</p>
+                </div>					
+            </div>
+		    </div> 
+		    <div class="col-md-10 col-md-offset-6 col-sm-16 col-sm-offset-0 col-xs-16 col-xs-offset-0 col-xs-16 bbb no-side-padding">  
+                <div class="row index cols-bottom margin-top-60">
+                    <div class="col-md-5 col-md-offset-0 col-sm-5 col-sm-offset-0 col-xs-offset-0 col-xs-16 intro-col">
+                        <h5>A map that makes news</h5>
+                        <p>We mapped every known piece of border fence, the most current and comprehensive audit to date. Here's what we discovered.</p>
 						        <div class="btn-wrap">
 							        <div class="blah">
-							            <div class="icon-blah"><img src="images/icon-play_24.svg"></div><span class="btn btn-1c"><span class="text">Watch</span></span>
+							            <div class="icon-blah"><img src="images/location-pin.png"></div><span class="btn btn-1c"><span class="text">Explore</span></span>
 							        </div>
 					            </div>
 					        </div>
-					        <div class="col-md-5 col-md-offset-0 col-sm-5 col-sm-offset-0 col-xs-offset-0 col-xs-16 intro-col">
-						        <h5>Stories</h5>
-						        <p>(6-12 mins.each)</p>
-						        <p>The untold stories of the border, where some face death and some find life.</p>
+                    <div class="col-md-5 col-md-offset-0 col-sm-5 col-sm-offset-0 col-xs-offset-0 col-xs-16 intro-col">
+						        <h5>Innovative<br>virtual reality</h5>
+						      
+						        <p>Learn how we created this pioneering experience, where you can explore the project in Vive VR and stand at the border itself.</p>
 						        <div class="btn-wrap">
 							        <div class="blah">
-							            <div class="icon-blah"><img src="images/read.png"></div><span class="btn btn-1c"><span class="text">Read</span></span>
+							            <div class="icon-blah"><img src="images/vr.png"></div><span class="btn btn-1c"><span class="text">Virtual Reality</span></span>
 							        </div>
 					            </div>
 					        </div>
-					        <div class="col-md-5 col-md-offset-0 col-sm-5 col-sm-offset-0 col-xs-offset-0 col-xs-16 intro-col">
-					            <h5>Podcasts</h5>
-					            <p>(15-18 mins.each)</p>
-					            <p>Our podcast series, where the team explains the hidden challenges.</p>
+                    <div class="col-md-5 col-md-offset-0 col-sm-5 col-sm-offset-0 col-xs-offset-0 col-xs-16 intro-col">
+					            <h5>Behind-the-scenes podcast series</h5>
+					         
+					            <p>Our reporting teams share their untold stories and personal discoveries from this report.</p>
                                 <div class="btn-wrap">
 							        <div class="blah">
 							            <div class="icon-blah"><img src="images/snd-icon.png"></div><span class="btn btn-1c"><span class="text">Listen</span></span>
@@ -1046,203 +1110,316 @@ margin-left: calc( (25% + 7%  ) /2);
 					            </div>
 				            </div>
 				            <div class="clearer"></div>
-                            <div class="col-sm-16 intro-col margin-top-60" style="padding-right:0;width:100%;margin-top:40px">
-                                <div class="vr-btn">
-                                    <div class="icon-blah">
-                                        <img src="images/vr.png">
-                                    </div>
-					                <div style="display:inline-block;margin-left:5px;">
-					                    <h5>Virtual Reality</h5>
-                                        <p>Explore the series on the Vive VR system and stand at the border itself.</p>
-                                    </div>
-							       </div> 
-							        <div class="vr-btn-mobile">
-							        <h5>Virtual Reality</h5>
-							        <p>Explore the series on the Vive VR system and stand at the border itself.</p>
-							        <div class="btn-wrap">
-							        <div class="blah">
-							            <div class="icon-blah"><img src="images/vr.png"></div><span class="btn btn-1c"><span class="text">Listen</span></span>
-							        </div>
-					            </div>
-                            </div>   
-                        </div>
+                         
+                </div>
+		        <div class="row index intro-col cols-bottom margin-top-60">
+		           <div class="col-sm-16 intro-col margin-top-60">        
+                        <div class="vr-btn">
+                            <div class="icon-blah">
+                                <img src="images/meeting-128.png">
+                            </div>
+                            <div style="display:inline-block;margin-left:5px;">
+                                <h5>About the team</h5>
+                                <p style="margin-top:0">Meet the people behind the USA TODAY NETWORK'S groundbreaking effort.</p>
+                            </div>
+						</div> 
+						
+						<div class="vr-btn-mobile">
+						    <h5>About the team</h5>
+                            <p style="margin-top:0">Meet the people behind the USA TODAY NETWORK'S groundbreaking effort.</p>
+							<div class="btn-wrap">
+							    <div class="blah">
+							        <div class="icon-blah"><img src="images/vr.png"></div><span class="btn btn-1c"><span class="text">Listen</span></span>
+							    </div>
+					        </div>
+                        </div>   
                     </div>
-		        
-			    </div>	
-			    <div class="clearer"></div>
+		        </div>
+            </div>	
+            <div class="clearer"></div>
 		       
-		    <div class="clearer"></div>
 	    </div>
-    
     </div>
-    
-    <div id="core-intro">
-        <table class="header-menu">
-            <tr>
-                <td><img src="images/logo_black.png" class="wall-logo">
-                    <img src="images/logo-mob-bl.png" class="wall-logo-mobile">
-            	</td>
-	            <td class="text-right">
-                    <h4 class="header-h4">
-	                    <span class="hide-mobile">Share<img src="images/swoosh.png" class="share"></span>Stories</h4>
-	                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </td>
-	        </tr>
-	    </table>
-	    <section class="core-main lax" data-rellax-speed="-4" data-rellax-percentage="0.5">
-			<figure class="full">
-        	    <img src="images/BigBendAerial.jpg">
-        	    <div class="col-md-3 col-md-offset-2 col-sm-5 col-sm-offset-1 col-xs-offset-0 col-xs-16 no-side-padding"> 
-            	    <figcaption class="hanging mobile"><b>Photo 1:</b> This photo is right aligned and full width from left margin of 2 columns</figcaption>
-        	    </div>
-    	    </figure>
-        </section>
 
-	    <div class="section intro-txt"> 
-	
-		    <div class="intro core">
-			    <img class="para-img hide-mobile show-tablet" src="images/para-b.png">   
-                <h3 class="sub hide-mobile show-tablet">land of | <span>shadows</span></h3>
-                <p>Silky mud squirts between toes as we wade into the Rio Grande. The river’s water is lukewarm here, slippery against the skin.</p>
-			    <p>We dive beneath the surface, swimming against current, back and forth. Forth to Coahuila, back to Texas. Knee deep, mid-river, it is unclear at times whether we’re in the United States or in Mexico.</p>
-			    <p>The border is an idea at midstream. But in the drifting current, it’s impossible to know.</p>
-			    <p>We are nearly midway through a nearly 2,000-mile journey. By car, by occasional swim, and foremost by helicopter, we are here to examine every inch of the international boundary.</p>
-           
-            </div>
-        </div>
-    </div>	
-    	
-        
-    	
-    <div class="clear"></div>
+
+<!-- end home screen -->
+
     
-    <section>
-       <table class="header-menu">
-            <tr>
-                <td> <img src="images/logo_black.png" class="wall-logo">
-                    <img src="images/logo-mob-bl.png" class="wall-logo-mobile">
-            	</td>
-	            <td class="text-right">
-                    <h4 class="header-h4">
-	                    <span class="hide-mobile">Share<img src="images/swoosh.png" class="share"></span>Stories</h4>
-	                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </td>
-	        </tr>
-	    </table>
-		<div class="clearer"></div>  
+   	<div class="fake-vid">VIDEO PLAYER</div>   
    
-        <div class="col-md-14 col-md-offset-2 col-sm-16 col-sm-offset-0 no-side-padding">
-			<figure class="full">
-				<img src="images/maninwater.jpg">
-            </figure>
-	    </div>
-	    <div class="col-md-5 col-md-offset-2 col-sm-5 col-sm-offset-1 col-xs-offset-0 col-xs-16"> 
-	    <figcaption class="photo2 hanging"><b>Photo 2:</b> This photo is full-bleed content width placeholder. Cutline for the photo goes here and is centered on desktop.</figcaption>
-			</figure>
-			</div>
+    	
+ <style>
+
+.img-circular {
+ width: 65px;
+ height: 65px;
+ background-image: url('images/poodle-1.jpg');
+ background-size: cover;
+ display: block;
+ border-radius: 100px;
+ position: relative;
+ top: 0;
+}
+.content .row.index h5 + p.about {
+margin-top: 20px;
+}
+.img-circular + p {
+    margin-top: 0;
+}
+.img-circular.poodle-2 {
+ background-image: url('images/poodle-2.jpg');
+}
+.img-circular.poodle-3 {
+ background-image: url('images/poodle-3.jpg');
+}
+[class*='cols-'] {
+   display:table;
+}
+[class*='cols-'] > * {
+    float: none;
+    position: relative;
+    /* old ie fixes */
+    *zoom: 1; 
+    *display: inline;
+    display: table-cell;
+}
+.cols-bottom > * {
+        vertical-align: bottom;
+}
+.cols-top > * {
+        vertical-align: top;
+}
+
+//extra bonus if needed
+.p-top {
+    vertical-align: top;
+}
+
+.row.index .podcast-top {
+
+    clear: both;
+    position:absolute !important;
+    top:0 !important;
+}
+.podcast-bottom {
+
+}
+.row.index p.podcast-date {
+    margin-top:0;
+    margin-bottom:0;
+}
+.podcast-h5 {
+margin-top:0;
+}
+.row.index p.podcast-desc {
+    margin-top:140px;
+    margin-bottom: 30px;
+}
+.no-left-padding {
+    padding-left: 0 !important;
+}
+.margin-top-0 {
+    margin-top: 0 !important;
+}
+ </style>       
+    	
 
 
-</section>
 
 
-
-
+<!-- podcasts section -->
 
     <div class="clearer"></div>
-     
+
+
     <section class="core-main">
-        <div class="row">
-            <div class="col-md-7 col-md-offset-8 col-sm-8 col-sm-offset-7 col-xs-offset-0 col-xs-16 core-start">    
-                <h4 class="location"><i class="fa fa-map-marker" aria-hidden="true"></i>Segment I &mdash; Gulf to Laredo</h4>
-                <h1 class="sub">Main header header for article</h1>
-                <div class="byline">
-					<b>Dennis Wagner</b> | Arizona Republic <span class="show-mobile"<br></span> <span class="hide-mobile">|</span> USA TODAY NETWORK
-				</div>
-                <p>White, puffy clouds scud overhead as the Bell Long Ranger helicopter, armed with a nose camera, drops to 100 feet above the Gulf of Mexico and rushes toward Texas shoreline.</p>
-                <p>At the mouth of the Rio Grande, seabirds scattering, the chopper climbs rapidly and begins to swerve in concert with the river channel, the borderline.</p>
-                <p>Thus begins a quest to understand an international boundary as few, if any, have done before.</p>
+        <table class="header-menu">
+        <tr>
+            <td>
+                <img src="images/logo_black.png" class="wall-logo">
+                <img src="images/logo-mob-bl.png" class="wall-logo-mobile">
+            </td>
+            <td class="text-right">
+                <h4 class="header-h4 black">
+                    <span class="hide-mobile">Share<img src="images/swoosh.png" class="share"></span>Stories
+                </h4>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </td>
+	    </tr>
+	</table>	 
+        <div class="row content">
+            <div class="col-md-3 col-md-offset-1 bbb">
+                <img src="images/podcast.png" class="left-col-icon">
+                <figcaption>Reporter Gustavo Solis meets law-enforcement experts in San Diego, where dense border.</figcaption>
+                <figcaption>American Southwest if a continuous border wall is built.</figcaption>
+            </div>
+            <div class="margin-top-100 col-md-9 col-md-offset-2 col-sm-16 col-sm-offset-0 col-xs-16 col-xs-offset-0 col-xs-16 bbb no-side-padding">    
+                
+                <h1 class="core">There is always a story behind the story.</h1>
+                <p class="tablet-p">Journalists have the best stories.</p>
+                <p class="tablet-p">Not just the ones they write or document on video, but the ones they share when they come back from assignments.</p>
+                <p class="tablet-p">In this podcast series, we'll introduce you to the journalists behind The Wall. Hear what they went through to bring you theses stories &mdash; and the surprising things they learned along the way.</p>
+
+<!-- podcast calendar -->  
+
+                <h4 class="subhead first">The series calendar</h4>
+                                
+                <div class="row index cols-bottom margin-top-0">
+                    <div class="col-md-5 col-md-offset-0 col-sm-5 col-sm-offset-0 col-xs-offset-0 col-xs-16 no-left-padding">
+                        <div class="podcast-top">
+                            <div class="img-circular poodle-1"></div>
+                            <p class="podcast-date">Sept. 13</p>
+                            <h5 class="podcast-h5">Inside the mind of a human smuggler</h5>
+                        </div>
+                        <p class="podcast-desc">Longtime immigration reporter Daniel Gonzalez travels to the historic center of Mexicali to meet a "pollero," a man who is paid to get migrants over the border fence and into the United States.</p>
+                        <div class="btn-wrap">
+							<div class="blah">
+							    <div class="icon-blah"><img src="images/snd-icon.png"></div><span class="btn btn-1c"><span class="text">Listen</span></span>
+							</div>
+					    </div>
+					</div>
+                    <div class="col-md-5 col-md-offset-0 col-sm-5 col-sm-offset-0 col-xs-offset-0 col-xs-16 no-left-padding">
+                   
+                        <div class="podcast-top">
+                            <div class="img-circular poodle-2"></div>
+                            <p class="podcast-date">Sept. 14</p>
+                            <h5 class="podcast-h5">Losing the jaguar</h5>
+                        </div>
+                        <p class="podcast-desc">Environmental reporter Brandon Loomis visits the jaguar's native habitat in Sonora, Mexico, learning that this apex predator will become extinct in the American Southwest if a continuous border wall is built.</p>
+                        <div class="btn-wrap">
+                            <div class="blah">
+                                <div class="icon-blah"><img src="images/snd-icon.png"></div><span class="btn btn-1c"><span class="text">Listen</span></span>
+                            </div>
+					    </div>
+                    </div>
+                    <div class="col-md-5 col-md-offset-0 col-sm-5 col-sm-offset-0 col-xs-offset-0 col-xs-16 no-left-padding">
+                        <div class="podcast-top">
+                            <div class="img-circular poodle-3"></div>
+                            <p class="podcast-date">Sept. 15</p>
+                            <h5 class="podcast-h5">Following drugs under, around and through the border</h5>
+                        </div>
+                        <p class="podcast-desc">Reporter Gustavo Solis meets law-enforcement experts in San Diego, where dense border fencing hasn't stopped the constant flow of drugs through dozens of huge underground tunnels.</p>
+                        <div class="btn-wrap">
+                            <div class="blah">
+                                <div class="icon-blah"><img src="images/snd-icon.png"></div>
+                                <span class="btn btn-1c"><span class="text">Listen</span></span>
+                            </div>
+					    </div>
+					</div>
+                </div>
+                  <div class="row index cols-bottom">
+                    <div class="col-md-5 col-md-offset-0 col-sm-5 col-sm-offset-0 col-xs-offset-0 col-xs-16 no-left-padding">
+                        <div class="podcast-top">
+                            <div class="img-circular poodle-4"></div>
+                            <p class="podcast-date">Sept. 16</p>
+                            <h5 class="podcast-h5">Searching for Carlos</h5>
+                        </div>
+                        <p class="podcast-desc">Photojournalist David Wallace walks Arizona's Organ Pipe National Monument, one of the harshest and most remote places along the 2,000-mile U.S.-Mexico border, with a woman looking for the remains of her older brother.</p>
+
+                        <div class="btn-wrap">
+							<div class="blah">
+							    <div class="icon-blah"><img src="images/snd-icon.png"></div><span class="btn btn-1c"><span class="text">Listen</span></span>
+							</div>
+					    </div>
+					</div>
+                    <div class="col-md-5 col-md-offset-0 col-sm-5 col-sm-offset-0 col-xs-offset-0 col-xs-16 no-left-padding">
+                   
+                        <div class="podcast-top">
+                            <div class="img-circular poodle-5"></div>
+                            <p class="podcast-date">Sept. 17</p>
+                            <h5 class="podcast-h5">On patrol with border vigilantes</h5>
+                        </div>
+                       <p class="podcast-desc">Border reporter Rafael Carranza joins a group of civilian men patrolling the U.S.-Mexico border. They dress in combat gear, carry AR-15s and spend their vacation as part of one of the best-known, and most.</p>
+                        <div class="btn-wrap">
+                            <div class="blah">
+                                <div class="icon-blah"><img src="images/snd-icon.png"></div><span class="btn btn-1c"><span class="text">Listen</span></span>
+                            </div>
+					    </div>
+                    </div>
+                    <div class="col-md-5 col-md-offset-0 col-sm-5 col-sm-offset-0 col-xs-offset-0 col-xs-16 no-left-padding">
+                        <div class="podcast-top">
+                            <div class="img-circular poodle-6"></div>
+                            <p class="podcast-date">Sept. 18</p>
+                            <h5 class="podcast-h5">Joined in faith, divided by a border</h5>
+                        </div>
+                        <p class="podcast-desc">Border eporter Aileen B. Flores hikes up Mount Cristo Rey, a mountain on the border between El Paso, Texas and Juarez, Mexico, with the Mexicans and Americans who view the site as a sacred homage.</p>
+                        <div class="btn-wrap">
+                            <div class="blah">
+                                <div class="icon-blah"><img src="images/snd-icon.png"></div>
+                                <span class="btn btn-1c"><span class="text">Listen</span></span>
+                            </div>
+					    </div>
+					</div>
+                </div>
+                
+                
+                
+                
+                <div class="row index cols-bottom">
+                    <div class="col-md-5 col-md-offset-0 col-sm-5 col-sm-offset-0 col-xs-offset-0 col-xs-16 no-left-padding">
+                        <div class="podcast-top">
+                            <div class="img-circular poodle-7"></div>
+                            <p class="podcast-date">Sept. 19</p>
+                            <h5 class="podcast-h5">Building the wall, at the expense of private property</h5>
+                        </div>
+                        <p class="podcast-desc">Government reporter John Moritz and business reporter Chris Ramirez investigate how much Texas private property would need to be bought or taken in order to build a border.</p>
+                        <div class="btn-wrap">
+							<div class="blah">
+							    <div class="icon-blah"><img src="images/snd-icon.png"></div><span class="btn btn-1c"><span class="text">Listen</span></span>
+							</div>
+					    </div>
+					</div>
+                    <div class="col-md-5 col-md-offset-0 col-sm-5 col-sm-offset-0 col-xs-offset-0 col-xs-16 no-left-padding">
+                   
+                        <div class="podcast-top">
+                            <div class="img-circular poodle-8"></div>
+                            <p class="podcast-date">Sept. 20</p>
+                            <h5 class="podcast-h5">Severing a tribe's ancenstral lands</h5>
+                        </div>
+                        <p class="podcast-desc">Reporter Dianna M. Náñez joins members of the Tohono O'odham Nation at the border in southern Arizona's Sonoran Desert, wherre ancestral lands cross into Mexico. Tribal members are allowed.</p>
+                        <div class="btn-wrap">
+                            <div class="blah">
+                                <div class="icon-blah"><img src="images/snd-icon.png"></div><span class="btn btn-1c"><span class="text">Listen</span></span>
+                            </div>
+					    </div>
+                    </div>
+                    <div class="col-md-5 col-md-offset-0 col-sm-5 col-sm-offset-0 col-xs-offset-0 col-xs-16 no-left-padding">
+                        <div class="podcast-top">
+                            <div class="img-circular poodle-9"></div>
+                            <p class="podcast-date">Sept. 21</p>
+                            <h5 class="podcast-h5">Flying the border, driving the border. What we learned.</h5>
+                        </div>
+                        <p class="podcast-desc">Reporters Dennis Wagner and Laura Gómez traversed all 2,000 miles of the U.S,-Mexico border &mdash; Dennis by air, Laura by land. Listen to their stories, their insights, and their</p>
+                        <div class="btn-wrap">
+                            <div class="blah">
+                                <div class="icon-blah"><img src="images/snd-icon.png"></div>
+                                <span class="btn btn-1c"><span class="text">Listen</span></span>
+                            </div>
+					    </div>
+					</div>
+                </div>
             </div>
         </div>
-    </section>
-   
-    <section class="photo1">
-		<div class="col-md-8 col-md-offset-2 col-sm-16 col-sm-offset-0 photo3 margin-top-60">
-			<figure class="full">
-				<img src="images/MouthRio.jpg">
-			</figure>
-		</div>
-		<div class="col-md-3 col-sm-4 photo3-caption">
-			<figcaption><b>Photo 3:</b> Photo is 8-columns wide and caption is 3-columns wide and aligned left.</figcaption> 
-		</div>
-    </section>
+    </section>	
+<!--
+<p class="podcast-desc">Photojournalist David Wallace walks Arizona's Organ Pipe National Monument, one of the harshest and most remote places along the 2,000-mile U.S.-Mexico border, with a woman looking for the remains of her older brother.</p>
+<p class="podcast-desc">Border reporter Rafael Carranza joins a group of civilian men patrolling the U.S.-Mexico border. They dress in combat gear, carry AR-15s and spend their vacation as part of one of the best-known, and most.</p>
+<p class="podcast-desc"></p>
 
-    <section class="core-main">
-        <div class="row">
-            <div class="col-md-7 col-md-offset-8 col-sm-8 col-sm-offset-7 col-xs-offset-0 col-xs-16 core-start" style="position:relative;z-index:40;background:rgba(255,255,255,0.85);margin-bottom:60px">    
-                <p>Our goal is to fly and film every inch of the line. To survey the existing fence and security features. To capture images of illegal crossers. To figure out how a wall fits into the big picture.</p>
-                <p>In those first minutes, several deer spook at the thump of chopper rotors, bounding through bush lands along the river delta.</p>
-                <p>Brownsville is off in the distance. There is no fence below. No sign of law enforcement.</p>
-                <p>Just a mesmerizing delta, and a measure of anticipation: How many undocumented migrants would we see running like deer? How many smugglers? How many Border Patrol chases and apprehensions?</p>
-                   <div class="clear"></div>
-            </div>
-               <div class="clear"></div>
-        </div>   
-           <div class="clear"></div>     
-    </section>
-    <div class="clear"></div>
-	<div class="fake-vid">VIDEO PLAYER</div>  
-	<div class="clear"></div>		
+<p class="podcast-desc"></p>
+<p class="podcast-desc"></p>
+<p class="podcast-desc"></p>
 
-
-  
-        
-   
-
-                
-         
- 
-
-
-
-
-	
-
-
-
-   
-   
-	
-
- 
-
-
-        
-        
-        
- <!-- 
- x/7 - 12px
- 14%
- -->       
-        
-<br><br><br><br><br>
+-->
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 <script src="js/jquery-2.1.1.min.js"></script>
-<!--<script src='https://cdnjs.cloudflare.com/ajax/libs/rellax/1.1.0/rellax.min.js'></script>
-<script>
-    if (window.matchMedia("(min-width: 1024px)").matches) {
-      var rellax = new Rellax('.lax');
-    }
-</script>-->
+
 <script>
 var high = $( document ).height();
 console.log(high);
