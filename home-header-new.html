@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>The Wall</title>
+    <link href="css/bootstrap.css" rel="stylesheet">  
+    <link href="css/grid.css" rel="stylesheet">
+    <link href="css/style-wall.css" rel="stylesheet">
+<style>
+#themap {
+width:100%;background:#fff url('images/mapgrab.png') no-repeat;position: relative;clear: both;z-index:10;background-size:cover;
+}
+video.fullscreen { 
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translate(-50%, -50%);
+}
+.unmute-video,
+.mute-video {
+    background-image: url('sound-btn.png');
+    background-repeat: no-repeat;
+    display: block;
+    height: 24px;
+    position:relative;
+    text-indent:-999px;
+    width: 24px;
+    z-index: 11;
+}
+.unmute-video:hover,
+.mute-video:hover {
+    cursor: pointer;
+}
+.mute-video {
+    background-position: 0 0;
+}
+.mute-video:hover {
+    background-position: 0 -25px;
+}
+.unmute-video {
+    background-position: -48px 0;
+}
+.unmute-video:hover {
+    background-position: -48px -25px;
+}
+
+section.hide-mobile-footer {
+    bottom: 20px;
+    left: 40px;
+    position: absolute;
+    width: calc( 100% - 80px );
+}
+.message {
+    height: 960px;
+}
+h1.core{
+    font: 36px/42px 'Unify Sans Bold', sans-serif;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    color: #000;
+    text-align: left;
+    font-weight: normal;
+    text-transform: none;
+    color: #000;
+    text-align: left;
+    font-weight: normal;
+}
+h4 + h1.core {
+    margin: 10px 0 0;
+}
+.opener {
+	font-family: 'Unify Serif', serif;
+	font-size: 19px;
+	line-height:33px;
+	margin-top:40px;
+}
+.text-right {
+    text-align:right;
+}
+.sr-only {
+    display: none;
+}
+.wrapper {
+    height:650px;
+    z-index:0;
+}
+/*
+------------------------------- new header */
+.header {
+    background:#fff;
+    height:70px; 
+    opacity:0;
+    top:0;
+    width:100%;
+    z-index:200;
+}
+.header-animate {
+    height: 50px;
+    opacity:.9;
+    padding-top:20px;
+}
+
+nav {
+    color:#000;
+    opacity:1;
+    position:absolute;
+    top:0;
+    width:100%;
+    z-index:300;
+}
+nav ul {
+    padding:0;
+    margin:0;
+}
+
+nav li {
+    display:inline-block;
+    vertical-align:middle;
+    width: 48%;
+}
+
+.navbar-toggle {
+    position: relative;
+    float: right;
+    padding: 9px 0;
+    margin-top: 8px;
+    margin-right: 0;
+    margin-bottom: 8px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    line-height: 1;
+    vertical-align: middle;
+}
+.navbar-toggle .icon-bar {
+    background-color: #000;
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+}
+.navbar-toggle .icon-bar+.icon-bar {
+    margin-top: 4px;
+}
+.first nav {
+    padding-top:16px;
+}
+
+.wall-logo-mobile {
+    height: 15px;
+    width: auto;
+    display: none;
+    margin-left:40px;
+    margin-top: -8px;
+}
+h4.header-h4 {
+    display:inline-block;
+    font-family:'Unify Sans SemiBold',sans-serif;
+    font-size: 14px;
+    line-height:14px;
+    margin-right: 12px;
+    margin-top:18px;
+}
+.home-div nav {
+    background:rgba(255,255,255,0);
+}
+.first nav {
+     background:rgba(255,255,255,.9);
+}
+.ripper{
+    z-index: inherit;
+}
+
+#menu span {
+    margin-right:20px
+}
+
+.header-animate + nav ul li h4.header-h4 {
+    margin-top: 4px
+}
+
+.header-animate + nav ul li button {
+    margin-top: -2px !important;
+}
+
+#menu span.icon-bar {
+    margin-right:0;
+}
+.hide-mobile-share {
+    display:inline-block;
+}
+@media(max-width:1023px) {
+    .hide-mobile-share {
+        display: none;
+    }
+}
+
+
+.home-screen-top #menu h4 {
+    color:#fff;
+}
+.home-screen-top #menu .icon-bar {
+    background:#fff;
+}
+.wall-logo-mobile {
+    display:block;
+}
+img.share {
+    margin-left:6px;
+    margin-right:20px;
+}
+.home-div{
+    display:block;
+    position:fixed;
+    top:0;
+    z-index:3000;
+    width:100%;
+}
+.first {
+    display:none;
+    position:fixed;
+    
+    width:100%;
+    z-index:3000;
+}
+</style>
+</head>
+<body>
+    
+<div class="home-div">
+    <div class="header"></div> 
+    <nav class="home-screen-top">
+        <ul>
+            <li> 
+                
+            </li>
+            <li class="text-right" id="menu">
+                <h4 class="header-h4">
+                    <span class="hide-mobile-share">Share<img src="images/swoosh-w.png" class="share">Stories</span>
+                </h4>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button></li>
+        </ul>
+    </nav>
+</div>
+<div class="first">    
+    <div class="header-animate"></div>
+    <nav class="first-screen">
+        <ul>
+            <li id="logo-item"> 
+               
+                <img src="images/logo-mob-bl.png" class="wall-logo-mobile">
+            </li>
+            <li class="text-right" id="menu">
+                <h4 class="header-h4">
+                    <span class="hide-mobile-share">Share<img src="images/swoosh.png" class="share">Stories</span>
+                </h4>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button></li>
+        </ul>
+    </nav>
+</div>
+    <div class="wrapper">
+		    <video class="fullscreen" loop autoplay>
+			    <source src="TheWallLoopV5.mp4" type="video/mp4">
+			    <source src="TheWallLoopV5.ogg" type="video/ogg">
+			    Your browser does not support the video tag.
+		    </video>
+            <div class="message">
+        	    <!-- placeholder for story progress -->
+                <img src="leftnav.png" class="left-nav hide-mobile">
+            
+                <div class="surtitle ripper">
+            	    <h3>Unknown stories.</h3>
+            	    <h3>Unintended consequences.</h3>
+                </div>
+         	    <img src="thewalllogo_reverse-02.png" id="logo" style="margin-bottom: 100px;">
+          
+                <div class="scroll">
+				    <a class="page-header__scroll-to-content" href="#themap" aria-label="Jump to content">
+					    <div class="scroll_down"></div>
+				    </a>
+				    <br>
+			    </div>
+            </div>
+            <section class="hide-mobile-footer">
+        		<div class="pull-left">
+        			<div class="wt-circle"></div><div class="usat">USA TODAY NETWORK</div>
+        		</div>
+        		
+				<div class="pull-right">
+            		<div id="sound-toggle" class="mute-video"></div>
+        		</div>
+        	</section>
+		</div>
+
+    		
+ 
+    
+   
+	<div id="themap" style="z-index:0">
+
+	
+
+		
+
+		<article>
+			<div class="row">
+                <div class="col-md-8 col-md-offset-6 col-sm-8 col-sm-offset-6 col-xs-offset-0 col-xs-16">    
+					<h4 style="color:#009bff;font-family:'Unify Sans Bold', sans-serif;font-size:16px;text-transform:uppercase;">A USA today network Special report</h4>
+					<h1 class="core">Should we build a border wall?</h1>
+					<div class="opener">
+						<p>The promise fueled an unprecedented election: We will build a wall. The questions launched an unprecedented journey: Could it be built? Would it work? The USA TODAY NETWORK looked at every foot of a 2,000-mile border. Now, you can too. You'll meet remarkable people and discover the border's untold stories. Is a border wall worth the consequences? The issue is vast and complex. But the stories that follow are designed to help you understand. No matter what you already think about a border wall, you'll learn something new here. The exploration is yours to begin.</p>
+						<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nibh elit, accumsan sed velit non, bibendum efficitur nibh. Vivamus eu orci eu augue ultrices volutpat nec ac turpis. Sed tempus ullamcorper ante, ac congue elit facilisis sit amet. Nulla dolor libero, pellentesque ac leo ut, consectetur molestie magna. Vestibulum dictum tempus mauris. Proin ut est elementum, pellentesque orci eget, vulputate nibh. Curabitur a ultrices nibh, sagittis pharetra ipsum.
+</p>
+                        <p>
+Curabitur ex lorem, sagittis id viverra vel, mattis in velit. Nulla laoreet vestibulum sapien vitae facilisis. Quisque gravida viverra est vitae volutpat. Vivamus pharetra suscipit velit id rutrum. In venenatis massa eget nisi imperdiet sodales. Nunc mollis lorem at dui mattis, sed tempor ipsum mattis. Quisque ante massa, viverra vitae ipsum fringilla, suscipit elementum felis. Etiam ac leo quis risus sodales venenatis id eget neque. Phasellus rutrum, mi eu placerat condimentum, lacus elit euismod magna, mattis efficitur purus magna vitae elit. Curabitur et elit risus. Morbi feugiat venenatis lectus, sed commodo lacus convallis et. Vestibulum elementum urna vulputate urna pellentesque egestas. Aenean sodales ante quis nunc gravida, sed hendrerit felis sollicitudin.
+</p>
+                        <p>
+Phasellus pharetra congue diam at gravida. Nullam ultrices suscipit vehicula. Phasellus porta, nibh id aliquam dignissim, est eros tincidunt nisi, quis gravida ligula orci eget felis. Proin et enim tellus. Curabitur varius auctor nunc a ultricies. Maecenas ultricies, velit eget elementum scelerisque, urna eros fermentum odio, sed sagittis dui urna tincidunt neque. Proin consequat enim mauris, a aliquam sapien elementum et. Donec nec sem at odio volutpat euismod viverra id dui. Maecenas eleifend elementum bibendum. Aliquam ac ornare orci. Nam id est mi. Nullam maximus faucibus sapien vehicula vulputate. Donec vel diam odio. Curabitur pellentesque egestas rhoncus. Aliquam malesuada vitae est et tempor.
+</p>
+                        <p>
+Nulla vehicula, nunc a varius condimentum, augue lorem varius risus, quis aliquet eros magna a nunc. Nullam ornare tincidunt nisl, id placerat nunc ultricies sit amet. Vivamus et felis volutpat nisl sagittis convallis. In ac nulla leo. Nulla mollis erat quis ornare viverra. Cras leo justo, convallis non nisi sed, ornare euismod erat. Proin pretium turpis nec nisl auctor pellentesque. Sed facilisis cursus ex, ac vulputate risus. Duis tempor eros vestibulum eleifend feugiat. Vivamus sit amet leo facilisis ipsum lobortis lobortis vel vitae est. Fusce porttitor dolor felis, non aliquet dolor lacinia id.
+</p>
+                        <p>
+Vivamus sed porta nibh. Nullam ut magna quis massa viverra lacinia. Aenean eget ligula vestibulum, imperdiet enim id, molestie nulla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce in luctus ligula, et faucibus nibh. Phasellus id felis aliquet, dapibus justo eu, placerat est. Nulla at viverra ante, vel gravida nisi. Aenean id posuere leo. Donec blandit dictum urna, a accumsan felis facilisis sed. Integer lacus sapien, laoreet eu tincidunt in, facilisis a nulla. Nullam sed ornare quam. Aenean orci tortor, elementum nec lobortis non, posuere non tortor. Duis ac enim tortor. Donec dignissim luctus est non feugiat.
+</p>
+					</div>
+				
+			</div>
+		</div>
+		</article>
+	</div>
+	
+
+
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.waypoints.js"></script>
+<script>
+var $trigger = $('.ripper');
+
+var $header = $('.header');
+var $topnav = $('.home-screen-top');
+
+var $animated = $('.header-animate');
+var $fixednav = $('.first-screen');
+var $a = $('.home-div');
+var $b = $('.first');
+$trigger.waypoint(function(direction){
+    if (direction == 'down') {
+        $a.animate({'marginTop' : '-=60px'});
+        $b.fadeIn(3000);
+       
+    } else {
+    
+     $b.fadeOut(1000);
+     $a.animate({'marginTop' : '0px'});
+    }
+    console.log('Waypoint!');
+    }, {offset: 0});
+
+
+</script>
+
+
+
+
+    <script>
+    $("video").prop('muted', false);
+
+	$("#sound-toggle").click(function () {
+    if ($("video").prop('muted')) {
+        $("video").prop('muted', false);
+        $(this).removeClass('unmute-video');
+    
+
+    } else {
+        $("video").prop('muted', true);
+        $(this).addClass('unmute-video');
+    }
+    console.log($("video").prop('muted'))
+});
+</script>
+
+ -->
+</body>
+</html>

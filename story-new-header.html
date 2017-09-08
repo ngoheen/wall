@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>The Wall - Story Header</title>
+    <!--<link href="css/bootstrap.css" rel="stylesheet">  
+    <link href="css/grid.css" rel="stylesheet">-->
+    <link href="css/style-wall4.css" rel="stylesheet">
+<style>
+.navbar-toggle {
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    display:block;
+    float: right;
+    line-height: 60px;
+    margin: 8px 0;
+    padding: 9px 0;
+    position: relative;    
+    vertical-align: middle;    
+}
+
+.navbar-toggle .icon-bar {
+    background-color: #000;
+    border-radius: 1px;
+    display: block;
+    height: 2px;
+    width: 22px;   
+}
+.navbar-toggle .icon-bar + .icon-bar {
+    margin-top: 4px;
+}
+
+.text-right {
+    text-align:right;
+}
+
+.header {
+    height:70px;
+    background:#fff;
+    opacity:0;
+    top:0;
+    width:100%;
+    z-index:200;
+}
+.header-animate {
+    height: 50px;
+    opacity:.9;
+    padding-top:20px;
+}
+
+.sr-only {
+    display: none;
+}
+nav {
+    color:#000;
+    opacity:1;
+    position:absolute;
+    top:0;
+    width:100%;
+    z-index:300;
+}
+
+.first nav {
+    background:rgba(255,255,255,.9);
+    padding-top:16px;
+}
+nav ul {
+    margin:0;
+    padding:0;
+}
+nav li {
+    display:inline-block;
+    vertical-align:middle;
+    width: 48%;
+}
+.wall-logo {
+    background: url('images/logo_black.png');
+    background-size:cover;
+    height: 50px;
+    margin-left:40px;
+    width: 100px;   
+}
+.wall-logo-mobile {  
+    display: none;
+    height: 15px;
+    margin-left: 40px;
+    margin-top: -8px;
+    width: auto;
+}
+
+h4.header-h4 {
+    display:inline-block;
+    font-family:'Unify Sans SemiBold',sans-serif;
+    font-size: 14px;
+    line-height:14px;
+    margin-right: 12px;
+    margin-top:18px;
+}
+
+.story-div nav {
+    background:rgba(255,255,255,.2);
+    height:100px;
+}
+
+.mripper,
+.ripper{
+    z-index:inherit;
+}
+
+#menu span {
+    margin-right:20px
+}
+.header-animate + nav ul li h4.header-h4 {
+margin-top: 4px
+}
+
+
+.header-animate + nav ul li button {
+    margin-top: -2px !important;
+}
+
+
+#menu span.icon-bar {
+    margin-right:0;
+}
+.hide-mobile-share {
+    display:inline-block;
+}
+@media(max-width:1023px) {
+    .hide-mobile-share {
+        display: none;
+    }
+    .header-animate + nav ul li h4.header-h4 {
+        margin-top: 8px
+    }
+}
+
+.story-div .home-screen-top #menu h4 {
+    color:#000;
+}
+ .home-screen-top #menu .icon-bar {
+    background:#fff;
+}
+.story-div .home-screen-top #menu .navbar-toggle {
+    margin-top:15px;
+}
+.story-div .home-screen-top #menu .icon-bar {
+    background:#000;
+}
+
+.wall-logo-mobile {
+    display:block;
+}
+img.share {
+    margin-left:6px;
+    margin-right:20px;
+}
+.story-div,
+.home-div{
+    display:block;
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:3000;
+}
+.story-div .home-screen-top li {
+    height:50px;
+    margin-top:20px;
+    display:inline-block;
+}
+.hide-mobile-share {
+    margin-top:3px;
+}
+.first {
+    display:none;
+    position:fixed;
+    top:0;
+    z-index:3000;
+    width:100%;
+}
+.intro {
+    background-image: none;
+}
+.para-img {
+    margin-top:0;
+    margin-left:-20px;
+    width:19px;
+}
+@media (max-width:1023px) {
+    .wall-logo-mobile,
+    .wall-logo {
+        margin-left: 32px;
+    }
+}
+</style>
+</head>
+<body style="background: url(images/background-v6.png) no-repeat;background-size:cover;">
+    
+<div class="story-div">
+    <div class="header"></div> 
+    <nav class="home-screen-top">
+        <ul>
+            <li> 
+                 <img src="images/logo_black.png" class="wall-logo">
+            </li>
+            <li class="text-right" id="menu">
+                <h4 class="header-h4">
+                    <span class="hide-mobile-share">Share<img src="images/swoosh.png" class="share">Stories</span>
+                </h4>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<div class="first">    
+    <div class="header-animate"></div>
+    <nav class="first-screen">
+        <ul>
+            <li id="logo-item"> 
+                <img src="images/logo-mob-bl.png" class="wall-logo-mobile">
+            </li>
+            <li class="text-right" id="menu">
+                <h4 class="header-h4">
+                    <span class="hide-mobile-share">Share<img src="images/swoosh.png" class="share">Stories</span>
+                </h4>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </li>
+        </ul>
+    </nav>
+</div>
+    
+    		
+ 
+    
+<section class="photo1 mripper" style="z-index:10;margin-top:100px;">
+        <div class="col-sm-14 col-sm-offset-2 col-xs-16 col-xs-offset-0 no-side-padding">
+        
+            <div class="screen"></div>
+            <img src="images/USATSI_10033146.jpg" class="hide-mobile">
+            <div class="title show-mobile">
+                <h1>Land of <b>Shadows</b></h1>
+            </div>
+        </div>
+        <div class="row hide-mobile block-desk">
+            <div class="col-sm-4 col-sm-offset-2 col-xs-offset-0">
+                <figcaption class="hanging"><b>Photo 1:</b> This photo is right aligned and full width from left margin of 2 columns</figcaption>
+            </div>
+        </div>
+    </section>       
+    
+<figcaption class="show-mobile side-padding"><b>Cutline title goes here:</b> Cutline for the photo goes here on mobile. And might be quite long.</figcaption>
+  
+    
+<!-- intro text -->
+<div class="section sub intro-txt lax" data-rellax-speed="4" data-rellax-percentage="0.75"> 
+    <div class="intro col-md-7 col-md-offset-8 col-sm-9 col-sm-offset-7 col-xs-offset-0 col-xs-16" style="margin-top:-120px">
+        <img src="images/para-b.png" class="para-img">   
+        <h3 class="sub hide-mobile" style="margin-bottom: 20px">ranchers | <span>intro</span></h3>
+        <p class="ripper">Sometimes, the border ranchers hear the horses whinny in the corral at midnight, and see shadows moving silently past the barn. They've ridden over a ridge and stumbled into cartel "drug mules" &mdash; post stuffed in backpacks, assault rifles in hand.</p>
+        <p>After more than a decade of outrage about border security, cattlemen and women in the thorny southern Arizona outback grudgingly share the memories. Fences and irrigation lines cut. Homes and sheds broken into. Border Patrol sirens screaming through darkness in pursuit of drug-running vehicles. On of their own murdered in cold blood.</p>
+        <p>But in this land of dust and shadows, what most weighs on ranchers is not just what's seen, but what's unseen.</p>
+    </div>  
+</div>
+        
+<div class="clearer"></div>
+        
+<section class="sub main">
+    <!-- image rifle --> 
+    <div class="col-xs-16 col-sm-16 col-sm-offset-0 col-xs-offset-0 photo2">
+        <figure class="full">
+            <img src="images/rifle.jpg">
+            <figcaption class="center"><b>Photo 2:</b> This photo is full-bleed content width. Cutline for the photo goes here and is centered on desktop.</figcaption>
+        </figure>              
+    </div>
+</section>
+        
+<div class="clearer"></div> 
+
+
+<br><br><br><br><br><br><br><br><br><br>
+
+
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/rellax/1.1.0/rellax.min.js'></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.waypoints.js"></script>
+<script>
+
+    var $windowWidth = $(window).width();
+    if ($windowWidth > 414) {
+        
+        var $trigger = $('.ripper');
+
+        var $header = $('.header');
+        var $topnav = $('.home-screen-top');
+
+        var $animated = $('.header-animate');
+        var $fixednav = $('.first-screen');
+        var $a = $('.story-div');
+        var $b = $('.first');
+        
+        $trigger.waypoint(function(direction){
+            
+            if (direction == 'down') {
+            
+                $a.animate({'marginTop' : '-=150px'});
+                $b.fadeIn(300);
+       
+            } else {
+    
+                $b.fadeOut(300);
+                $a.animate({'marginTop' : '0px'});
+            }
+            console.log('Waypoint!');
+        }, {offset: 0});
+    
+    } else {
+        var $triggermobile = $('.mripper');
+        var $a = $('.story-div');
+        var $b = $('.first');
+        $triggermobile.waypoint(function(direction){
+            if (direction == 'down') {
+                $a.animate({'marginTop' : '-=150px'});
+                $b.fadeIn(300);
+        
+            } else {
+                $b.fadeOut(300);
+                $a.animate({'marginTop' : '0px'});
+            }
+            console.log('Mobiel Waypoint!');
+         }, {offset: 0});
+    }
+
+</script>
+
+<script>
+    if (window.matchMedia("(min-width: 1024px)").matches) {
+      var rellax = new Rellax('.lax');
+    }
+</script>
+
+</body>
+</html>
