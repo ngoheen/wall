@@ -15,238 +15,113 @@
 .text-left {
     text-align: left;
 }
-.fixed-white {
-    z-index: -1;
+.margin-top-0 {
+    margin-top: 0 !important;
 }
-.glyphicon {
-    position: relative;
-    top: 1px;
-    display: inline-block;
-    font-family: 'Glyphicons Halflings';
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+.margin-top-40 {
+    margin-top: 40px;
 }
-.photo-move {
-    margin-top: 300px;
-}
-.top-menu > .mobile-logo  {
- 	display: none;
-}
-.hide-tablet {
-	display: block;
-}
-@media (max-width:767px) {
-	.top-menu > .mobile-logo {
-		display: block;
-		left: 40px;
-		right: auto;
-	}
-	.mobile-logo img {
-	
-	}
-	.top-menu {
-		width: 100%;
-	}
-}
-.mobile-caption {
-	margin-left:32px;
-	margin-right: 32px;
-}
-@media (min-width:768px) {
-	.photo1 {
-		background-image:none;
-	}
-	header.substory .top-logo img.wall-logo.show-tablet.hide-mobile {
-	margin-left:40px;
-    }
-  
-}
-@media (min-width:768px) {
-	.mobile-caption {
-		display: none;
-    }
-}
-
-@media (min-width:1023px) {
-	.hide-tablet {
-		display: none;
-}
-
-	 h3.sub {
-        margin-bottom:24px;
-        margin-left:15px;
-    }
-}
-
-@media (max-width:768px) {
-  .tablet-p,
-    h1.core,
-    h4.subhead.first,
-    .row.index {
-    padding-left:17px;
-    padding-right: 17px;
-    }
-   .photo-move {
-        margin-top:0;
-   }
-    .intro {
-        margin-top:50px;
-    }
-}
-.para-img {
-    height:65px;
-    width: auto;
-    margin-left: 0;
-    margin-top:14px;
-    }
-@media (min-width:768px) and (max-width:1023px) {
-  .photo-move {
-        margin-top:0;
-   }
-    .intro {
-    	margin-top:0;
-    }
-    .block-desk,
-    .show-tablet {
-    	display: block !important;
-    }
-    
-   
-}
-.show-tablet {
-    display: block;
-}
-@media (min-width:1024px) {
-	header.substory .top-logo img.wall-logo.show-tablet.hide-mobile {
-		margin-left:0;
-	}
-	.left-col-icon {
-height:auto;
-margin-top:100px !important;
-width: 50px;
-}
-}
-p.first {
-	margin-top: 0 !important;
-}
-
-
-.intro {
-    background-color: rgba(255,255,255,0.85);
-    background-image: url(../images/paragraph.png);
-    background-repeat: no-repeat;
-    background-position: 52px top;
-    padding: 0 75px 100px;
-    width: 60%;
-}
-.intro p {
-	margin: 12px 75px 12px 0;
-}
-
-
-.photo1 {
-	position: relative;
-	width: 87.5%;
-	margin-left: 12.5%;
-	z-index:0;
-}
-p.first {
-	margin-top: 0 !important;
-}
-.core-start {
-    background:rgba(255,255,255,0.85);
-    position:relative;
-    z-index:40;
-}
-.story-move {
-    margin-top:-200px;
-    position:relative;
-    z-index:500
-}
-.photo2,
-.photo3 {
-	padding-left: 0;
-	padding-right: 0;
-}
-
-.photo3-caption {
-	margin-left:32px;
-	margin-right: 32px;
-}
-.intro-txt {
-	overflow: hidden;
-	margin-top: -200px;
-}
-.intro {
-    background-color: rgba(255,255,255,0.85);
-    margin-left:37.5%;
-    margin-right:37.5%;
-    position:relative;
-
-    padding: 0 75px 100px;
-
-}
-.intro p {
-	margin: 12px 75px 12px 0;
-}
-
 .margin-top-60 {
 	margin-top: 60px !important;
 }
- .margin-top-100 {
+.margin-top-100 {
     margin-top: 100px !important;
-    }
-.margin-top-300 {
-    margin-top: -300px;
 }
-.para-img {
-
+.no-left-padding {
+    padding-left: 0 !important;
 }
-
-
-video.fullscreen { 
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -100;
-  transform: translate(-50%, -50%);
+.black {
+    color: #000;
 }
-.unmute-video,
-.mute-video {
-    background-image: url('images/sound-btn.png');
-    background-repeat: no-repeat;
-    display: block;
-    height: 24px;
+.sr-only {
+    display: none;
+}
+.fake-vid {
+clear:both;position:relative;z-index:40;background:black;width:100%;color:white;display:table;vertical-align:middle;text-align:center;height:550px;
+}
+.tablet-p {
+    font-family: 'Unify Serif',serif;
+    font-size: 19px;
+    line-height: 33px;
+    margin-top: 20px;
+}
+[class*='cols-'] {
+   display:table;
+}
+[class*='cols-'] > * {
+    float: none;
     position: relative;
-    text-indent:-999px;
-    width: 24px;
-    z-index: 11;
+    display: table-cell;
 }
-.unmute-video:hover,
-.mute-video:hover {
-    cursor: pointer;
+.cols-bottom > * {
+        vertical-align: bottom;
 }
-.mute-video {
-    background-position: 0 0;
+.cols-top > * {
+        vertical-align: top;
 }
-.mute-video:hover {
-    background-position: 0 -25px;
+.row.index .podcast-top {
+    clear: both;
+    position:absolute !important;
+    top:0 !important;
 }
-.unmute-video {
-    background-position: -48px 0;
+.desk-findings .content .row.index p {
+    font-size: 17px;
+    line-height: 26px;
 }
-.unmute-video:hover {
-    background-position: -48px -25px;
+.row.index p.podcast-date {
+    font-family: 'Unify Sans',sans-serif;
+    font-size: 15px;
+    letter-spacing: -0.012em;
+    line-height: 24px;
+    margin-top:0;
+    margin-bottom:0;
+}
+.podcast-h5 {
+    margin-top:0;
+}
+.row.index p.podcast-desc {
+    margin-top:140px;
+    margin-bottom: 30px;
+    font-family: 'Unify Sans',sans-serif;
+    font-size: 15px;
+    letter-spacing: -0.012em;
+    line-height: 24px;
 }
 
+.row.index .intro-col p.podcast-desc {
+    margin-top: 40px;
+}
+/*
+------------------ header menu */
+img.share {
+    margin-left: 6px;
+    margin-right: 18px;
+}
+.wall-logo {
+    height: 50px;
+    width: auto;
+}
+.wall-logo-mobile {
+    height: 15px;
+    width: auto;
+    display: none;
+}
+.header-menu {
+    height:60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left:40px;
+    margin-right:40px;
+    padding:0;
+    width:calc(100% - 80px);
+}
+/* end header */
 
+.row.index {
+    margin-top: 30px;
+    margin-left:0;
+    margin-right:0;
+}
 .content {
     background: url('images/mapgrab_update.png') no-repeat;
     background-size:cover;
@@ -260,12 +135,29 @@ video.fullscreen {
 .findings .row.content,
 .desk-findings .content {
     background-image: none !important;
-    z-index: 16;
     padding-top: 100px;
+    z-index: 16;
 }
 .desk-findings .content + div + div,
 .content + div + div {
     padding-left: 32px !important;
+}
+
+
+
+
+
+h1.core {
+    font: 42px/42px 'Unify Sans Bold', sans-serif;
+    margin-bottom: 50px;
+    margin-top: 0;
+    color: #000;
+    text-align: left;
+    font-weight: normal;
+    text-transform: none;
+    color: #000;
+    text-align: left;
+    font-weight: normal;
 }
 h4.header-h4 {
     display:inline-block;
@@ -274,8 +166,8 @@ h4.header-h4 {
     line-height:48px;
     margin-right: 12px;
 }
-.black {
-    color: #000;
+h4 + h1.core {
+    margin: 30px 0 0;
 }
 .desk-findings .content h5,
 .content h5 {
@@ -287,39 +179,11 @@ h4.header-h4 {
 .desk-findings .content h5 {
     font-size: 17px;
 }
-.row.index {
-    margin-top: 30px;
-    margin-left:0;
-    margin-right:0;
-}
-.desk-findings .content .row.index p,
-.content .row.index p {
-    font-family:'Unify Sans',sans-serif;
-    font-size: 15px;
-    letter-spacing: -0.012em;
-    line-height: 24px;
-    margin: 10px 0;
-    
-}
-.desk-findings .content .row.index p {
-    font-size: 17px;
-    line-height: 26px;
-}
-@media (max-width: 1024px) {
-    .desk-findings .content .intro-col.row.index p {
-        font-size: 15px;
-        line-height: 24px;
-        padding-right:15px;
-    }
-}
+
 .content .row.index h5 + p {
     margin-top: 0;
 }
-.content .opener p.choose {
-    font-family:'Unify Sans',sans-serif;
-    font-size:16px;
-    line-height: 23px;
-}
+
 .desk-findings .content h4.subhead,
 .content h4.subhead {
     color: #009bff;
@@ -336,263 +200,77 @@ h4.header-h4 {
 p + .btn-wrap {
     margin-top:20px;
 }
-h2.core {
-    font-family:'Unify Sans Bold', sans-serif;
-    font-size:30px;
-    line-height:33px;
-    margin-bottom: 20px;
-    letter-spacing: -.0125em;
-    margin-top:0;
-}
-
-header {
-    padding:40px 40px 60px;
-    width:100%;
-}
-header .wall-logo {
-    height: 50px;
-    width: auto;
-}
-.navbar-toggle {
-    position: relative;
-    float: right;
-    padding: 9px 0;
-    margin-top: 8px;
-    margin-right: 0;
-    margin-bottom: 8px;
-    background-color: transparent;
-    background-image: none;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    line-height: 60px;
-    vertical-align: middle;
-}
-.findings .header-menu.splash .icon-bar,
-.navbar-toggle .icon-bar {
-    background-color: #000;
-}
-.navbar-toggle .icon-bar {
-    display: block;
-    width: 22px;
-    height: 2px;
-    border-radius: 1px;
-}
-.navbar-toggle .icon-bar+.icon-bar {
-    margin-top: 4px;
-}
-h1.core{
-    font: 42px/42px 'Unify Sans Bold', sans-serif;
-    margin-bottom: 50px;
+.content h5.podcast-h5 {
     margin-top: 0;
-    color: #000;
-    text-align: left;
-    font-weight: normal;
-    text-transform: none;
-    color: #000;
-    text-align: left;
-    font-weight: normal;
-}
-h2.core {
-    font-size:30px;
-    margin-top:0;
-    line-height:33px;
-    margin-bottom: 20px
-}
-h4 + h1.core {
-    margin: 10px 0 0;
-}
-.core-main p,
-.opener {
-	font-family: 'Unify Serif', serif;
-	font-size: 19px;
-	line-height:33px;
-	margin-top:20px;
-}
-a.pop-out {
-	font-family:'Unify Serif Bold',serif;
-	font-size: inherit;
-	color: #009bff;
-	text-decoration: none;
-}
-
-
-.intro p {
-padding-right:0;
-}
-@media (max-width:768px) {
-    h1.core {
-    font-size: 36px;
-    }
-    h4 + h1.core {
-        margin-bottom: 20px;
-    }
-    h1.core + .row.index {
-        margin-top:25px;
-    }
-    .intro {
-		 padding: 0 45px 100px;
-    }
-    .intro p {
-        margin:12px 40px 12px 0
-    }
-    .intro-txt {
-    	margin-top: -200px;
-    }
-    .core-main p,
-    section.main.story-move p,
-    .opener p {
-        font-size: 16px;
-        line-height: 26px;
-    }
-    .margin-top-300,
-    .margin-top-100 {
-        margin-top: 0;
-    }
-	.photo2,
-	.photo1 {
-	    margin-left: 0%;
-        position: relative;
-        width: 100%;
-        z-index:0;
-	}
-	figcaption.photo2  {
-        padding-left:17px;
-        padding-right: 17px;
-    }
-	.story-move {
-	    margin-top: 0;
-	    margin-bottom: 40px;
-	    margin-left: 32px;
-	    margin-right: 32px;
-	}
-	figcaption.photo2.hanging,
-	figcaption {
-
-	    padding: 0 !important;
-	}
-	
-
-}
-@media (max-width: 600px) {
-   .intro {
-    width: 100%;
-    background-image: none;
-    margin-left: 0;
-    margin-right: 0;
-}
-   .intro-txt{ 
-    margin-top: 0;
-    }
-    .para-img {
-        display: none;
-    }
-    h3.sub {
-        margin-left:17px;
-    }
-    .intro p {
-     margin: 12px 17px;
-    }
-    .no-side-padding figcaption.mobile.hanging {
-        margin-left: 32px;
-        margin-right: 32px;            
-    }
-}
-@media (max-width:992px){
-
-    .bbb {
-    	margin-left:32px;
-    	margin-right:0;
-    	width:calc(100% - 32px);
-	}
-}
-
-@media (max-width: 1024px) {
-  .intro-txt {
-    	margin-top:0;
-    }
-}
-
-header .wall-logo {
-    float: left;
-}
-@media (min-width: 768px) {
-/*bootstrap.css:4408*/
-    .navbar-toggle {
-        display: block;
-    }
-    .margin-top-300 {
-        margin-top: 0;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 768px){
-    .para-img {
-        height: 65px;
-        width: auto;
-        margin-left: 0;
-        margin-top: 14px;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 768px){
-
-    .block-desk, .show-tablet {
-        display: block !important;
-    }
-}
-
-
-#themap {
     width: 100%;
 }
-#core-intro {
-    position: relative;
+.vr-btn {
+    display:block;
 }
-#core-intro header {
-    position: absolute;
-    top:0;
-    z-index: 40;
-}
-header {
-    display: table;
-    width: 100%;
-}
-.header .row {
-    display: table-cell;
-      vertical-align: middle;
-}
-.table-cell {
-    position: relative;
-    height: 50px; 
-}
-
-img.share {
-    margin-left:6px;
-    margin-right:18px;
-}
-.wall-logo {
-    height: 50px;
-    width: auto;
-}
-.wall-logo-mobile {
-    height: 15px;
-    width: auto;
+.vr-btn-mobile {
     display: none;
 }
+.left-col-icon {
+    height:auto;
+    width: 50px;
+}
 
-.header-menu {
-    height:60px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left:40px;
-    margin-right:40px;
-    padding:0;
-    width:calc(100% - 80px);
+
+
+.findings .header-menu {
+    color:#fff;
+    font-family: 'Unify Sans SemiBold',sans-serif;
+    font-size:14px;
+    position:absolute;
+    text-align:right;
+	top:0;
+    z-index:40;
 }
-.full img {
-    max-width: 100%;
-    height: auto;
+ .desk-findings {  
+    background-image:url('images/aerial.jpg');
+    background-size:cover;
+    bottom:0;
+    display:table;
+    height:100%;
+    left:0;
+    position:relative;
+    right:0;
+    top:0;
+    width:100%;
+    z-index:10;
 }
+.findings-overlay {
+    background: rgba(255,255,255,0.68);
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 14;
+}
+.desk-findings .content {
+    z-index:20;
+} 
+
+
+
+
+@media (max-width:992px) and (min-width: 600px) {
+    .bbb {
+        margin-left:40px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
 /*
 -------------------------- Animated BUTTONS */
@@ -603,12 +281,12 @@ img.share {
     max-width:200px;
 }
 .btn {
-border-radius: 0;
-   text-align: left;
-	position: relative;
+    border-radius: 0;
+    position: relative;
+    text-align: left;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
-	transition: all 0.3s;
+    transition: all 0.3s;
 }
 .btn:after {
 	content: '';
@@ -637,6 +315,7 @@ border-radius: 0;
 .blah span {
     color: #fff;
     position: absolute;
+    height: 34px;
     top: 50%;
     left: 33px;
     padding-left:4px;
@@ -721,23 +400,83 @@ span.text {
     left: 0;
     position: relative;
     text-align: left;
+    top:6px
 }
-
-.vr-btn {
-    display:block;
-}
-.vr-btn-mobile {
-    display: none;
-}
-.intro-col {
-    padding-left:0;
-    padding-right:15px;
-    }
     
 /* end Animated buttons 
 ------------------------------------ */
 
-@media (max-width: 768px) {
+
+/* Circular mug shots 
+------------------------------------ */
+.img-circular {
+    background-image: url('images/poodle-1.jpg');
+    background-size: cover;
+    border-radius: 100px;
+    display: block;
+    height: 65px;
+    position: relative;
+    top: 0;
+    width: 65px;
+}
+.content .row.index h5 + p.about {
+    margin-top: 20px;
+}
+.img-circular + p {
+    margin-top: 0;
+}
+.img-circular.poodle-2 {
+    background-image: url('images/poodle-2.jpg');
+}
+.img-circular.poodle-3 {
+    background-image: url('images/poodle-3.jpg');
+}
+/* end Circular mugshots 
+------------------------------------ */
+
+
+
+    .desk-findings .content .intro-col.row.index p {
+        font-size: 15px;
+        line-height: 24px;
+        padding-right:15px;
+        padding-left: 15px;
+    }
+
+
+
+@media (min-width:1024px) {
+	.left-col-icon {
+        height:auto;
+        margin-top:100px !important;
+        width: 50px;
+    }
+}
+
+
+@media (max-width:992px) {
+    .tablet-p,
+    h1.core,
+    h4.subhead.first,
+    .row.index {
+        padding-left:17px;
+        padding-right: 17px;
+    } 
+    h1.core {
+        font-size: 36px;
+    }
+    h4 + h1.core {
+        margin-bottom: 20px;
+    }
+    h1.core + .row.index {
+        margin-top:25px;
+    }
+    .bbb {
+    	margin-left:32px;
+    	margin-right:0;
+    	width:calc(100% - 32px);
+	}
+
     .wall-logo-mobile {
         display: block;
     }
@@ -758,16 +497,6 @@ span.text {
         margin-left:32px;
         margin-right:32px;
     }
-    .intro-col {
-        padding-left:0;
-        padding-right:0;
-    }
-    .intro-col {
-        width: 34.375% !important;
-    }
-    .intro-col.margin-top-60 {
-        margin-top: 20px !important;
-    }
     .desk-findings .content h5,
     .content h5 {
         margin-top: 40px;
@@ -778,7 +507,7 @@ span.text {
    }
    .cols-bottom p,
    .content p.podcast-desc {
-   width: 90%;
+        width: 90%;
    }
    .header-menu {
         margin-left:32px !important;
@@ -788,20 +517,41 @@ span.text {
     h4.header-h4  {
         display: none;
     }
-}
-.content h5.podcast-h5 {
-    margin-top: 0;
-    width: 90%;
-   }
-@media (max-width: 414px) {
- .intro-col {
-        width: 100% !important;
+    .desk-findings .content .intro-col .vr-btn-mobile p {
+        padding-left: 0 !important;
     }
+    .col-sm-16.intro-col.margin-top-60 {
+        margin-top: 0 !important;
+    }
+}
+@media (max-width:767px) and (min-width: 600px) {
+    [class*='cols-'] > * {
+        float: left;
+        position: relative;
+        display: block;
+        margin-top: 20px;
+        padding-left: 0;
+    }
+    .intro-col {
+        padding-left: 15px;
+    }
+    .desk-findings .content .intro-col .vr-btn-mobile p {
+        padding-left: 0 !important;
+    }
+    .content .row.index h5 + p {
+        margin-top: 12px;
+    }
+    .col-sm-16.intro-col.margin-top-60 {
+        margin-top: 0 !important;
+    }
+}
+@media (max-width: 414px) {
+ 
     .row.cols-bottom .no-left-padding {
         margin-top:40px
     }
     .cols-bottom p.podcast-desc,
-     .content h5.podcast-h5 {
+    .content h5.podcast-h5 {
         width: 100% !important;
     }
     .margin-top-100 {
@@ -811,226 +561,26 @@ span.text {
         margin-top: 0 !important;
     }
 }
-.sr-only {
-    display: none;
-}
-.fake-vid {
-clear:both;position:relative;z-index:40;background:black;width:100%;color:white;display:table;vertical-align:middle;text-align:center;height:550px;
-}
-.mobile-splash {
-    background-image: url('images/ranch-splash.jpg');
-    background-repeat: no-repeat;
-    background-position: right -20%;
-    position:relative;
-    z-index: -1;
-    background-size: cover;
+@media (max-width: 768px) {
+.team-info p{
     width: 100%;
-    height: 100%;
-    display: block;
-}
-.next-screen {
-    width:100%;clear:both;position:relative;margin-top:100vh;
-}
-video.fullscreen {
-    display: none;
-}
-.mobile-splash {
-    display: block;
-    z-index:1
-}
-.left-col-icon {
-height:auto;
-
-width: 50px;
-}
-@media (min-width: 1025px) {
-video.fullscreen { 
-    display: block;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  max-height:980px;
-  width: auto;
-  height: auto;
-  z-index: -100;
-  transform: translate(-50%, -50%);
-}
-
-.mobile-splash {
-    display: none;
 }
 }
-h3 {
-    color: #fff;
-    font-family: 'Unify Sans SemiBold', sans-serif;
-    font-size: 22px;
-    letter-spacing: 0.0125em;
-    line-height: 1;
-    margin-top: 24px;
-    margin-bottom: 36px;
-}
-.findings .header-menu,
-.header-menu.splash {
-    position:absolute;
-    top:0;
-    color:#fff;
-    font-family: 'Unify Sans SemiBold',sans-serif;
-	font-size:14px;
-	text-align:right;
-    z-index:40;
-}
-.findings .header-menu {
-    text-align: left;
-}
-.header-menu.splash td {
-    vertical-align:middle;
-}
-.header-menu.splash .icon-bar {
-    background-color:#fff;
-}
-.header-menu.splash .menu-txt {
-    display:inline-block;color:#fff;
+@media (min-width: 1024px) {
+   
+    .team-btn .icon-blah {
+        float: left;
     }
-.header-menu.splash .navbar-toggle {
-    display:inline-block;margin-top:8px;margin-left:6px;
+    .team-btn h5,
+    .team-info p{
+        display:block;
+        float: left;
+        padding-left: 5px !important;
+        padding-right: 0 !important;
+        width: calc(100% - 43px);
     }
-
-.share-stuff {
-    display: none;
-}
-#logo {
-margin-bottom: 40px;height: auto;width:100%;margin-left:-30%;
-}
- .desk-findings {
- height:100%;position:relative;z-index:1;background-image:url(images/aerial.jpg);background-size:cover;
-    display:table;top:0;left:0;bottom:0;right:0;width:100%;
-}
-.findings-overlay {
-        background: rgba(255,255,255,0.68);
-    /*background: linear-gradient(to bottom, rgba(255,255,255,0.88) 0%, rgba(209,209,209,0.12) 82%, rgba(254,254,254,0) 100%);*/
-    bottom: 0;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 14;
-}
-@media (min-width:1025px) {
-
-    .desk-splash {
-        height:100%;position:relative;z-index:1;background-image:url(images/vid-cap.png);background-size:cover;
-    display:table;top:0;left:0;bottom:0;right:0;width:100%;
-    }
-
-    .desk-findings {
-        background-image: url(images/aerial.jpg);
-    }
-    
-.hide-mobile-footer {
-    position:absolute;
-    bottom:20px;
-    width: calc(100% - 80px);
-    left:40px;
-   right:40px;
-   z-index:100;
-}
-.share-stuff{
-display:inline-block;
-}
-#logo {
-    width:60%;
-
-margin-left: calc( (25% + 7%  ) /2);
-
-
-}
-}
-.desk-findings {
-    z-index:10;
-}  
-.desk-findings .content {
-z-index:20;
-} 
-.splash-title {
-    position: relative;
-    z-index: 20;
-    width: 100%;
-    display: table-cell;
-    vertical-align: bottom;
-    height: 100%;
 }
 
-.desk-splash .splash-title > div {
-    text-align:center;
-}
-.mobile-splash .splash-title {
-    display: table;
-}
-.mobile-wrap {
-    display: table-cell;
-    height: 100vh;
-    vertical-align:bottom;
-}
-.usat-wrap {
-    margin: 20px auto;
-}
-.surtitle {
-    margin-left:calc( (100% - 150px) / 2 );
-}
-.surtitle > div.wrapper {
-    text-align:left;
-    width:150px
-}
-.logo-wrapper {
-    margin:auto;
-    width:30%
-}
-.logo-wrapper .splash-logo {
-    margin-left:14%;
-}
-.splash-scroll {
-    margin: 20px auto 10px auto;
-}
-.splash-scroll img {
-    height:44px;
-    margin: 20px auto;
-    width:44px;
-}
-.usat-logo {
-    height:18px;width:170px;
-}
-@media (max-width:414px) {
-#logo {
-    margin-left:-15%;
-}
-.core-start {
-    padding-left:47px;
-    padding-right:47px;
-}
-[class*='cols-'].row > *{
-  float: none;
-  position: relative;
-  display: inline-block; 
-  /* old ie fixes */
-  *zoom: 1; 
-  *display: inline;
-}
-
-.row.cols-bottom > *{
-  vertical-align: bottom;
-}
-.row.index {
-    margin-top:0 !important;
-}
-.row.cols-middle > *{
-  vertical-align: middle;
-}
-.margin-top-40 {
-    margin-top: 40px;
-}
 
 </style>
 </head>
@@ -1042,7 +592,7 @@ z-index:20;
      <!-- menu -->
     <table class="header-menu">
         <tr>
-            <td>
+            <td class="text-left">
                 <img src="images/logo_black.png" class="wall-logo">
                 <img src="images/logo-mob-bl.png" class="wall-logo-mobile">
             </td>
@@ -1060,89 +610,92 @@ z-index:20;
 	    </tr>
 	</table>	    
 	    
-    <!-- home screen desk -->
+    <!-- findings first screen -->
     
     <div class="desk-findings">	
         <div class="findings-overlay"></div>
         <div class="content row">
     
-            <div class="col-md-9 col-md-offset-6 col-sm-16 col-sm-offset-0 col-xs-16 col-xs-offset-0 col-xs-16 bbb no-side-padding">    
+            <div class="col-md-9 col-md-offset-6 col-sm-16 col-sm-offset-0 col-xs-16 col-xs-offset-0 col-xs-16 bbb">    
                 <h4 class="subhead first">A USA Today Network Special report</h4>
                 <h1 class="core">What we learned. How we did it.</h1>
                 <div class="index row">
-                <p><b>A search for answers:</b> Most of the border remains unfenced, ad more than half the existing fence blocks only cars, not people. But building a contiguous fence or wall is almost unimaginable. In Texas, it could require seizing as many as 5,000 parcels of private property. Border fences do inhibit crossings, but human smuggling and drug smuggling remain active once fences are built. There is no cost estimate for a border wall, and more crucially, there is no cost-benefit analysis: In some stretches, a wall might stop immigrants at a cost of more than $1 million per person.</p>
-		        <div class="btn-wrap">
-                    <div class="blah">
-                        <div class="icon-blah"><img src="images/read.png"></div><span class="btn btn-1c"><span class="text">Read</span></span>
-                    </div>
-                </div>					
-            </div>
+                    <p><b>A search for answers:</b> Most of the border remains unfenced, ad more than half the existing fence blocks only cars, not people. But building a contiguous fence or wall is almost unimaginable. In Texas, it could require seizing as many as 5,000 parcels of private property. Border fences do inhibit crossings, but human smuggling and drug smuggling remain active once fences are built. There is no cost estimate for a border wall, and more crucially, there is no cost-benefit analysis: In some stretches, a wall might stop immigrants at a cost of more than $1 million per person.</p>
+		            <div class="btn-wrap">
+                        <div class="blah">
+                            <div class="icon-blah"><img src="images/read.png"></div><span class="btn btn-1c"><span class="text">Read</span></span>
+                        </div>
+                    </div>					
+                </div>
 		    </div> 
+		    
 		    <div class="col-md-10 col-md-offset-6 col-sm-16 col-sm-offset-0 col-xs-16 col-xs-offset-0 col-xs-16 bbb no-side-padding">  
                 <div class="row index cols-bottom margin-top-60">
                     <div class="col-md-5 col-md-offset-0 col-sm-5 col-sm-offset-0 col-xs-offset-0 col-xs-16 intro-col">
-                        <h5>A map that makes news</h5>
-                        <p>We mapped every known piece of border fence, the most current and comprehensive audit to date. Here's what we discovered.</p>
-						        <div class="btn-wrap">
-							        <div class="blah">
-							            <div class="icon-blah"><img src="images/location-pin.png"></div><span class="btn btn-1c"><span class="text">Explore</span></span>
-							        </div>
-					            </div>
-					        </div>
+                        <div clas="podcast-top"><h5>A map that makes news</h5></div>
+                       <p class="podcast-desc">We mapped every known piece of border fence, the most current and comprehensive audit to date. Here's what we discovered.</p>
+                        <div class="btn-wrap">
+							<div class="blah">
+							    <div class="icon-blah"><img src="images/location-pin.png"></div><span class="btn btn-1c"><span class="text">Explore</span></span>
+							</div>
+					    </div>
+					</div>
+					
                     <div class="col-md-5 col-md-offset-0 col-sm-5 col-sm-offset-0 col-xs-offset-0 col-xs-16 intro-col">
-						        <h5>Innovative<br>virtual reality</h5>
+                        <div class="podcast-top"><h5>Innovative virtual reality</h5></div>
 						      
-						        <p>Learn how we created this pioneering experience, where you can explore the project in Vive VR and stand at the border itself.</p>
-						        <div class="btn-wrap">
-							        <div class="blah">
-							            <div class="icon-blah"><img src="images/vr.png"></div><span class="btn btn-1c"><span class="text">Virtual Reality</span></span>
-							        </div>
-					            </div>
+                        <p class="podcast-desc">Learn how we created this pioneering experience, where you can explore the project in Vive VR and stand at the border itself.</p>
+                        <div class="btn-wrap">
+							<div class="blah">
+							    <div class="icon-blah"><img src="images/vr.png"></div><span class="btn btn-1c"><span class="text">Virtual Reality</span></span>
+							    </div>
 					        </div>
+					</div>
+					
                     <div class="col-md-5 col-md-offset-0 col-sm-5 col-sm-offset-0 col-xs-offset-0 col-xs-16 intro-col">
-					            <h5>Behind-the-scenes podcast series</h5>
-					         
-					            <p>Our reporting teams share their untold stories and personal discoveries from this report.</p>
-                                <div class="btn-wrap">
-							        <div class="blah">
-							            <div class="icon-blah"><img src="images/snd-icon.png"></div><span class="btn btn-1c"><span class="text">Listen</span></span>
-							        </div>
-					            </div>
-				            </div>
-				            <div class="clearer"></div>
-                         
+                        <div class="podcast-top"><h5>Behind-the-scenes podcast series</h5></div>
+                        <p class="podcast-desc">Our reporting teams share their untold stories and personal discoveries from this report.</p>
+                        <div class="btn-wrap">
+							<div class="blah">
+							    <div class="icon-blah"><img src="images/snd-icon.png"></div><span class="btn btn-1c"><span class="text">Listen</span></span>
+							</div>
+					    </div>
+				    </div>
+				    <div class="clearer"></div>
                 </div>
+                
 		        <div class="row index intro-col cols-bottom margin-top-60">
 		           <div class="col-sm-16 intro-col margin-top-60">        
-                        <div class="vr-btn">
+                        <div class="vr-btn team-btn">
                             <div class="icon-blah">
                                 <img src="images/meeting-128.png">
                             </div>
-                            <div style="display:inline-block;margin-left:5px;">
+                            <div class="team-info">
                                 <h5>About the team</h5>
-                                <p style="margin-top:0">Meet the people behind the USA TODAY NETWORK'S groundbreaking effort.</p>
+                                <p>Meet the people behind the USA TODAY NETWORK'S groundbreaking effort.</p>
                             </div>
 						</div> 
 						
 						<div class="vr-btn-mobile">
-						    <h5>About the team</h5>
-                            <p style="margin-top:0">Meet the people behind the USA TODAY NETWORK'S groundbreaking effort.</p>
-							<div class="btn-wrap">
-							    <div class="blah">
-							        <div class="icon-blah"><img src="images/vr.png"></div><span class="btn btn-1c"><span class="text">Listen</span></span>
+						    <div class="team-info">
+						        <h5>About the team</h5>
+                                <p>Meet the people behind the USA TODAY NETWORK'S groundbreaking effort.</p>
+                            </div>
+							    <div class="btn-wrap">
+							        <div class="blah">
+							        <div class="icon-blah"><img src="images/meeting-128.png"></div><span class="btn btn-1c"><span class="text">Meet</span></span>
 							    </div>
-					        </div>
+					            </div>
                         </div>   
                     </div>
 		        </div>
             </div>	
             <div class="clearer"></div>
-		       
 	    </div>
     </div>
 
 
-<!-- end home screen -->
+<!-- end first screen -->
 
     
    	<div class="fake-vid">VIDEO PLAYER</div>   
@@ -1150,77 +703,8 @@ z-index:20;
     	
  <style>
 
-.img-circular {
- width: 65px;
- height: 65px;
- background-image: url('images/poodle-1.jpg');
- background-size: cover;
- display: block;
- border-radius: 100px;
- position: relative;
- top: 0;
-}
-.content .row.index h5 + p.about {
-margin-top: 20px;
-}
-.img-circular + p {
-    margin-top: 0;
-}
-.img-circular.poodle-2 {
- background-image: url('images/poodle-2.jpg');
-}
-.img-circular.poodle-3 {
- background-image: url('images/poodle-3.jpg');
-}
-[class*='cols-'] {
-   display:table;
-}
-[class*='cols-'] > * {
-    float: none;
-    position: relative;
-    /* old ie fixes */
-    *zoom: 1; 
-    *display: inline;
-    display: table-cell;
-}
-.cols-bottom > * {
-        vertical-align: bottom;
-}
-.cols-top > * {
-        vertical-align: top;
-}
 
-//extra bonus if needed
-.p-top {
-    vertical-align: top;
-}
 
-.row.index .podcast-top {
-
-    clear: both;
-    position:absolute !important;
-    top:0 !important;
-}
-.podcast-bottom {
-
-}
-.row.index p.podcast-date {
-    margin-top:0;
-    margin-bottom:0;
-}
-.podcast-h5 {
-margin-top:0;
-}
-.row.index p.podcast-desc {
-    margin-top:140px;
-    margin-bottom: 30px;
-}
-.no-left-padding {
-    padding-left: 0 !important;
-}
-.margin-top-0 {
-    margin-top: 0 !important;
-}
  </style>       
     	
 
@@ -1258,7 +742,7 @@ margin-top:0;
                 <figcaption>Reporter Gustavo Solis meets law-enforcement experts in San Diego, where dense border.</figcaption>
                 <figcaption>American Southwest if a continuous border wall is built.</figcaption>
             </div>
-            <div class="margin-top-100 col-md-9 col-md-offset-2 col-sm-16 col-sm-offset-0 col-xs-16 col-xs-offset-0 col-xs-16 bbb no-side-padding">    
+            <div class="margin-top-100 col-md-9 col-md-offset-2 col-sm-16 col-sm-offset-0 col-xs-16 col-xs-offset-0 col-xs-16 bbb">    
                 
                 <h1 class="core">There is always a story behind the story.</h1>
                 <p class="tablet-p">Journalists have the best stories.</p>
@@ -1283,7 +767,7 @@ margin-top:0;
 							</div>
 					    </div>
 					</div>
-                    <div class="col-md-5 col-md-offset-0 col-sm-5 col-sm-offset-0 col-xs-offset-0 col-xs-16 no-left-padding">
+                    <div class="col-md-5 col-md-offset-0 col-sm-5 col-sm-offset-0 col-xs-offset-0 col-xs-16">
                    
                         <div class="podcast-top">
                             <div class="img-circular poodle-2"></div>
@@ -1297,7 +781,7 @@ margin-top:0;
                             </div>
 					    </div>
                     </div>
-                    <div class="col-md-5 col-md-offset-0 col-sm-5 col-sm-offset-0 col-xs-offset-0 col-xs-16 no-left-padding">
+                    <div class="col-md-5 col-md-offset-0 col-sm-5 col-sm-offset-0 col-xs-offset-0 col-xs-16">
                         <div class="podcast-top">
                             <div class="img-circular poodle-3"></div>
                             <p class="podcast-date">Sept. 15</p>
@@ -1327,21 +811,21 @@ margin-top:0;
 							</div>
 					    </div>
 					</div>
-                    <div class="col-md-5 col-md-offset-0 col-sm-5 col-sm-offset-0 col-xs-offset-0 col-xs-16 no-left-padding">
+                    <div class="col-md-5 col-md-offset-0 col-sm-5 col-sm-offset-0 col-xs-offset-0 col-xs-16">
                    
                         <div class="podcast-top">
                             <div class="img-circular poodle-5"></div>
                             <p class="podcast-date">Sept. 17</p>
                             <h5 class="podcast-h5">On patrol with border vigilantes</h5>
                         </div>
-                       <p class="podcast-desc">Border reporter Rafael Carranza joins a group of civilian men patrolling the U.S.-Mexico border. They dress in combat gear, carry AR-15s and spend their vacation as part of one of the best-known, and most.</p>
+                        <p class="podcast-desc">Border reporter Rafael Carranza joins a group of civilian men patrolling the U.S.-Mexico border. They dress in combat gear, carry AR-15s and spend their vacation as part of one of the best-known, and most.</p>
                         <div class="btn-wrap">
                             <div class="blah">
                                 <div class="icon-blah"><img src="images/snd-icon.png"></div><span class="btn btn-1c"><span class="text">Listen</span></span>
                             </div>
 					    </div>
                     </div>
-                    <div class="col-md-5 col-md-offset-0 col-sm-5 col-sm-offset-0 col-xs-offset-0 col-xs-16 no-left-padding">
+                    <div class="col-md-5 col-md-offset-0 col-sm-5 col-sm-offset-0 col-xs-offset-0 col-xs-16">
                         <div class="podcast-top">
                             <div class="img-circular poodle-6"></div>
                             <p class="podcast-date">Sept. 18</p>
@@ -1374,7 +858,7 @@ margin-top:0;
 							</div>
 					    </div>
 					</div>
-                    <div class="col-md-5 col-md-offset-0 col-sm-5 col-sm-offset-0 col-xs-offset-0 col-xs-16 no-left-padding">
+                    <div class="col-md-5 col-md-offset-0 col-sm-5 col-sm-offset-0 col-xs-offset-0 col-xs-16">
                    
                         <div class="podcast-top">
                             <div class="img-circular poodle-8"></div>
@@ -1388,7 +872,7 @@ margin-top:0;
                             </div>
 					    </div>
                     </div>
-                    <div class="col-md-5 col-md-offset-0 col-sm-5 col-sm-offset-0 col-xs-offset-0 col-xs-16 no-left-padding">
+                    <div class="col-md-5 col-md-offset-0 col-sm-5 col-sm-offset-0 col-xs-offset-0 col-xs-16">
                         <div class="podcast-top">
                             <div class="img-circular poodle-9"></div>
                             <p class="podcast-date">Sept. 21</p>
