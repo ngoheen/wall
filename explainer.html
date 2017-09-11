@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>Explainer First Card</title>
+<link href="css/grid.css" rel="stylesheet">
+<link href="css/style-wall4.css" rel="stylesheet">
+<style>
+.text-right {
+    text-align: right;
+}
+
+.sr-only {
+    display: none;
+}
+
+h4.header-h4 {
+    display:inline-block;
+    font-family:'Unify Sans SemiBold',sans-serif;
+    font-size: 14px;
+    line-height:14px;
+    margin-right: 12px;
+    margin-top:18px;
+}
+.hide-mobile-share {
+    display:inline-block;
+}
+
+.first {
+    display:none;
+    position:fixed;
+    top:0;
+    z-index:3000;
+    width:100%;
+}
+.intro {
+    background-image: none;
+}
+.para-img {
+    margin-top:0;
+    margin-left:-20px;
+    width:19px;
+}
+
+</style>
+</head>
+
+<body style="background: url(images/background-v6.png) no-repeat;background-size:cover;">
+    
+
+    
+    		
+ 
+    
+    <section class="photo1 mripper" style="z-index:10;margin-top:100px;">
+        <div class="col-sm-14 col-sm-offset-2 col-xs-16 col-xs-offset-0 no-side-padding">
+        
+            <div class="screen"></div>
+            <img src="images/USATSI_10033146.jpg" class="hide-mobile">
+            <div class="title show-mobile">
+                <h1>Land of <b>Shadows</b></h1>
+            </div>
+        </div>
+        <div class="row hide-mobile block-desk">
+            <div class="col-sm-4 col-sm-offset-2 col-xs-offset-0">
+                <figcaption class="hanging"><b>Photo 1:</b> This photo is right aligned and full width from left margin of 2 columns</figcaption>
+            </div>
+        </div>
+    </section>       
+    
+<figcaption class="show-mobile side-padding"><b>Cutline title goes here:</b> Cutline for the photo goes here on mobile. And might be quite long.</figcaption>
+  
+    
+<!-- intro text -->
+<div class="section sub intro-txt"> 
+    <div class="intro col-md-7 col-md-offset-8 col-sm-9 col-sm-offset-7 col-xs-offset-0 col-xs-16" style="margin-top:-120px">
+        <img src="images/para-b.png" class="para-img">   
+        <h3 class="sub hide-mobile" style="margin-bottom: 20px">ranchers | <span>intro</span></h3>
+        <p class="ripper">Sometimes, the border ranchers hear the horses whinny in the corral at midnight, and see shadows moving silently past the barn. They've ridden over a ridge and stumbled into cartel "drug mules" &mdash; post stuffed in backpacks, assault rifles in hand.</p>
+        <p>After more than a decade of outrage about border security, cattlemen and women in the thorny southern Arizona outback grudgingly share the memories. Fences and irrigation lines cut. Homes and sheds broken into. Border Patrol sirens screaming through darkness in pursuit of drug-running vehicles. On of their own murdered in cold blood.</p>
+        <p>But in this land of dust and shadows, what most weighs on ranchers is not just what's seen, but what's unseen.</p>
+    </div>  
+</div>
+        
+<div class="clearer"></div>
+        
+<section class="sub main">
+    <!-- image rifle --> 
+    <div class="col-xs-16 col-sm-16 col-sm-offset-0 col-xs-offset-0 photo2">
+        <figure class="full">
+            <img src="images/rifle.jpg">
+            <figcaption class="center"><b>Photo 2:</b> This photo is full-bleed content width. Cutline for the photo goes here and is centered on desktop.</figcaption>
+        </figure>              
+    </div>
+</section>
+        
+<div class="clearer"></div> 
+<style>
+
+.explainer-card {
+    background-image:none;
+    margin-bottom:40px;
+}
+.explainer-promo h5,
+.explainer-card h5 {
+    color:#009BFF;
+    font-family:'Unify Sans Bold',sans-serif;
+    font-size: 16px;
+    line-height:20px;
+    margin-bottom:10px;
+}
+.explainer-promo h2,
+.explainer-card h2 {
+    color:#000;
+    font-family:'Unify Sans Bold',sans-serif;
+    font-size:20px;
+    line-height:26px;
+    margin-bottom:10px;
+}
+.explainer-content {
+    font-family:'Unify Sans',sans-serif;
+    font-size:16px;
+    line-height:26px;
+}
+.explainer-card b {
+font-family:'Unify Sans SemiBold',sans-serif;"
+}
+.arrow-btn {
+    background: #009BFF;
+    display: inline-block;
+    padding: 12px 10px 12px 16px;
+    font-size: 12px;
+    line-height: 8px;
+    color: #fff;
+    font-family:'Unify Sans Bold',sans-serif;
+}
+.arrow-btn.right {
+    margin-left: 10px;
+}
+.arrow-btn.left {
+    margin-left: 0;
+    padding: 12px 16px 12px 10px;
+}
+.explainer-promo img,
+.arrow-btn.left img {
+    margin-right: 6px;
+    width: 18px;
+    height: 12px;
+}
+.explainer-promo img {
+    position: absolute;
+    margin-right: 30px;
+   top: 50%;
+}
+.arrow-btn.right span + img {
+    margin-left: 6px;
+    width: 18px;
+    height: 12px;
+}
+.arrow-btn span {
+    transform: translateY(-2px);
+    display: inline-block;
+}
+.explainer-card {
+    display: none;
+}
+.explainer-promo {
+    display: block;
+    background: #F6F6F6;
+    border-top:1px solid #D6D6D6;
+    border-bottom: 1px solid #D6D6D6;
+    overflow: hidden;
+    padding: 30px;
+    position: relative;
+    width: calc( 100% + 64px );
+    margin-left: -32px;
+    margin-right: -32px;
+}
+.explainer-promo h5 {
+    text-transform: uppercase;
+}
+.explainer-promo-title {
+    max-width: calc( 100% - 30px );
+    float: left;
+}
+@media (min-width: 415px) {
+    .explainer-card {
+        display: block;
+    }
+    .explainer-promo {
+        display: none;
+    }
+}
+</style>
+<section class="sub main">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-2 col-sm-6 col-sm-offset-0">
+            <div class="explainer-card">
+                <h5>Explainer</h5>
+                <h2>What types of fence are there on the border?</h2>
+                <div class="explainer-content">
+                    <p><b>1. “Bollard-style” fences </b> are made from tall, vertical steel slats. Often, these are buried in the ground, but some bollard fences are “floating,” either on metal frames in sandy dunes or on top of long rows of concrete in river basins.</p>
+                    <div class="arrow-btn left">
+                        <img src="images/icon/arrow-left_24-w.png"><span>Back</span>
+                    </div>
+                    
+                    <div class="arrow-btn right">
+                        <span>Next</span><img src="images/icon/arrow-right_24-w.png">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="explainer-promo">
+                <div class="explainer-promo-title">
+                    <h5>Explainer</h5>
+                    <h2>What types of fence are there on the border?</h2>
+                </div>
+                <img src="images/icon/arrow-right_24.png">
+            </div>
+        </div>
+        <div class="col-md-offset-2 col-md-7 col-sm-8 col-sm-offset-1 col-xs-16 col-xs-offset-0">
+        <p>It wasn’t always like this.</p>
+
+        <p>“There would be shootouts over drug loads,” Unzueta says. The retired Immigration and Customs Enforcement agent spent 30 years trying to stop drugs from coming into San Diego, as an undercover agent and later as a top criminal investigator.</p>
+
+        <p>“This area used to be so dangerous that we couldn’t do what we are doing right now,” Customs and Border Protection Agent Joe Hernandez says. “We couldn’t just drive into this area, we would’ve been assaulted within seconds of being here.”</p>
+
+        <p>Fences went up, but drugs kept moving.</p>
+
+        <p>After the government built fences in San Diego, drug smugglers turned to the ocean, underground tunnels and, most commonly, the ports of entry. Last year more than 90 percent of the drug seizures happened in the port of entry, where millions of cars drive into San Diego from Mexico every year.</p>
+
+        <p>David Shaw is Unzueta’s successor at Homeland Security Investigations. The unit investigates cross-border crimes such as human trafficking, money laundering and drug smuggling.</p>
+
+        <p>Cartels “operate like a business,” Shaw says. “If you put up one wall, they find a way to get around it.”</p>
+    </div>
+    </div>
+</section>
+</body>
+</html>
